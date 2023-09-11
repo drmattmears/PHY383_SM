@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.3 Glasses &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic1sec3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Topic 2 - Polymers" href="Topic2.html" />
+    <link rel="prev" title="1.2 Shearing a solid or liquid" href="Topic1sec2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1.html">Topic 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic1sec3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic1sec3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.3 Glasses</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-t-g">Measuring <span class="math notranslate nohighlight">\(T_g\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-g-from-thermal-expansivity-ellipsometry"><span class="math notranslate nohighlight">\(T_g\)</span> from thermal expansivity - Ellipsometry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-g-from-heat-capacity-differential-scanning-calorimetry"><span class="math notranslate nohighlight">\(T_g\)</span> from heat capacity - Differential Scanning Calorimetry</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="glasses">
+<span id="sec-glasses"></span><h1>1.3 Glasses<a class="headerlink" href="#glasses" title="Permalink to this headline">#</a></h1>
+<p>We’ll start this section by jumping back into the macroscopic domain and think about the properties of a glass. Unlike a crystalline solid where the atoms or molecules go from a state of no long range order into a highly ordered crystal lattice, the molecules in a glass do not have long range order even when the bulk material is rigid. And by rigid I mean that it also has a finite shear modulus just like a crystalline solid.</p>
+<p>So how does this combination of solid-like shear response but liquid-like absence of long range order come about? To understand this we need to return to the concepts of a relaxation time associated with a change in the configuration of atoms or molecules, <span class="math notranslate nohighlight">\(\tau_\text{config}\)</span>, and the characteristic vibration time of the atoms or molecules, <span class="math notranslate nohighlight">\(\tau_\text{vib}\)</span>. In an ordinary solid-liquid transition the characteristic vibrational time is large enough compared to the configuration time such that the atoms and molecules are able to freely “hop around’’ to get themselves into the lowest free energy configuration, namely a lattice. Experimentally what we find for glasses is that the temperature dependence on <span class="math notranslate nohighlight">\(\tau_\text{config}\)</span> strongly departs from that of <span class="math notranslate nohighlight">\(\tau_\text{vib}\)</span> at some finite temperature <span class="math notranslate nohighlight">\(T_0\)</span> known as the <strong>Vogel-Fulcher temperature</strong>, and that the resulting viscosity follows an empirical law known as the Vogel-Fulcher law:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\eta &amp;= \eta_0\,\text{exp}\left(\frac{B}{T-T_0}\right)
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(B\)</span> is some constant.</p>
+<p>The divergence between <span class="math notranslate nohighlight">\(\tau_\text{vib}\)</span> and <span class="math notranslate nohighlight">\(\tau_\text{config}\)</span> gives rise to an interesting effect that is observed in practice as a deviation from predictions. Take <a class="reference internal" href="#fig-c1-vogelfulcher"><span class="std std-numref">Fig. 12</span></a> in which these two characteristic times are plotted as a function of inverse temperature (just to emphasise that moving to the right means decreasing temperature!).</p>
+<div class="figure align-center" id="fig-c1-vogelfulcher">
+<a class="reference internal image-reference" href="_images/C1_VogelFulcher.png"><img alt="Above a characteristic temperature $T_0$ the vibrational and configurational timescales are similar. At lower temperatures these two timescales deviate, and subsequently the vibrational timescale is lower than that required for configurational changes." src="_images/C1_VogelFulcher.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Above a characteristic temperature <span class="math notranslate nohighlight">\(T_0\)</span> the vibrational and configurational timescales are similar. At lower temperatures these two timescales deviate, and subsequently the vibrational timescale is lower than that required for configurational changes.</span><a class="headerlink" href="#fig-c1-vogelfulcher" title="Permalink to this image">#</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be very careful of the axes. The vertical axis is <strong>inverse</strong> time with the extra step of taking a log.</p>
+</div>
+</div>
+<p>At temperatures above the Vogel-Fulcher temperature <span class="math notranslate nohighlight">\(T_0\)</span> the two lines overlap but as the system is cooled they begin to deviate. The configuration relaxation time increases much faster than the characteristic vibration time meaning the average time for conformational changes between molecules gets much longer with only a small decrease in temperature.</p>
+<p>Now for the interesting effect. We live in a world in which our experimental observations take place above some finite timescale <span class="math notranslate nohighlight">\(\tau_\text{exp}\)</span>: any process happening at timescales below this are not observed by us (even though they take place) and we only see the end result of the processes. As <span class="math notranslate nohighlight">\(\tau_\text{config}\)</span> increases so rapidly with decreasing temperature it follows that there will be some characteristic temperature in which the configurational relaxation is happening at timescales above <span class="math notranslate nohighlight">\(\tau_\text{exp}\)</span> and are, for all intents and purposes, not taking place fast enough for us to see the process happening. A good analogy here is the erosion of buildings due to rain - it is happening but at such a slow timescale that it appears to us that they are not eroding at all.<br />
+To stretch the analogy, we could see and measure the erosion if we had more sophisticated and precise experiments. What this does is change <span class="math notranslate nohighlight">\(\tau_\text{exp}\)</span> and if we can get this experimental timescale down to the same scale as erosion happens we will see it in action.</p>
+<p>What this means then is that because the molecules in the liquid require longer timescales to rearrange than which we are observing the liquid for, the material behaves like a rigid material. The molecules are locked into their positions without any long range order but also without the time (strictly speaking the energy) to rearrange. The temperature that corresponds to this experimental timescale is the glass transition temperature <span class="math notranslate nohighlight">\(T_g\)</span>. Or rather, it is one definition of <span class="math notranslate nohighlight">\(T_g\)</span>. As I write these notes we still do not have a full understanding of the glass transition and there are differences between researchers as to what the glass transition is and what temperature we should be quoting for a given material.</p>
+<p>Despite nobody in the world having a clear and definitive explanation of the glass transition process, we can still develop some insights and understanding from experimental data and how the proposed theories support or deviate from observations.</p>
+<div class="section" id="measuring-t-g">
+<h2>Measuring <span class="math notranslate nohighlight">\(T_g\)</span><a class="headerlink" href="#measuring-t-g" title="Permalink to this headline">#</a></h2>
+<p>There are two primary approaches used for determining the glass transition temperature of a material, measuring heat capacity and thermal expansivity. Both are used because they allow us to observe discontinuities in thermodynamic quantities that relate to the second derivatives of the free energy. We will consider each of these approaches separately both in terms of the underlying theory that drives the experimental process as well as some key findings from each technique.</p>
+<div class="section" id="t-g-from-thermal-expansivity-ellipsometry">
+<h3><span class="math notranslate nohighlight">\(T_g\)</span> from thermal expansivity - Ellipsometry<a class="headerlink" href="#t-g-from-thermal-expansivity-ellipsometry" title="Permalink to this headline">#</a></h3>
+<p>The key concept to remember here is that materials expand when they are heated and contract when cooled. Simple really.</p>
+<p>If we have a liquid that is able to form a crystal then by cooling it down to a well-defined temperature, the melting temperature <span class="math notranslate nohighlight">\(T_m\)</span>, the liquid then reduces in volume without any change in temperature. Once the atoms or molecules are all in a regular arrangement then the now solid will continue to shrink as it is cooled. This process is a first order phase transition and is characteristic for the solid-liquid transition. The thermal expansivity is the gradient of the temperature-volume curve and is linear for most materials (though different in the solid and liquid domains) - see <a class="reference internal" href="#fig-c1-thermalexpansion"><span class="std std-numref">Fig. 13</span></a>.</p>
+<p>Liquids that form glasses behave somewhat differently when cooled. In much the same way as a simple liquid behaves, a glass-forming liquid will contract when cooled, with a typically linear relationship that has a constant of proportionality of the expansion coefficient <span class="math notranslate nohighlight">\(\alpha_\text{liquid}\)</span>. However when the temperature reaches the glass transition temperature there is a change in the gradient, and the new gradient is the expansion coefficient of the glass state <span class="math notranslate nohighlight">\(\alpha_\text{glass}\)</span>. The key difference between crystal forming and glass forming liquids is that at the transition temperature the former has a decrease in volume that occurs at a constant temperature (the vertical segment of the black line in <a class="reference internal" href="#fig-c1-thermalexpansion"><span class="std std-numref">Fig. 13</span></a>), corresponding to the <strong>latent heat</strong> required for the transition.
+The glass forming liquid only has a discontinuity in gradient without the vertical segment in the graph separating liquid and rigid phase.</p>
+<div class="figure align-center" id="fig-c1-thermalexpansion">
+<a class="reference internal image-reference" href="_images/C1_ThermalExpansion.png"><img alt="Thermal expansion curves of a crystal-forming solid (black line) and a glass-forming material (blue lines). The melting temperature of the crystalline solid is a fixed value (for given pressure, etc) whereas the glass transition temperature varies depending on cooling rate, thermal history,..." src="_images/C1_ThermalExpansion.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Thermal expansion curves of a crystal-forming solid (black line) and a glass-forming material (blue lines). The melting temperature of the crystalline solid is a fixed value (for given pressure, etc) whereas the glass transition temperature varies depending on cooling rate, thermal history,…</span><a class="headerlink" href="#fig-c1-thermalexpansion" title="Permalink to this image">#</a></p>
+</div>
+<p>Some would say that the glass forming liquids have a second order phase transition because the transition is continuous rather than having a mixed-phased regime involving the latent heat. While this is true it is argued that the glass transition is not a true second order phase transition because it is not a fixed value for a given material.</p>
+<p>A non-glass forming material that undergoes a second order phase transition (e.g. ferromagnetic transition, superconducting transition) will show the continuous transition but, and this is the important bit, it will always happen at the same temperature for any given material. So ferromagnetic material A will (generally) have a transition temperature at <span class="math notranslate nohighlight">\(T_A\)</span> regardless of the surrounding environment or factors. Glasses are much more fickle type of material in that their glass transition temperature depends strongly on factors such as the cooling <strong>rate</strong>, the number of times it has been heated and cooled, age of sample… So instead of trying to measure <span class="math notranslate nohighlight">\(T_g\)</span> for a given material, what glass transition scientists are trying to understand is how <span class="math notranslate nohighlight">\(T_g\)</span> is influenced by so many factors. To date we do not have a complete picture.</p>
+<p>So now that we are armed with the foreknowledge that <span class="math notranslate nohighlight">\(T_g\)</span> is sensitive to experimental conditions, let us finally get to the substance of this section which is how to use ellipsometry to determine <span class="math notranslate nohighlight">\(T_g\)</span>.<br />
+In short, ellipsometry uses the change in polarisation of light as it passes through a thin (<span class="math notranslate nohighlight">\(\approx10-1000\text{ nm}\)</span>) sample. The more material it passes through, the larger the change in polarisation between the p- and s- components, so we can reverse this experimentally to measure the change in polarisation to determine the amount (i.e. thickness) of the sample. This is quite neat but it gets even cooler when you then change the temperature of the sample. If you take thickness measurements across a range of temperatures you will get a set of data that looks like that in <a class="reference internal" href="#fig-c1-thermalexpansion"><span class="std std-numref">Fig. 13</span></a>. We can then assume that <span class="math notranslate nohighlight">\(T_g\)</span> is at the point where the two lines (glass and liquid expansions with <span class="math notranslate nohighlight">\(\alpha_\text{glass}\)</span> and <span class="math notranslate nohighlight">\(\alpha_\text{liquid}\)</span> respectively) intersect.</p>
+<p>This is a simplified model and we know that the transition process occurs over a finite temperature range roughly centred about <span class="math notranslate nohighlight">\(T_g\)</span> measured in this way, but this approach still gives some interesting insights. For example Keddie, Jones and Cory <span id="id1">Keddie <em>et al.</em> [<a class="reference internal" href="markdown.html#id3" title="J. L. Keddie, R. A. L. Jones, and R. A. Cory. Size-Dependent Depression of the Glass Transition Temperature in Polymer Films. EPL (Europhysics Letters), 27(1):59, jul 1994. URL: https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011 https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011/meta, doi:10.1209/0295-5075/27/1/011.">1994</a>]</span> found that the glass transition temperature of polystyrene depends on the thickness of a sample below about <span class="math notranslate nohighlight">\(100\text{ nm}\)</span>. Their key result is shown in <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>, and all each point on that graph is the glass transition temperature determined using the ellipsometry method we’ve just covered.</p>
+<div class="figure align-center" id="fig-c1-keddie">
+<a class="reference internal image-reference" href="_images/C1_Keddie.png"><img alt="First experimental evidence of the supression of $T_g$ for ultrathin polymer films where the glass transition temperature is constant down to a characteristic thickness, then decreases as the film gets thinner." src="_images/C1_Keddie.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">First experimental evidence of the supression of <span class="math notranslate nohighlight">\(T_g\)</span> for ultrathin polymer films. \Taken from Keddie et al \cite{Keddie1994}</span><a class="headerlink" href="#fig-c1-keddie" title="Permalink to this image">#</a></p>
+</div>
+<p>It is worth re-emphasising the thickness range at which ellipsometry can be used. It is a great technique for testing thin film samples and surface effects but it is completely useless if we wanted to know more about the bulk properties of a material. For that we need another technique…</p>
+</div>
+<div class="section" id="t-g-from-heat-capacity-differential-scanning-calorimetry">
+<h3><span class="math notranslate nohighlight">\(T_g\)</span> from heat capacity - Differential Scanning Calorimetry<a class="headerlink" href="#t-g-from-heat-capacity-differential-scanning-calorimetry" title="Permalink to this headline">#</a></h3>
+<p>…and here is another common technique in our <span class="math notranslate nohighlight">\(T_g\)</span> toolkit, one that works better for large, bulk materials rather than thin films.</p>
+<p>Differential Scanning Calorimetry, or DSC, uses another fairly simple physical process but the devil is in the detail of developing suitably accurate equipment. The simple process that underpins this technique is that of <strong>heat capacity</strong>; adding a certain amount of heat to a sample will increase the temperature by some other amount, and the proportionality between heat and temperature change is the heat capacity.</p>
+<p>The ‘calorimetry’ part of DSC is obvious here as we are talking about heat. But what about the ‘differential scanning’? The challenge experimentally is that new or unusual materials do not have a well established value for the heat capacity. To get around this issue the designers of DSC realised that you can extract information about your sample when you compare it to a well known reference sample.</p>
+<p>In one method known as heat-flux DSC the sample and reference are placed in a temperature controlled chamber. The sample and reference are connected by a low–resistance heat–flow path. The assembly is enclosed in a single furnace. Enthalpy or heat capacity changesin the sample cause a difference in its temperature relative to the reference; the resulting heat
+flow is small compared with that in differential thermal analysis (DTA) because the sample and reference are in good thermal contact. The temperature difference is recorded and related to enthalpy change in the sample using calibration experiments.<br />
+There are other types of DSC and refinements of the above, so if you are interested in the experimental and measurement side then I’d encourage you to look for some journal articles that used DSC.</p>
+<p>When using DSC to determine <span class="math notranslate nohighlight">\(T_g\)</span> one would be interested in seeing how the specific heat capacity of the sample deviates away from a linear dependence with temperature. For example Schawe (<span id="id2">Schawe [<a class="reference internal" href="markdown.html#id7" title="J. E.K. Schawe. Principles for the interpretation of modulated temperature DSC measurements. Part 1. Glass transition. Thermochimica Acta, 261(C):183–194, sep 1995. doi:10.1016/0040-6031(95)02315-S.">1995</a>]</span> and <a class="reference internal" href="#fig-c1-schawe"><span class="std std-numref">Fig. 15</span></a>) used DSC to find the glass transition temperature for polystyrene, which you’ll also see agrees with those found in  <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>.</p>
+<div class="figure align-center" id="fig-c1-schawe">
+<a class="reference internal image-reference" href="_images/C1_Schawe.png"><img alt="The heat capacity of a material varies linearly below and above the transition temperature, but around $T_g$ there is a noticible change that can either be a change in gradient (curves 2a and 2b) or even a peak in the curve (1a, 1b, 3a, 3b)." src="_images/C1_Schawe.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">The heat capacity of a material varies linearly below and above the transition temperature, but around <span class="math notranslate nohighlight">\(T_g\)</span> there is a noticible change that can either be a change in gradient (curves 2a and 2b) or even a peak in the curve (1a, 1b, 3a, 3b).</span><a class="headerlink" href="#fig-c1-schawe" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="questions-for-practice">
+<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id3">
+<dl class="citation">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">KJC94</a></span></dt>
+<dd><p>J. L. Keddie, R. A. L. Jones, and R. A. Cory. Size-Dependent Depression of the Glass Transition Temperature in Polymer Films. <em>EPL (Europhysics Letters)</em>, 27(1):59, jul 1994. URL: <a class="reference external" href="https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011 https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011/meta">https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011 https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011/meta</a>, <a class="reference external" href="https://doi.org/10.1209/0295-5075/27/1/011">doi:10.1209/0295-5075/27/1/011</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">Sch95</a></span></dt>
+<dd><p>J. E.K. Schawe. Principles for the interpretation of modulated temperature DSC measurements. Part 1. Glass transition. <em>Thermochimica Acta</em>, 261(C):183–194, sep 1995. <a class="reference external" href="https://doi.org/10.1016/0040-6031(95)02315-S">doi:10.1016/0040-6031(95)02315-S</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic1sec2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.2 Shearing a solid or liquid</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Topic 2 - Polymers</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-t-g">Measuring <span class="math notranslate nohighlight">\(T_g\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-g-from-thermal-expansivity-ellipsometry"><span class="math notranslate nohighlight">\(T_g\)</span> from thermal expansivity - Ellipsometry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-g-from-heat-capacity-differential-scanning-calorimetry"><span class="math notranslate nohighlight">\(T_g\)</span> from heat capacity - Differential Scanning Calorimetry</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

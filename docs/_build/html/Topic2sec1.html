@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1 Polymers: Types &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic2sec1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.2 Polymers: Ideal Chain" href="Topic2sec2.html" />
+    <link rel="prev" title="1.3 Glasses" href="Topic1sec3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.1 Polymers: Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic2sec1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic2sec1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.1 Polymers: Types</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-polymers">What are polymers?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-principles-of-polymer-structures">Fundamental principles of polymer structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-polymers">Types of polymers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology">Topology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-physics-not-polymer-chemistry">Polymer <strong>physics</strong>, not polymer chemistry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="polymers-types">
+<span id="topic2sec1"></span><h1>2.1 Polymers: Types<a class="headerlink" href="#polymers-types" title="Permalink to this headline">#</a></h1>
+<div class="section" id="what-are-polymers">
+<h2>What are polymers?<a class="headerlink" href="#what-are-polymers" title="Permalink to this headline">#</a></h2>
+<p>You are all already familiar with atoms and will have some insight into how small molecules behave, most likely from thermodynamics courses and the idea of degrees of freedom. These small molecules typically have a few atoms (think <span class="math notranslate nohighlight">\(\text{H}_2\text{O}\)</span>, <span class="math notranslate nohighlight">\(\text{CO}_2\)</span> or <span class="math notranslate nohighlight">\(\text{N}_2\)</span>), whereas a polymer is a very large molecule that is comprised of a large number of repeating units or <strong>monomers</strong><a class="footnote-reference brackets" href="#c2-polymer" id="id1">1</a>, and often interchange between the two words.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Chemistry tend to use lowercase <span class="math notranslate nohighlight">\(n\)</span>, but we will use uppercase <span class="math notranslate nohighlight">\(N\)</span> as this is more consistent with the statistical physics we will need to employ</p>
+</div>
+</div>
+<p>A key parameter when describing a polymer is <span class="math notranslate nohighlight">\(N\)</span>, the <strong>degree of polymerisation</strong>. This is more of a chemistry definition so a simpler definition of <span class="math notranslate nohighlight">\(N\)</span> is the number of repeated units in the polymer chain. It is worth stressing here that the number of units in a chain is not the same as the number of atoms in a chain. For example in <a class="reference internal" href="#fig-c2-polythene"><span class="std std-numref">Fig. 16</span></a> we see a polythene chain with <span class="math notranslate nohighlight">\(N=4\)</span>. One unit is an ethene monomer <span class="math notranslate nohighlight">\(\text{CH}_2-\text{CH}_2\)</span>, indicated by the dashed box, and we have four of these units in the diagram.</p>
+<div class="figure align-center" id="fig-c2-polythene">
+<a class="reference internal image-reference" href="_images/C2_Polythene.png"><img alt="An example of a polythene oligomer, i.e. a very short chained polymer. The left hand side is a schematic of the full chain (ignore the dashed left and right bonds, as these would need terminating units) with a single monomer highlighted by an orange dashed box. The right hand side is the same molecule but in condensed / shorthand notation." src="_images/C2_Polythene.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">An example of a polythene oligomer, i.e. a very short chained polymer. The left hand side is a schematic of the full chain (ignore the dashed left and right bonds, as these would need terminating units) with a single monomer highlighted by an orange dashed box. The right hand side is the same molecule but in condensed / shorthand notation.</span><a class="headerlink" href="#fig-c2-polythene" title="Permalink to this image">#</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you read around the subject you may see the term <strong>oligomer</strong>. These are short polymers with <span class="math notranslate nohighlight">\(N\)</span> of order <span class="math notranslate nohighlight">\(10\)</span>, though the term itself is not consistently used across the field</p>
+</div>
+</div>
+<p>Although I’ve chosen to draw a schematic with <span class="math notranslate nohighlight">\(N=4\)</span>, in reality many polymers can have of order <span class="math notranslate nohighlight">\(10^4\)</span> units and sometimes even more. In terms of size a typical polymer will be around <span class="math notranslate nohighlight">\(10\)</span>’s of nanometers which seems rather small but compared to the atomic or diatomic molecule lengthscale it is rather large - two or three orders of magnitude larger than the Bohr radius, for those who like a numerical comparison.</p>
+<p>The way that we define the size of a polymer is not as clear cut compared to atoms so we will spend some time later going into the detail of quantifying polymer sizes.</p>
+</div>
+<div class="section" id="fundamental-principles-of-polymer-structures">
+<h2>Fundamental principles of polymer structures<a class="headerlink" href="#fundamental-principles-of-polymer-structures" title="Permalink to this headline">#</a></h2>
+<p>The most simple arrangement of these units is as a chain comprising of multiple identical units in a linear chain, known as a homopolymer. One of the most widely known homopolymers is polyethylene (often known as polythene), which is formed from ethylene monomers (<a class="reference internal" href="#fig-c2-polyethylene"><span class="std std-numref">Fig. 17</span></a>).</p>
+<div class="figure align-center" id="fig-c2-polyethylene">
+<a class="reference internal image-reference" href="_images/C2_ethene_polymerisation.png"><img alt="Polymerisation of $N$ ethylene monomers into a polyethylene polymer with degree of polymerisation $N$" src="_images/C2_ethene_polymerisation.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Polymerisation of <span class="math notranslate nohighlight">\(N\)</span> ethylene monomers into a polyethylene polymer with degree of polymerisation <span class="math notranslate nohighlight">\(N\)</span></span><a class="headerlink" href="#fig-c2-polyethylene" title="Permalink to this image">#</a></p>
+</div>
+<p>Whilst a linear homopolymer is conceptually the simplest, it is far from the most practical. As the overall properties of a polymer material depend on the monomers used it is often beneficial to mix polymers with different properties to form a <strong>copolymer</strong>. For example the addition of acrylonitrile into a chain of styrene monomers gives a resulting copolymer that has greater thermal, mechanical, and chemical resistances compared to a polystyrene homopolymer (<span id="id2">[<a class="reference internal" href="#id15" title="C. A. Harper, editor. Modern Plastics Handbook. McGraw-Hill, 1999.">Harper, 1999</a>]</span>).</p>
+<p>There are a variety of ways in which two (or more) monomer species can be integrated into a polymer structure. <a class="reference internal" href="#fig-c2-polymer-configs"><span class="std std-numref">Fig. 18</span></a> shows a linear homopolymer (a), and two types of linear copolymers: (b) comprises of alternating monomers along the chain, whereas in (c) the monomers are randomly distributed along the chain. Of course polymers are not restricted to forming linear structures; if a monomer has the chemical structure to facilitate additional bonds then multiple chains or branches can form from these units. Chain (d) of <a class="reference internal" href="#fig-c2-polymer-configs"><span class="std std-numref">Fig. 18</span></a> shows a grafted copolymer in which chains of B monomers are grafted onto a linear backbone of A monomers.</p>
+<div class="figure align-center" id="fig-c2-polymer-configs">
+<a class="reference internal image-reference" href="_images/C2_PolymerTypes.png"><img alt="Possible configurations of polymer chains; a) homopolymer, b) alternating copolymer, c) random copolymer, d) grafted copolymer." src="_images/C2_PolymerTypes.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Possible configurations of polymer chains; a) homopolymer, b) alternating copolymer, c) random copolymer, d) grafted copolymer.</span><a class="headerlink" href="#fig-c2-polymer-configs" title="Permalink to this image">#</a></p>
+</div>
+<p>Furthermore, the orientation of the monomers is important when considering the properties of the polymer. Whilst this is not immediately clear when considering polymer structures in terms of A and B monomers, one can appreciate the importance from the grafted copolymer previously mentioned. Consider a grafted copolymer in which the side chains (that is, the -B-B- branches) terminate with a monomer that interacts strongly with another material. In the presence of this material such end monomers will prefer to interact with it and so the grafted copolymer will easily fix itself with the backbone (-A-A-) oriented away (much like a upright comb held teeth down). However if the side chains alternate between ‘above’ and ‘below’ the backbone there will be competition between the side chains to interact with the material.</p>
+<p>The orientation of the monomers within a chain is known as <strong>tacticity</strong> and is shown in <a class="reference internal" href="#fig-tacticity"><span class="std std-numref">Fig. 19</span></a>. The tacticity of a polymer has great importance in the thermal properties (crystallisation and melting) <span id="id3">[<a class="reference internal" href="#id16" title="R. Paukkeri and A. Lehtinen. Thermal behaviour of polypropylene fractions: 1. Influence of tacticity and molecular weight on crystallization and melting behaviour. Polymer, 34(19):4075 - 4082, 1993.">Paukkeri and Lehtinen, 1993</a>]</span>, permeation of gas <span id="id4">[<a class="reference internal" href="#id17" title="K. E. Min and D. R. Paul. Effect of tacticity on permeation properties of poly(methyl methacrylate). J. Poly. Sci. B. Poly. Phys., 26(5):1021 - 1033, 2003.">Min and Paul, 2003</a>]</span>, miscibility of polymer blends <span id="id5">[<a class="reference internal" href="#id19" title="G. Beaucage, R. S. Stein, T. Hashimoto, and H. Hasegawa. Tacticity effects on polymer blend miscability. Macromolecules, 24(11):3443 - 3448, 1991.">Beaucage <em>et al.</em>, 1991</a>, <a class="reference internal" href="#id18" title="E. J. Vorenkamp, G. ten Brinke, J. G. Meijer, H. Jager, and G. Challa. Influence of the tacticity of poly(methyl methacrylate) on the miscability with poly(vinyl chloride). Polymer, 26(11):1725 - 1732, 1985.">Vorenkamp <em>et al.</em>, 1985</a>]</span>, as well as allowing the formation of previously unproducable polymers <span id="id6">[<a class="reference internal" href="#id20" title="S. Washburn, J. Lauterbach, and C. M. Snively. Polymerization of Unpolymerizable Molecules through Topological Control. Macromolecules, 39(24):8210 - 8212, 2006.">Washburn <em>et al.</em>, 2006</a>]</span>.</p>
+<div class="figure align-center" id="fig-tacticity">
+<a class="reference internal image-reference" href="_images/C2_Tacticities.jpg"><img alt="Molecular tacticity. Left shows an isotactic molecule in which all (generic) R groups are out of the page. The right hand image is a syndiotactic chain whereby the R group alternates between into and out of the page for each monomer. A third type (not shown) is atactic in which the orientation of the R groups is random." src="_images/C2_Tacticities.jpg" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Molecular tacticity. Left shows an isotactic molecule in which all (generic) R groups are out of the page. The right hand image is a syndiotactic chain whereby the R group alternates between into and out of the page for each monomer. A third type (not shown) is atactic in which the orientation of the R groups is random.</span><a class="headerlink" href="#fig-tacticity" title="Permalink to this image">#</a></p>
+</div>
+<p>It is therefore important that not only the individual constituents of the polymer are known, but also the order, amount, and orientation of the monomer species that form the resulting chain.</p>
+</div>
+<div class="section" id="types-of-polymers">
+<h2>Types of polymers<a class="headerlink" href="#types-of-polymers" title="Permalink to this headline">#</a></h2>
+<p>There are three broad and not completely exclusive categories of polymers: plastics, semiconducting polymers, and biopolymers.<br />
+<strong>Plastic type polymers</strong>, such as those shown in <a class="reference internal" href="#fig-c2-polythene"><span class="std std-numref">Fig. 16</span></a> and <a class="reference internal" href="#fig-c2-plastics"><span class="std std-numref">Fig. 20</span></a>, are generally the most simple in terms of their molecular structure. They often have a simple backbone and relatively simple side groups. Take PMMA in <a class="reference internal" href="#fig-c2-plastics"><span class="std std-numref">Fig. 20</span></a>. The backbone is a the zig-zag chain of carbons and a relatively small side group ‘above’ the chain comprising of two oxygen atoms and a <span class="math notranslate nohighlight">\(\text{CH}_3\)</span> molecule. Despite being a relatively simple side chain these play an important role in the macroscopic properties we observe - in the case of PMMA it has a <span class="math notranslate nohighlight">\(T_g\)</span> of around <span class="math notranslate nohighlight">\(383\text{ K}\)</span> but adding an extra <span class="math notranslate nohighlight">\(\text{CH}_2\)</span> between the O and <span class="math notranslate nohighlight">\(\text{CH}_3\)</span> reduces <span class="math notranslate nohighlight">\(T_g\)</span> by approximately <span class="math notranslate nohighlight">\(30\text{ K}\)</span>.<a class="footnote-reference brackets" href="#c2-pbma" id="id7">2</a></p>
+<p>And although many plastic type polymers are normally a long chain like polymer, by using some interesting chemistry you can change the overall topology of the molecule as we have already discussed in the previous section.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Chemistry convention is to not include the C symbol for carbon along these bonds. I suppose for those who work with these diagrams every day it’s obvious what the omission is.</p>
+</div>
+</div>
+<div class="figure align-center" id="fig-c2-plastics">
+<a class="reference internal image-reference" href="_images/C2_PMMA_PDMS.png"><img alt="Chemical structures for two different plastics, PMMA and PDMS." src="_images/C2_PMMA_PDMS.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Two example of plastic type polymers. On the left is poly(methyl methacrylate) (PMMA), often called perspex. On the right is poly(dimethylsiloxane) (PDMS), often called silicone.</span><a class="headerlink" href="#fig-c2-plastics" title="Permalink to this image">#</a></p>
+</div>
+<p><strong>Semiconducting polmyers</strong> are somewhat similar to plastic type polymers in that their structure tends to be a long chain molecule with some side groups, but the backbone is often more complex in modern semiconductor type polymers. In the earliest discovered semiconducting polymer the backbone was a carbon-carbon double bond but more efficient modern polymers use benzene or other aromatic rings as a chain. We will not be going into the detail around how semiconducting polymers work, but the short answer is that units along the main chain have conjugated bonds meaning that electrons become delocalised from a particular unit and can become charge carriers along the polymer. Adjusting the side chains can change and moderate the band gap associated with these conjugated bonds meaning, with some fancy chemistry, one can change the semiconductor structure akin to the hard crystalline type you have seen in your solids courses.</p>
+<p>Finally we come to <strong>biopolymers</strong>. Despite these types of polymers often being composed of more complex molecules, the underlying structure still remains broadly the same. Some more simple biopolymers such as amylose (starch) are linear polymers formed from 300-600 repeat units, and other types such as proteins are linear copolymer chains with different functional side groups that gives rise to the functionality of the protein itself. Finally we have DNA which is another copolymer of alternating sugar and phosphate units, and the bases that make up the functionality of DNA are attached to these units. Even though DNA could be considered a random copolymer (as per <a class="reference internal" href="#fig-c2-polymer-configs"><span class="std std-numref">Fig. 18</span></a>), there is a global order to the molecule that dicates, well, everything about our biology. These three examples of biopolymers can be found in <a class="reference internal" href="#fig-c2-biopolymers"><span class="std std-numref">Fig. 21</span></a>.</p>
+<div class="figure align-center" id="fig-c2-biopolymers">
+<a class="reference internal image-reference" href="_images/C2_Biopolymers.png"><img alt="Three examples of biopolymers; top) amylose, middle) protein backbone with the function group R providing the functionality of the molecule, and bottom) DNA." src="_images/C2_Biopolymers.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Three examples of biopolymers; a) amylose, b) protein backbone with the function group R providing the functionality of the molecule, and c) DNA.</span><a class="headerlink" href="#fig-c2-biopolymers" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="topology">
+<h2>Topology<a class="headerlink" href="#topology" title="Permalink to this headline">#</a></h2>
+<p>We are not going to spend much time and effort in understanding polymer topologies in great detail, but it is useful to be aware of the different types that exist as you may see them as part of your wider reading. Some rough sketch schematics of the more common topologies are shown in <a class="reference internal" href="#fig-c2-topology"><span class="std std-numref">Fig. 22</span></a>.<br />
+Previously we thought about polymers as being a long molecule comprised of a backbone, some of which have small side groups that introduce some functionality or property to the final material. It is possible to take this long linear molecules and join them together in a number of different ways. One may be that instead of having small side groups, there are other polymer chains joined to the main backbone (a branched polymer). Alternatively a polymer can join together with itself (ring) or ends from many polymers join at the centre of a star like structure.</p>
+<p>Other systems that give rise to novel and sometime unexpected macroscopic properties are hyperbranched polymers (i.e. those with branches on branches, etc) and networks (effectively a tangle of polymer chains, although some order to the structure can be imposed with careful chemistry). These two systems allow for long range cooperativity if not completely regular order. Take networks for example - these systems are able to swell many many times their original volume by allowing solvent molecules to penetrate into the network and cause the chains to stretch without the network itself being broken. Each chain only needs to stretch by a small amount which can lead to substantial macroscopic swelling. The gels you find in nappies, sanitary towels and aqua beads are exactly these types of polymer networks and can swell by two or three orders of magnitude by absorbing water.</p>
+<div class="figure align-center" id="fig-c2-topology">
+<a class="reference internal image-reference" href="_images/C2_Topology.png"><img alt="Different topologies of polymer chains and systems." src="_images/C2_Topology.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Different topologies of polymer chains and systems.</span><a class="headerlink" href="#fig-c2-topology" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="polymer-physics-not-polymer-chemistry">
+<h2>Polymer <strong>physics</strong>, not polymer chemistry<a class="headerlink" href="#polymer-physics-not-polymer-chemistry" title="Permalink to this headline">#</a></h2>
+<p>I’ve been working with polymer systems since 2005 and one of the most frequent questions I get asked is whether I’m a chemist. I always answer this with my usual charm and tact. But it is actually a fairly sensible question given that in a lot of the previous sections I have shown you a whole bunch of chemistry diagrams and talked about carbon-carbon bonds and functional side groups.</p>
+<p>This interest in what the polymers are made of, at the monomer and ‘within chain’ level, is what we would broadly classify as polymer chemistry. Polymer chemists bring expertise and understanding to how and why the different groups behave as they do, and the more experimental ones devise new and frankly astonishing chemical synthesis protocols to build the molecules that we need.</p>
+<div class="figure align-center" id="fig-c2-polymerphysics">
+<a class="reference internal image-reference" href="_images/C2_PolymerPhysics.png"><img alt="Polymer chemists are interested in what makes up a polymer, whereas polymer physicists often simplify the system into a series of connected vectors or as a random walk system" src="_images/C2_PolymerPhysics.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Polymer chemists are interested in what makes up a polymer, whereas polymer physicists often simplify the system into a series of connected vectors or as a random walk system</span><a class="headerlink" href="#fig-c2-polymerphysics" title="Permalink to this image">#</a></p>
+</div>
+<p>Polymer physicists on the other hand take a rather different perspective as shown in <a class="reference internal" href="#fig-c2-polymerphysics"><span class="std std-numref">Fig. 23</span></a>. Instead of thinking about what the chain is made of, we tend to step back and think about the chain as a 2- or 3-dimensional entity. We forget that the monomers are actual chemical structures and instead conceptualise them as either random walk systems, as vectors with mass or indeed a hybrid of the two. What is very surprising is how extremely accurate this approach is, as we will see in section on <a class="reference internal" href="Topic2sec2.html#sec-c2-idealchain"><span class="std std-ref">Ideal Chains</span></a> where we use this random walk vector approach to predict the size of polymers, and compare this to experimental results.</p>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Bibliography<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="id8">
+<dl class="citation">
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id2">Har99</a></span></dt>
+<dd><p class="sd-card-text">C. A. Harper, editor. <em>Modern Plastics Handbook</em>. McGraw-Hill, 1999.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id5">BeaucageSteinHashimotoHasegawa91</a></span></dt>
+<dd><p class="sd-card-text">G. Beaucage, R. S. Stein, T. Hashimoto, and H. Hasegawa. Tacticity effects on polymer blend miscability. <em>Macromolecules</em>, 24(11):3443 – 3448, 1991.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id4">MinPaul03</a></span></dt>
+<dd><p class="sd-card-text">K. E. Min and D. R. Paul. Effect of tacticity on permeation properties of poly(methyl methacrylate). <em>J. Poly. Sci. B. Poly. Phys.</em>, 26(5):1021 – 1033, 2003.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id3">PaukkeriLehtinen93</a></span></dt>
+<dd><p class="sd-card-text">R. Paukkeri and A. Lehtinen. Thermal behaviour of polypropylene fractions: 1. Influence of tacticity and molecular weight on crystallization and melting behaviour. <em>Polymer</em>, 34(19):4075 – 4082, 1993.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id5">VorenkamptBrinkeMeijer+85</a></span></dt>
+<dd><p class="sd-card-text">E. J. Vorenkamp, G. ten Brinke, J. G. Meijer, H. Jager, and G. Challa. Influence of the tacticity of poly(methyl methacrylate) on the miscability with poly(vinyl chloride). <em>Polymer</em>, 26(11):1725 – 1732, 1985.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id6">WashburnLauterbachSnively06</a></span></dt>
+<dd><p class="sd-card-text">S. Washburn, J. Lauterbach, and C. M. Snively. Polymerization of Unpolymerizable Molecules through Topological Control. <em>Macromolecules</em>, 39(24):8210 – 8212, 2006.</p>
+</dd>
+</dl>
+</div>
+</div>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="questions-for-practice">
+<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="c2-polymer"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>For anyone interested in etymology, the “-mer” means unit, so “mono” prefix means a single unit whereas “poly” means many. “Poly + mer” = “Many + units.”</p>
+</dd>
+<dt class="label" id="c2-pbma"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
+<dd><p>This change in chemical structure actually changes it from PMMA to poly(ethyl methacrylate). If you add a couple more <span class="math notranslate nohighlight">\(\text{CH}_2\)</span> units you get poly(butyl methacrylate) with <span class="math notranslate nohighlight">\(T_g\)</span> around room temperature.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic1sec3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.3 Glasses</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic2sec2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.2 Polymers: Ideal Chain</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-polymers">What are polymers?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-principles-of-polymer-structures">Fundamental principles of polymer structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-polymers">Types of polymers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology">Topology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-physics-not-polymer-chemistry">Polymer <strong>physics</strong>, not polymer chemistry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2 Shearing a solid or liquid &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic1sec2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.3 Glasses" href="Topic1sec3.html" />
+    <link rel="prev" title="1.1 What is soft matter?" href="Topic1sec1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1.html">Topic 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic1sec2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic1sec2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.2 Shearing a solid or liquid</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hookean-solids-and-newtonian-liquids">Hookean solids and Newtonian liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shearing-a-solid-stress-and-strain">Shearing a solid - stress and strain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensile-stress-and-young-s-modulus">Tensile stress and Young’s modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-s-ratio">Poisson’s ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-moduli-with-poisson-s-ratio">Combining moduli with Poisson’s ratio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shearing-a-liquid-stress-and-strain-rate">Shearing a liquid - stress and strain rate.}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelastic-materials">Viscoelastic materials.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moduli-and-relaxation-times-at-the-atomic-level">Moduli and relaxation times at the atomic level.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-modulus-calculating-from-first-principles">Shear modulus - calculating from first principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaxation-time-viscosity-and-temperature-dependence">Relaxation time, viscosity, and temperature dependence.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="shearing-a-solid-or-liquid">
+<span id="sec-c1-shearing"></span><h1>1.2 Shearing a solid or liquid<a class="headerlink" href="#shearing-a-solid-or-liquid" title="Permalink to this headline">#</a></h1>
+<p>In the previous sections we have discussed the differences between hard and soft condensed matter in terms of a) the types of units (atoms versus long molecules) and b) the relative strength of inter-unit bonds. These are both valid distinctions (otherwise I wouldn’t be including them here) but from a historical and pragmatic perspective they are very difficult to observe. In practice a great deal of the developments in understanding soft condensed matter came from observing the <strong>macroscopic</strong> properties of materials and developing theories and predictions of molecular systems and interactions that could lead to the properties we measure in the everyday world.</p>
+<p>Consequently we are now going to turn our attention to the differences between hard- and soft- condensed matter at the macroscopic or <strong>bulk</strong> level. But to do so we need to consider the simple cases we are already familiar with, namely a Hookean solid (i.e. one that obeys Hooke’s law) and a Newtonian liquid, and then we will consider materials that deviate away from one or both of these ideal materials.</p>
+<div class="section" id="hookean-solids-and-newtonian-liquids">
+<h2>Hookean solids and Newtonian liquids<a class="headerlink" href="#hookean-solids-and-newtonian-liquids" title="Permalink to this headline">#</a></h2>
+<div class="section" id="shearing-a-solid-stress-and-strain">
+<h3>Shearing a solid - stress and strain<a class="headerlink" href="#shearing-a-solid-stress-and-strain" title="Permalink to this headline">#</a></h3>
+<div class="figure align-center" id="fig-c1-shear">
+<a class="reference internal image-reference" href="_images/C1_Shear.png"><img alt="Simple shear applied to a material (grey) fixed between two flat plates (blue) with surface area $A$. The bottom plate is fixed in place and a force $f$ is applied to the top plate along the $x$ direction that results in a deformation of the material by some distance $\Delta x$. \\Note that as the system is not moving there must be an equal and opposite force holding the bottom plate in place, rather than it being moved along with the force transmitted from the top plate through the material." src="_images/C1_Shear.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Simple shear applied to a material (grey) fixed between two flat plates (blue) with surface area <span class="math notranslate nohighlight">\(A\)</span>. The bottom plate is fixed in place and a force <span class="math notranslate nohighlight">\(f\)</span> is applied to the top plate along the <span class="math notranslate nohighlight">\(x\)</span> direction that results in a deformation of the material by some distance <span class="math notranslate nohighlight">\(\Delta x\)</span>. \Note that as the system is not moving there must be an equal and opposite force holding the bottom plate in place, rather than it being moved along with the force transmitted from the top plate through the material.</span><a class="headerlink" href="#fig-c1-shear" title="Permalink to this image">#</a></p>
+</div>
+<p>Consider the system presented in <a class="reference internal" href="#fig-c1-shear"><span class="std std-numref">Fig. 5</span></a> in which a solid material is fixed between two plates (of cross sectional area <span class="math notranslate nohighlight">\(A\)</span>). Firstly we assume that the bottom plate is fixed, and that the adhesion between the material and the plates is sufficient strong that there is not slippage between material and plate. A horizontal force <span class="math notranslate nohighlight">\(f\)</span> is applied to the top plate which results in the top plate, and thus the top of the solid material being moved some distance <span class="math notranslate nohighlight">\(\Delta x\)</span> from the equilibrium position. As the bottom plate is connected to the top via the material then any force that is applied to the top plate is ‘transmitted through’ to the bottom plate, but as the bottom plate is fixed there must be an equal and opposite force acting to keep it stationary.</p>
+<p>The <strong>shear stress</strong> <span class="math notranslate nohighlight">\(\sigma\)</span> is defined as the ratio of the force applied and the cross sectional area of the surfaces. This area is also the area of any plane in the material parallel to the plane of the plates, meaning that any horizontal slice through the material experiences the same shear stress. We can thus state that</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-shearstress">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-c1-shearstress" title="Permalink to this equation">#</a></span>\[\sigma = \frac{f}{A}\]</div>
+<p>Next we turn our attention back to the observation that applying this force to the top plate causes it to displace by some distance <span class="math notranslate nohighlight">\(\Delta x\)</span>. The \textbf{shear strain} <span class="math notranslate nohighlight">\(\gamma\)</span> is the ratio of this displacement and the thickness of the sample <span class="math notranslate nohighlight">\(h\)</span>, namely</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-shearstrain">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-c1-shearstrain" title="Permalink to this equation">#</a></span>\[\begin{split}\gamma &amp;= \frac{\Delta x}{h}\\
+&amp;= \tan\theta \\
+&amp;\approx \theta \text{ for small displacements}\end{split}\]</div>
+<p>We are making the assumption here that the separation between the plates, i.e. the thickness of the sample, remains constant. In reality at large displacements of the top plate we would expect the material to thin as it becomes more spread out, but we tend to measure samples under small displacements partly for this reason but also in part that hard solids tend not to move much!</p>
+<p><strong>If</strong> the material is a perfectly elastic solid then the shear strain (how much it moves for a given thickness) is proportional to the shear stress (how much force is applied to a cross sectional area). The constant of proportionality is called the shear modulus <span class="math notranslate nohighlight">\(G\)</span> and is thus</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-shear-modulus">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-c1-shear-modulus" title="Permalink to this equation">#</a></span>\[\begin{split}G&amp;= \frac{\sigma}{\gamma}\\
+&amp;\left(= \frac{f}{A}\frac{h}{\Delta x}\right)\end{split}\]</div>
+</div>
+<div class="section" id="tensile-stress-and-young-s-modulus">
+<h3>Tensile stress and Young’s modulus<a class="headerlink" href="#tensile-stress-and-young-s-modulus" title="Permalink to this headline">#</a></h3>
+<p>You might feel that the shear modulus has the same look as Young’s modulus, and indeed there are some parallels. It is important to differentiate between these two moduli as Young’s deals with axial (typically linear) stress-strain whereas the shear modulus considers a system undergoing shear. For completeness Young’s modulus is defined as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-youngs">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-c1-youngs" title="Permalink to this equation">#</a></span>\[Y = \frac{\sigma_\text{tensile}}{\varepsilon} = \frac{f}{A}\frac{L}{\Delta L}\]</div>
+<p>though I am making the assumption that this is a topic you have already covered previously and so only stating the final relationship.</p>
+</div>
+<div class="section" id="poisson-s-ratio">
+<h3>Poisson’s ratio<a class="headerlink" href="#poisson-s-ratio" title="Permalink to this headline">#</a></h3>
+<p>One of the assumptions made in both defining the shear and Young’s moduli is that applying the stress in one direction does not change the dimensions in other directions; the material being tested does not get thinner as it is sheared or stretched.<br />
+In reality we know that this is rarely the case. For the tensile (Young’s) case we can define Poisson’s ratio <span class="math notranslate nohighlight">\(\nu\)</span> which considers how a longitudinal strain can result in a lateral or transverse strain. Consider the two dimensional case shown in <a class="reference internal" href="#fig-c1-poisson"><span class="std std-numref">Fig. 6</span></a>.</p>
+<div class="figure align-center" id="fig-c1-poisson">
+<a class="reference internal image-reference" href="_images/C1_Poisson.png"><img alt="A horizontal force is applied to a material such that it is stretched along the $x$ direction. The length parallel to the stretch increases by $\Delta x$ and the width (i.e. along $y$ axis) changes by $\Delta y$. For positive $\nu$ the width decreases meaning the block of material gets thinner. For $\nu=0$ the width does not change and for auxetic materials ($\nu&lt;0$) the material gets wider when stretched!" src="_images/C1_Poisson.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A horizontal force is applied to a material such that it is stretched along the <span class="math notranslate nohighlight">\(x\)</span> direction. The length parallel to the stretch increases by <span class="math notranslate nohighlight">\(\Delta x\)</span> and the width (i.e. along <span class="math notranslate nohighlight">\(y\)</span> axis) changes by <span class="math notranslate nohighlight">\(\Delta y\)</span>. For positive <span class="math notranslate nohighlight">\(\nu\)</span> the width decreases meaning the block of material gets thinner. For <span class="math notranslate nohighlight">\(\nu=0\)</span> the width does not change and for auxetic materials (<span class="math notranslate nohighlight">\(\nu&lt;0\)</span>) the material gets wider when stretched!</span><a class="headerlink" href="#fig-c1-poisson" title="Permalink to this image">#</a></p>
+</div>
+<p>We define Poisson’s ratio as the ratio of lateral strain <span class="math notranslate nohighlight">\(\varepsilon_{yy}\)</span> and longitudinal strain <span class="math notranslate nohighlight">\(\varepsilon_{xx}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-poisson">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-c1-poisson" title="Permalink to this equation">#</a></span>\[\nu = \frac{-\varepsilon_{yy}}{\varepsilon_{xx}}= \frac{-\Delta y}{y}\frac{x}{\Delta x}\]</div>
+<p>where the minus sign is included as <span class="math notranslate nohighlight">\(\Delta y\)</span> was considered to be inherently negative when equation <a class="reference internal" href="#equation-eq-c1-poisson">(5)</a> was first defined. This is because most typical materials get thinner when stretched, and so the minus sign was included, I presume, to ensure that the ratio is positive. It is therefore possible to have a negative Poisson ratio if the material expands laterally under longitudinal strain. Such materials are known as <strong>auxetic</strong> materials and include foams, graphene, paper and tendons!<br />
+However for most materials the Poisson ratio is positive. An incompressible material has <span class="math notranslate nohighlight">\(\nu=0.5\)</span>, most ordinary solids have <span class="math notranslate nohighlight">\(\nu \approx 0.25-0.35\)</span>, and rubber behaves as if it were nearly incompressible (<span class="math notranslate nohighlight">\(\nu \lessapprox 0.5\)</span>).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Additional - geometric argument for defining Poisson’s ratio<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider an isotropic cube of initial (pre-stretch) side length <span class="math notranslate nohighlight">\(L\)</span> and sides aligned along the <span class="math notranslate nohighlight">\(x,y,z\)</span> axes. A stress is applied to the cube along the <span class="math notranslate nohighlight">\(x\)</span> direction that causes the cube to be stretched; this increases the length by <span class="math notranslate nohighlight">\(\Delta L\)</span> in the <span class="math notranslate nohighlight">\(x\)</span> direction and a change of <span class="math notranslate nohighlight">\(\Delta L'\)</span> in both <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions. The associated infintesimal strains along each axis are:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\textrm{d}\varepsilon_x &amp;= \frac{\textrm{d}x}{x},  &amp;\textrm{d}\varepsilon_y &amp;= \frac{\textrm{d}y}{y}, &amp;\textrm{d}\varepsilon_z &amp;= \frac{\textrm{d}z}{z}
+\end{align*}\]</div>
+<p class="sd-card-text">By rearranging equation <a class="reference internal" href="#equation-eq-c1-poisson">(5)</a> and the equivalent relationship between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> we can state that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+-\nu &amp;= \int_{L}^{L+\Delta L} \frac{\mathrm{d}x}{x} = \int_{L}^{L+\Delta L'} \frac{\mathrm{d}y}{y} = \int_{L}^{L+\Delta L'} \frac{\mathrm{d}z}{z}
+\end{align*}\]</div>
+<p class="sd-card-text">where the integrals are introduced to consider the total strains over the whole length changes rather than an infinitesimal change along <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>.\
+Solving the integrals gives a bunch of logarithms, so with a bit of mathematical elbow grease you can derive a relationship between the increase stretch length <span class="math notranslate nohighlight">\(\Delta L\)</span> and the response length changes <span class="math notranslate nohighlight">\(\Delta L'\)</span> as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-poissongeolength">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-c1-poissongeolength" title="Permalink to this equation">#</a></span>\[\left(1+\frac{\Delta L}{L}\right)^{-\nu}=1+\frac{\Delta L'}{L}\]</div>
+<p class="sd-card-text">Moving on now to the <strong>volumetric</strong> change of the the cube. As we have a nice well behaved cube we can state that initially <span class="math notranslate nohighlight">\(V=L^3\)</span> and that after being stretched we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-poissongeovol">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-c1-poissongeovol" title="Permalink to this equation">#</a></span>\[\begin{split}V+\Delta V 	&amp;= \left(L + \Delta L\right)\left(L + \Delta L'\right)^2\nonumber\\
+&amp;= L^3\left(1+\frac{\Delta L}{L}\right)\left(1+\frac{\Delta L'}{L}\right)^2\nonumber\\
+\therefore \frac{\Delta V}{V} &amp;= \left(1+\frac{\Delta L}{L}\right)\left(1+\frac{\Delta L'}{L}\right)^2 - 1\nonumber\\
+&amp;= \left(1+\frac{\Delta L}{L}\right)^{1-2\nu}-1\end{split}\]</div>
+<p class="sd-card-text">where equation <a class="reference internal" href="#equation-eq-c1-poissongeolength">(6)</a> was used in the last step to get the final expression. From this we can see why the statement I made in the previous section that <span class="math notranslate nohighlight">\(\nu = 0.5\)</span> corresponds to an incompressible material; the exponent in equation <a class="reference internal" href="#equation-eq-c1-poissongeovol">(7)</a> is zero when <span class="math notranslate nohighlight">\(\nu=0.5\)</span> meaning the right hand side also equals zero and therefore the relative change in volume (right hand side) must also be zero.</p>
+</div>
+</details></div>
+<div class="section" id="combining-moduli-with-poisson-s-ratio">
+<h3>Combining moduli with Poisson’s ratio<a class="headerlink" href="#combining-moduli-with-poisson-s-ratio" title="Permalink to this headline">#</a></h3>
+<p>Finally it is possible to derive relationships between elastic moduli (Young’s modulus, shear modulus and bulk modulus [not covered in this course] ) and Poisson’s ratio. It’s beyond the scope of this course to derive them explicitly but for reference the relationship involving the two moduli covered above is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d3666bb4-5021-4188-a20a-fe79881c9dee">
+<span class="eqno">(8)<a class="headerlink" href="#equation-d3666bb4-5021-4188-a20a-fe79881c9dee" title="Permalink to this equation">#</a></span>\[\begin{align}
+G &amp;= \frac{Y}{2(1+\nu)}\label{eq:C1_ShearYoung}
+\end{align}\]</div>
+<p>If you are particularly interested in the fine details of elastic moduli and Poisson’s ratio, and in particular how they are all interrelated then I recommend taking a look at section 4.2 in the book by <span id="id1">Sadd [<a class="reference internal" href="markdown.html#id16" title="Martin H. (Martin Howard) Sadd. Elasticity : theory, applications, and numerics. Elsevier, Amsterdam, third edition. edition, 2014. ISBN 0-12-410432-0.">2014</a>]</span>. <strong>You do not need to understand the material in the textbook for this module - this is only for those who want a deeper understanding.</strong></p>
+</div>
+</div>
+<div class="section" id="shearing-a-liquid-stress-and-strain-rate">
+<h2>Shearing a liquid - stress and strain rate.}<a class="headerlink" href="#shearing-a-liquid-stress-and-strain-rate" title="Permalink to this headline">#</a></h2>
+<p>So far we have spent a lot of time exploring how solids respond to an applied shear stress. It logically follows that we should consider what happens to a liquid when a similar shear stress is applied. So let us crack on.</p>
+<p>Let us return to the schematic shown in <a class="reference internal" href="#fig-c1-shear"><span class="std std-numref">Fig. 5</span></a> but this time we have a liquid occupying the grey region between the two plates. When a shearing force <span class="math notranslate nohighlight">\(\sigma\)</span> is applied to the top plate the fluid <strong>flows</strong> meaning we need to consider the velocity of the fluid between the plates. Unfortunately the system for a liquid flowing is a little more complicated compared to a solid being deformed, but we can use the definition for shear strain (equation <a class="reference internal" href="#equation-eq-c1-shearstrain">(2)</a>) to help.</p>
+<p>The layer of liquid immediately touching the top plate will flow with a velocity <span class="math notranslate nohighlight">\(v\)</span> but the layer touching the bottom plate will remain stationary. This means that we have a velocity gradient through the material that is linear for simple liquids, or that the velocity is proportional to the vertical distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate and we shall use a temporary constant of propotionality <span class="math notranslate nohighlight">\(\zeta\)</span> so that we can state</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v &amp;= \zeta y, \text{ or}\\
+\zeta &amp;= \frac{v}{y}
+\end{align*}\]</div>
+<p>Remember though that the velocity here is the horizontal velocity, meaning that <span class="math notranslate nohighlight">\(v = \dfrac{\mathrm{d}x}{\mathrm{d}t}\)</span>. So</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\zeta &amp;= \frac{\mathrm{d}x}{\mathrm{d}t}\,\frac{1}{y}\\
+		&amp;= \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{x}{y}\right) = \dot{\gamma}
+\end{align*}\]</div>
+<p>This means that when a shear stress <span class="math notranslate nohighlight">\(\sigma\)</span> is applied to a liquid there is a flow quantified by and proportional to the <strong>shear strain rate</strong>. For a solid we introduced a constant of proportionality (<span class="math notranslate nohighlight">\(G\)</span>) that may have been unfamiliar to you, but for a liquid this constant of proportionality is much more familiar; it is the <strong>viscosity</strong> <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
+<p>Viscosity being the constant of proportionality should make sense here. A liquid with a high viscosity does not readily flow under a given force whereas a thin liquid (low viscosity) will flow more easily.</p>
+</div>
+<div class="section" id="viscoelastic-materials">
+<span id="sec-c1-viscoelastic"></span><h2>Viscoelastic materials.<a class="headerlink" href="#viscoelastic-materials" title="Permalink to this headline">#</a></h2>
+<p>So far we have considered elastic solids and viscous liquids, and how we can distinguish between them. Applying a shear stress to a solid produces a constant shear strain, whereas a shear stress on a liquid produces a constant shear strain rate.<br />
+But what about those materials that falls somewhere inbetween? Silly putty and oobleck (cornflour in water) can flow as a liquid but also respond like an elastic solid when you strike them - these materials are known as viscoelastic materials.. The key observation is that the mechanical properties of viscoelastic materials depend on the <strong>timescale</strong> in which the deformation is applied.</p>
+<div class="figure align-center" id="fig-c1-viscoelastic">
+<a class="reference internal image-reference" href="_images/C1_viscoelastic_graph.png"><img alt="A constant shear stress is applied to a viscoelastic material at $t=0$. At short timescales ($t&lt;\tau$) the material exhibits elastic-like behaviour, namely that there is a constant shear strain in the material. For longer timescales the material flows and the shear strain changes with time - in this example the strain rate is constant giving a linear response for $t&gt;\tau$." src="_images/C1_viscoelastic_graph.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">A constant shear stress is applied to a viscoelastic material at <span class="math notranslate nohighlight">\(t=0\)</span>. At short timescales (<span class="math notranslate nohighlight">\(t&lt;\tau\)</span>) the material exhibits elastic-like behaviour, namely that there is a constant shear strain in the material. For longer timescales the material flows and the shear strain changes with time - in this example the strain rate is constant giving a linear response for <span class="math notranslate nohighlight">\(t&gt;\tau\)</span>.</span><a class="headerlink" href="#fig-c1-viscoelastic" title="Permalink to this image">#</a></p>
+</div>
+<p>Consider <a class="reference internal" href="#fig-c1-viscoelastic"><span class="std std-numref">Fig. 7</span></a>. When a stress is applied over a short timescale (such as hitting the material) it behaves like an elastic solid, with an instantaneous shear modulus <span class="math notranslate nohighlight">\(G_0\)</span>. After some characteristic relaxation timescale <span class="math notranslate nohighlight">\(\tau\)</span> the material begins to flow.<br />
+This allows us to define a <strong>scaling relationship</strong> between <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G_0\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span>. The gradient of the viscous region is inversely proportional to the viscosity (more viscous means less flow meaning lower shear strain rate). We then extrapolate back from the transition point at <span class="math notranslate nohighlight">\(t=\tau\)</span> which gives a gradient of the dashed extrapolation line of <span class="math notranslate nohighlight">\(\dfrac{1}{G_0\tau}\)</span>, and as both the extrapolation and viscous response domain have the same gradient we can state that</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-visctau">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-c1-visctau" title="Permalink to this equation">#</a></span>\[\eta\sim G_0\tau\]</div>
+<p>We call this a scaling relationship because it describes the relationship between the different parameters but there may be an additional numerical parameter unknown to us. We hope that this numerical prefactor is of order unity but either way the scaling relationship argument provides us with a starting point from which to construct more accurate models.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is actually the definition of what a Newtonian fluid is.</p>
+</div>
+</div>
+<p>Although ‘typical’ (i.e. Newtonian) fluids follow a linear relationship between stress and strain rate, there are other fluid systems whose effective viscosity follow a non-linear relationship between strain rate and stress. These non-Newtonian fluids broadly fall under two categories:</p>
+<ol class="arabic simple">
+<li><p>Shear thinning - increased strain rate reduces the effective viscosity (gets thinner with more strain applied per unit time),</p></li>
+<li><p>Shear thickening - increased strain rate increases the effective viscosity (gets thicker with more strain applied per unit time).
+Some schematics of Newtonian (a), shear thinning non-Newtonian (b) and shear thickening non-Newtonian (c) fluids can be found in <a class="reference internal" href="#fig-c1-nonnewtonian"><span class="std std-numref">Fig. 8</span></a>.</p></li>
+</ol>
+<div class="figure align-center" id="fig-c1-nonnewtonian">
+<a class="reference internal image-reference" href="_images/C1_NonNewtonian.png"><img alt="Stress-strain rate (left) and strain rate-effective viscosity plots for a) Newtonian, b) shear thinning and c) shear thickening liquids. A Newtonian liquid is defined as one where $\sigma \propto \dot{\gamma}$, with a constant of proportionality $\eta$, i.e the viscosity. A non-Newtonian liquid shows a non-linear relationship between $\sigma$ and $\dot{\gamma}$, and consequently the effective viscosity depends on the strain rate i.e. $\eta(\dot{\gamma})$" src="_images/C1_NonNewtonian.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Stress-strain rate (left) and strain rate-effective viscosity plots for a) Newtonian, b) shear thinning and c) shear thickening liquids. A Newtonian liquid is defined as one where <span class="math notranslate nohighlight">\(\sigma \propto \dot{\gamma}\)</span>, with a constant of proportionality <span class="math notranslate nohighlight">\(\eta\)</span>, i.e the viscosity. A non-Newtonian liquid shows a non-linear relationship between <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\dot{\gamma}\)</span>, and consequently the effective viscosity depends on the strain rate i.e. <span class="math notranslate nohighlight">\(\eta(\dot{\gamma})\)</span></span><a class="headerlink" href="#fig-c1-nonnewtonian" title="Permalink to this image">#</a></p>
+</div>
+<p>These types of behaviours have been observed and experimentally studied for a long time, but can we understand what is going on at the molecular level that would give rise to these different macroscopic behaviours. We can make some initial assumptions about the systems, particularly the instantaneous shear modulus <span class="math notranslate nohighlight">\(G_0\)</span> and relaxation time <span class="math notranslate nohighlight">\(\tau\)</span>, from which we can build our theoretical constructs.</p>
+<ul class="simple">
+<li><p>The <strong>instantaneous shear modulus</strong> will likely depend on the forces between individual molecules. We would not expect this to depend strongly on temperature.</p></li>
+<li><p>The <strong>relaxation time</strong> arises from the way that molecules can move around themselves and one another. We expect there to be a strong temperature dependence given that the motion of molecules is a statistical / thermodynamic process.</p></li>
+</ul>
+<p>So now that we’ve got a starting point, let us jump straight in to the details!</p>
+</div>
+<div class="section" id="moduli-and-relaxation-times-at-the-atomic-level">
+<span id="sec-c1-moduli"></span><h2>Moduli and relaxation times at the atomic level.<a class="headerlink" href="#moduli-and-relaxation-times-at-the-atomic-level" title="Permalink to this headline">#</a></h2>
+<div class="section" id="shear-modulus-calculating-from-first-principles">
+<h3>Shear modulus - calculating from first principles<a class="headerlink" href="#shear-modulus-calculating-from-first-principles" title="Permalink to this headline">#</a></h3>
+<p>For the purposes of simplicity we are going to calculate the Young’s modulus from first principles. It is possible to also calculate other moduli using similar arguments but they also introduce some extra geometry that makes it more complicated without adding anything to the conceptual understanding of what is going on.</p>
+<p>We start by assuming that we have a cuboid block of material of initial length <span class="math notranslate nohighlight">\(L\)</span> and cross sectional area <span class="math notranslate nohighlight">\(A\)</span>. A force <span class="math notranslate nohighlight">\(F\)</span> is applied along the length such that the block length increase by <span class="math notranslate nohighlight">\(\Delta L\)</span>.<br />
+Next we zoom in to the atomic level as shown in <a class="reference internal" href="#fig-c1-youngspring"><span class="std std-numref">Fig. 9</span></a>.</p>
+<div class="figure align-center" id="fig-c1-youngspring">
+<a class="reference internal image-reference" href="_images/C1_YoungSpring.png"><img alt="Ball and spring model of a solid. At equilibrium each atom is a distance $r_0$ from its nearest neighbour." src="_images/C1_YoungSpring.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Ball and spring model of a solid. At equilibrium each atom is a distance <span class="math notranslate nohighlight">\(r_0\)</span> from its nearest neighbour.</span><a class="headerlink" href="#fig-c1-youngspring" title="Permalink to this image">#</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not the cross sectional area of an atom itself, but is the total cross sectional area of the plane divided by the total number of atoms in the plane. An alternative view is that it is the cross sectional area of the spring itself.</p>
+</div>
+</div>
+<p>Here we model our solids as a collection of spheres (the atoms) and springs (the interatomic forces) arranged in a simple cubic structure that aligns with the edges of the macroscopic block of material. When there is no force applied to the block each of the atoms are separated by a distance <span class="math notranslate nohighlight">\(r_0\)</span>, and applying the force <span class="math notranslate nohighlight">\(F\)</span> causes the springs aligned in the direction of <span class="math notranslate nohighlight">\(F\)</span> (in this case we will call this the <span class="math notranslate nohighlight">\(x\)</span> direction) to extend to a new legth <span class="math notranslate nohighlight">\(r\)</span>. The springs are assumed to obey Hooke’s law such that <span class="math notranslate nohighlight">\(F=k(r-r_0)\)</span> and each atom has an <strong>effective</strong> cross sectional area of <span class="math notranslate nohighlight">\(r_0^2\)</span> in the <span class="math notranslate nohighlight">\(y,z\)</span> plane.<br />
+Thus the associated stress is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-youngspring1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-c1-youngspring1" title="Permalink to this equation">#</a></span>\[\sigma_{\text{tensile}} = \frac{F}{r_0^2} = \frac{k(r-r_0)}{r_0^2}\]</div>
+<p>The strain experienced by each atom as a result of the applied stretching force is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-youngspring2">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-c1-youngspring2" title="Permalink to this equation">#</a></span>\[\varepsilon_{\text{tensile}} = \frac{r-r_0}{r_0}\label{eq:C1_YoungSpring2}\]</div>
+<p>and by combining equations <a class="reference internal" href="#equation-eq-c1-youngspring1">(10)</a> and <a class="reference internal" href="#equation-eq-c1-youngspring2">(11)</a> we find the Young’s modulus to be</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-youngspring3">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-c1-youngspring3" title="Permalink to this equation">#</a></span>\[\begin{split}Y  &amp;= \frac{k(r-r_0)}{r_0^2}\frac{r_0}{r-r_0}\\
+&amp;= \frac{k}{r_0}\label{eq:C1_YoungSpring3}\end{split}\]</div>
+<p>In the classical macroscopic treatment we would normally stop here and accept that the spring constant <span class="math notranslate nohighlight">\(k\)</span> is some inherent parament of the spring. Here however we are modelling the interatomic forces and energies as a spring, and it would be more insightful to move away from <span class="math notranslate nohighlight">\(k\)</span> into a model that relates to interatomic energies.<br />
+We can approximate the interatomic potential <span class="math notranslate nohighlight">\(U\)</span> around the equilibrium separation <span class="math notranslate nohighlight">\(r_0\)</span> by treating it like a harmonic oscillator, and so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+U(r) 	&amp;= U(r_0) + \frac{1}{2}(r-r_0)^2\frac{\mathrm{d}^2U}{\mathrm{d}r^2}\bigg\rvert_{r=r_0}+\text{ higher order terms}\\
+		&amp;= \text{constant} + \frac{1}{2}k(r-r_0)^2
+\end{align*}\]</div>
+<p>where the first line is a Taylor expansion for a harmonic oscillator and the second line is the potential energy of a spring that includes some constant zero offset. The particular form of the interatomic potential depends on the actual system at hand but we can generalise it as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+U(r) &amp;= \epsilon\,f\left({\scriptstyle \frac{r}{r_0}}\right)
+\end{align*}\]</div>
+<p>where the potential has a miminum value of <span class="math notranslate nohighlight">\(-\epsilon\)</span> at <span class="math notranslate nohighlight">\(r=r_0\)</span> (i.e. the <strong>bond energy</strong>), and so <span class="math notranslate nohighlight">\(f(\frac{r}{r_0})\)</span> is a dimensionless function that satisfies the condition <span class="math notranslate nohighlight">\(f(1) = -1\)</span>. Using this general function with the above approximation for the interatomic potential we find that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+k =  \frac{\mathrm{d}^2U}{\mathrm{d}r^2}\bigg\rvert_{r=r_0} = \frac{\epsilon}{r_0^2}\,f''(1)
+\end{align*}\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The main textbook used <span class="math notranslate nohighlight">\(A\)</span> here instead of <span class="math notranslate nohighlight">\(B\)</span> but I want to avoid confusion with area given that we’ve discussed cross sectional area as part of the proof.</p>
+</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(f''(1)\)</span> is a dimensionless number. The value of this number depends on the actual form of the potential involved but for the sake of simplicity we will generalise this to say that <span class="math notranslate nohighlight">\(f''(1)=B.\)</span>. Therefore equation <a class="reference internal" href="#equation-eq-c1-youngspring3">(12)</a> becomes</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-youngspring4">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-c1-youngspring4" title="Permalink to this equation">#</a></span>\[Y = B\frac{\epsilon}{r_0^3}\]</div>
+<p>Let us take a moment to pause and reflect on what equation <a class="reference internal" href="#equation-eq-c1-youngspring4">(13)</a> is actually telling us. This simple model predicts that the rigidity of a material (a macroscopic property) depends on the \textbf{bond density} at the interatomic level. A rigid material will have either strong interatomic bond strength, shorter interatomic spacing, or, more likely, some combination of the two. This feels right intuitively but it’s always nice to see it fall out from a structured argument.</p>
+</div>
+<div class="section" id="relaxation-time-viscosity-and-temperature-dependence">
+<h3>Relaxation time, viscosity, and temperature dependence.<a class="headerlink" href="#relaxation-time-viscosity-and-temperature-dependence" title="Permalink to this headline">#</a></h3>
+<div class="figure align-center" id="fig-c1-fluidtheory">
+<a class="reference internal image-reference" href="_images/C1_FluidTheory.png"><img alt="A liquid is initially at rest (left) and then a shear stress is applied that causes some of the atoms (labelled red) to be closely surrounded by and intereacting more with neighbouring molecules (centre figure). After some characteristic time $\tau$ the atom is able to escape the cage and move to a region of lower free energy." src="_images/C1_FluidTheory.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">A liquid is initially at rest (left) and then a shear stress is applied that causes some of the atoms (labelled red) to be closely surrounded by and intereacting more with neighbouring molecules (centre figure). After some characteristic time <span class="math notranslate nohighlight">\(\tau\)</span> the atom is able to escape the cage and move to a region of lower free energy.</span><a class="headerlink" href="#fig-c1-fluidtheory" title="Permalink to this image">#</a></p>
+</div>
+<p>We can now turn out attention to more complex liquids that are subjected to some applied stress. On the left hand side of figure <a class="reference internal" href="#fig-c1-fluidtheory"><span class="std std-numref">Fig. 10</span></a> the liquid is represented by a black box and is made up of individual yellow molecules. These molecules do not have any long range order and the interatomic / intermolecular distance is a range rather than a single value (some are closer together, others further apart). We then apply some shear stress such that the liquid deform (middle figure). In doing so the individual atoms or molecules are also moved and in some cases an atom or molecule, highlighted in red, finds itself much closer to its neighbours than would be expected in the unsheared case. These reduced distances means that the total interaction energy of this atom / molecule is high, and the system will want to change in order to minimise the energy of the system. We find that after some characteristic time <span class="math notranslate nohighlight">\(\tau\)</span> the ‘trapped’ molecule is able to escape the ‘cage’ formed by the too-close neighbours and relaxes into a new position that reduces the energy of interaction between that atom or molecule and the new neighbours.</p>
+<p>Sounds logical. But can we construct some logical argument that allows us to quantify <span class="math notranslate nohighlight">\(\tau\)</span> in terms of other properties of the system, such as the temperature or interaction energy? Of course, otherwise this would be a short and pointless section!</p>
+<p>We start our argument by recognising that the trapped molecule is not simply sitting there waiting until it is time to hop out of the cage. Instead the molecule will be continuously vibrating within the cage, moving with a continuously changing that depends on the thermal energy of the molecule <strong>and</strong> the interaction energy between neighbours <span class="math notranslate nohighlight">\(\epsilon\)</span>. What we have here is a statistical mechanics system, meaning we are interested in the <strong>probability</strong> that the molecule will be able to escape the cage by overcoming the energy barrier <span class="math notranslate nohighlight">\(\epsilon\)</span> and that this probability is given by the Boltzmann distribution. Thus the characteristic time to escape the cage is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-tau">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-c1-tau" title="Permalink to this equation">#</a></span>\[\tau^{-1} \sim \nu\,\, \text{exp}\left(-\frac{\epsilon}{k_\text{B}T}\right)\]</div>
+<p>The exact values for <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(\epsilon\)</span> will depend on the material we are studying but from a conceptual perspective we can get some understanding if we make some reasonable estimates about these parameters. As an order of magnitude argument is only what we are interested here, we assume that the frequency <span class="math notranslate nohighlight">\(\nu\)</span> is comparable to that of the frequency of phonons near the Brillouin zone boundary which are of order THz, or <span class="math notranslate nohighlight">\(10^{12}\text{ s}^{-1}\)</span>. We then note that the upper limit on the energy barrier <span class="math notranslate nohighlight">\(\epsilon\)</span> must be the latent heat of vaporisation per molecule <span class="math notranslate nohighlight">\(\epsilon'\)</span> otherwise the molecule escapes the liquid entirely as a vapour. Experimental data shows that for many simple liquids the approximation <span class="math notranslate nohighlight">\(\epsilon \approx 0.4\epsilon'\)</span> is reasonable. Again we are interested in order of magnitudes so using the latent heat per molecule of water as <span class="math notranslate nohighlight">\(6.67\times10^{-20}\text{ J}\)</span> means that <span class="math notranslate nohighlight">\(10^{-20}\)</span> will suffice for a simple liquid.</p>
+<p>Plugging in these order of magnitude values tells us that the relaxation time of a simple liquid is of order <span class="math notranslate nohighlight">\(10^{-12}-10^{-10}\text{ s}\)</span>.</p>
+<p>Again let us stop here and think about the the implications of this, and to do so we should make reference back to <a class="reference internal" href="#fig-c1-viscoelastic"><span class="std std-numref">Fig. 7</span></a>. There are two important conclusions we can draw, one which is fairly straightforward but the other is perhaps a little surprising.</p>
+<p>We can see that the relaxation time, i.e. the characteristic time at which a viscoelastic material ‘changes’ from elastic to viscous, depends on two parameters; <span class="math notranslate nohighlight">\(\nu\)</span> which relates to the molecule itself and <span class="math notranslate nohighlight">\(\epsilon\)</span> that characterises the interaction between the molecule and its neighbours. So a viscoelastic material that has a long relaxation time will have molecules that, for reasons we will consider later, make fewer attempts to escape the cage or have a higher interaction energy with neighbouring molecules. The actual reason is somewhere between the two, but we will come back to this later in the course.\
+The second and more surprising outcome from equation <a class="reference internal" href="#equation-eq-c1-tau">(14)</a> and the paragraph that follows is that water has a characteristic time <span class="math notranslate nohighlight">\(\tau\)</span>. The implication here is that water also behaves like a viscoelastic material but only if you were to observe the response to shear at the subnanosecond domain. You might wonder why this is the case, and again we look back to <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(\epsilon\)</span> - you might start to wonder why water and simple liquids have small <span class="math notranslate nohighlight">\(\tau\)</span>, and a reasonable hypothesis could be that the size of the molecule could play a part. <strong>Hold that thought for now</strong>.</p>
+<p>Combining equations <a class="reference internal" href="#equation-eq-c1-visctau">(9)</a> and <a class="reference internal" href="#equation-eq-c1-tau">(14)</a> gives</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-arrhenius">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-c1-arrhenius" title="Permalink to this equation">#</a></span>\[\eta = \frac{G_0}{\nu}\,\text{exp}\left(\frac{\epsilon}{k_\text{B}T}\right)\]</div>
+<p>meaning that the viscosity of our viscoelastic material in the domain of <span class="math notranslate nohighlight">\(t&gt;\tau\)</span> varies <strong>exponentially</strong> with temperature. This is known as an <strong>Arrhenius</strong> form, named after the more common version in physical chemistry that gives an empirical model of how the rate constant of a chemical reaction depends on temperature.</p>
+<p>Unfortunately this is not the end of the story. Some liquids do indeed follow an Arrhenius behaviour whereas others show what some call a “super-Arrhenius” type behaviour. The temperature dependence of viscosity in these liquids is much stronger than a simple exponential behaviour. Consider <a class="reference internal" href="#fig-c1-strongfragile"><span class="std std-numref">Fig. 11</span></a>.</p>
+<div class="figure align-center" id="fig-c1-strongfragile">
+<a class="reference internal image-reference" href="_images/C1_StrongFragile.png"><img alt="Plot of normalised temperature against log of viscosity. A linear dependence is found for strong liquids (such as silicon dioxide, labelled by open triangle) whereas fragile liquids (glycerol (solid circles) and sucrose (solid triangles) do not show a linear relationship." src="_images/C1_StrongFragile.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">There are some liquids, known as strong liquids, whose viscosity-temperature depenence follows the Arrhenius form given in equation <a class="reference internal" href="#equation-eq-c1-arrhenius">(15)</a>. Other liquids are more complex and show a non-linear relationship between <span class="math notranslate nohighlight">\(\ln \eta\)</span> and <span class="math notranslate nohighlight">\(T^{-1}\)</span> - these liquids are sometimes called <strong>fragile</strong> liquids.<br />
+Care needs to be taken with the horizontal axis. It is normalised such that unity refers to the temperature at which the liquid becomes rigid (glass - see next section) and values below 1 are temperatures <strong>above</strong> this glass temperature.<br />
+The strong liquid (open triangles) is <span class="math notranslate nohighlight">\(\text{SiO}_2\)</span> whereas the fraile liquid are glycerol (solid circles) and sucrose (solid triangles). Figure from Longinotti and Corti <span id="id2">[<a class="reference internal" href="markdown.html#id4" title="M. Paula Longinotti and Horacio R. Corti. Viscosity of concentrated sucrose and trehalose aqueous solutions including the supercooled regime. Journal of Physical and Chemical Reference Data, 37(3):1503, jul 2008. URL: https://aip.scitation.org/doi/abs/10.1063/1.2932114, doi:10.1063/1.2932114.">Longinotti and Corti, 2008</a>]</span></span><a class="headerlink" href="#fig-c1-strongfragile" title="Permalink to this image">#</a></p>
+</div>
+<p>The axes in this figure are a typcial choice for studying the temperature dependence of viscosity. From equation <a class="reference internal" href="#equation-eq-c1-arrhenius">(15)</a> it follows that plotting <span class="math notranslate nohighlight">\(\ln \eta\)</span> against <span class="math notranslate nohighlight">\(\frac{1}{T}\)</span> should give a straight line with gradient equal to <span class="math notranslate nohighlight">\(\dfrac{\epsilon}{k_\text{B}}\)</span> and intercept <span class="math notranslate nohighlight">\(\dfrac{G_0}{\nu}\)</span>. Therefore any data that lies on a straight line on these axes is a liquid that shows Arrhenius-type behaviour. By plotting data from three different liquids in <a class="reference internal" href="#fig-c1-strongfragile"><span class="std std-numref">Fig. 11</span></a> we immediately see that one of them shows Arrhenius-type behaviour associated with a simple liquid (in this case, <span class="math notranslate nohighlight">\(\text{SiO}_2\)</span>) but two different sugars show a much stronger temperature dependence and are consquently not a simple liquid. Some authors call these <strong>fragile</strong> liquids though it is not used by everyone.</p>
+<p>Now, remember not long ago I told you to hold that thought? Here we have some experimental data that does support our intuition that the size of the molecules may play a part in whether a liquid is simple or not. <span class="math notranslate nohighlight">\(\text{SiO}_2\)</span> is a relatively small molecule whereas sucrose (<span class="math notranslate nohighlight">\(\text{C}_{12}\text{H}_{22}\text{O}_{11}\)</span>) is much larger - in terms of molar mass, sucrose is 6 times more massive. The two molecules are also rather different in shape too but that is something we will explore in much more detail in <a class="reference internal" href="TopicXsecY.html#topic2"><span class="std std-ref">Topic 2</span></a>.</p>
+<p>Even putting aside the fine detail regarding the role of molecule size and shape we can still gain some insight into the possible causes of the non-Arrhenius behaviour exhibited by some liquids and what happens to these materials when we cool them to a rigid but non-crystalline state known as a <strong><a class="reference internal" href="Topic1sec3.html#sec-glasses"><span class="std std-ref">glass</span></a></strong>.</p>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id3">
+<dl class="citation">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">LC08</a></span></dt>
+<dd><p>M. Paula Longinotti and Horacio R. Corti. Viscosity of concentrated sucrose and trehalose aqueous solutions including the supercooled regime. <em>Journal of Physical and Chemical Reference Data</em>, 37(3):1503, jul 2008. URL: <a class="reference external" href="https://aip.scitation.org/doi/abs/10.1063/1.2932114">https://aip.scitation.org/doi/abs/10.1063/1.2932114</a>, <a class="reference external" href="https://doi.org/10.1063/1.2932114">doi:10.1063/1.2932114</a>.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">Sad14</a></span></dt>
+<dd><p>Martin H. (Martin Howard) Sadd. <em>Elasticity : theory, applications, and numerics</em>. Elsevier, Amsterdam, third edition. edition, 2014. ISBN 0-12-410432-0.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="questions-for-practice">
+<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic1sec1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.1 What is soft matter?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic1sec3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1.3 Glasses</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hookean-solids-and-newtonian-liquids">Hookean solids and Newtonian liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shearing-a-solid-stress-and-strain">Shearing a solid - stress and strain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensile-stress-and-young-s-modulus">Tensile stress and Young’s modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-s-ratio">Poisson’s ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-moduli-with-poisson-s-ratio">Combining moduli with Poisson’s ratio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shearing-a-liquid-stress-and-strain-rate">Shearing a liquid - stress and strain rate.}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelastic-materials">Viscoelastic materials.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moduli-and-relaxation-times-at-the-atomic-level">Moduli and relaxation times at the atomic level.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-modulus-calculating-from-first-principles">Shear modulus - calculating from first principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaxation-time-viscosity-and-temperature-dependence">Relaxation time, viscosity, and temperature dependence.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,631 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.1 What is soft matter? &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic1sec1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.2 Shearing a solid or liquid" href="Topic1sec2.html" />
+    <link rel="prev" title="Topic 1" href="Topic1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1.html">Topic 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic1sec1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic1sec1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.1 What is soft matter?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonds-in-hard-and-soft-condensed-matter">Bonds in hard- and soft-condensed matter.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="what-is-soft-matter">
+<span id="topic1"></span><h1>1.1 What is soft matter?<a class="headerlink" href="#what-is-soft-matter" title="Permalink to this headline">#</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>Before we jump straight into the topic of what soft condensed matter is, it can be more useful to think about what it <strong>isn’t</strong>. The existence of soft condensed matter suggests the existence of hard condensed matter, and this is something you are already more than familiar with. Often we would shorthand these as <strong>solids</strong>; yes, those solids that you’ve been learning about since secondary / high school. Rigid materials at the macroscopic level, and at the atomic level we observe a high degree of order amongst the atoms (see <a class="reference internal" href="#fig-c1-crystals"><span class="std std-numref">Fig. 1</span></a>). These well defined structures also persist over long ranges, defined with respect to the typical bond length or size of a unit cell.</p>
+<div class="figure align-center" id="fig-c1-crystals">
+<a class="reference internal image-reference" href="_images/C1_Crystals.png"><img alt="Common crystal structures including BCC (top left, CsCl) and simple cubic (top middle, NaCl) as well as some more complex but more useful materials. For example perovskites (bottom right) are a leading contender for high efficiency photovoltaic materials." src="_images/C1_Crystals.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Common crystal structures including BCC (top left, CsCl) and simple cubic (top middle, NaCl) as well as some more complex but more useful materials. For example perovskites (bottom right) are a leading contender for high efficiency photovoltaic materials.</span><a class="headerlink" href="#fig-c1-crystals" title="Permalink to this image">#</a></p>
+</div>
+<p>We are all also familiar with what a liquid is, particularly in comparison to a solid. When we heat a solid above its melting point the well defined and long range structure breaks down as the bonds between atoms are broken. We then have a material in which the individual atoms are able to move and are more randomly distributed across larger lengthscales. At the macroscopic level we now have a material that will flow under an applied force (more on this in the <a class="reference internal" href="Topic1sec2.html#sec-c1-shearing"><span class="std std-ref">section on Shearing</span></a>).</p>
+<p>I have no doubt that you are all already familiar with what a solid and liquid look like at the atomic level but I do appreciate a nice diagram, so see <a class="reference internal" href="#fig-c1-solid-liquid"><span class="std std-numref">Fig. 2</span></a> for your viewing pleasure. Although it may seem a waste of time for me to remind you about this, it does help us to visualise what soft condensed matter might look like by comparison.</p>
+<div class="figure align-center" id="fig-c1-solid-liquid">
+<a class="reference internal image-reference" href="_images/C1_Solid_Liquid.png"><img alt="Representation of a solid (left) and liquid (right) at the atomic level. Note that the atoms in the solid are in a regular pattern and that this pattern persists across the whole figure. The atoms in the liquid are more randomly scattered and there is no long range order or pattern to their placement." src="_images/C1_Solid_Liquid.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Representation of a solid (left) and liquid (right) at the atomic level. Note that the atoms in the solid are in a regular pattern and that this pattern persists across the whole figure. The atoms in the liquid are more randomly scattered and there is no long range order or pattern to their placement.</span><a class="headerlink" href="#fig-c1-solid-liquid" title="Permalink to this image">#</a></p>
+</div>
+<p>If we are taking the comparison perspective then you might expect that if hard-condensed matter is made up of highly ordered and well defined structures then soft condensed matter surely is highly <strong>disordered</strong> and lacks and well defined structures. This is broadly true for some types of soft matter (glasses, for example) whereas other soft materials such as semi-crystaline, self assembled and biological systems can exhibit a surprising amount of structure and order. The difference between ordered hard and soft materials is that, generally, the former will more readily form the well defined structures whereas the latter often require specific internal (i.e. molecular structure) and external (e.g. temperature, applied field, etc) factors to promote the ordered structure.</p>
+<p>A great example of this is the work of Rosalind Franklin and her graduate student Raymond Gosling in identifying the structure of DNA. They were already aware that mechanical treatment and drying could obtain highly ordered specimens of sodium thymonucleate (NaDNA), and they investigated the influence of humidity and sample preparation that led to them being able to obtain high quality x-ray scattering images of DNA. <a class="reference internal" href="#fig-c1-photo51"><span class="std std-numref">Fig. 3</span></a> is the infamous Photo 51 that other scientists “borrowed” without consent, published their own work using this, and subsequently got all the recognition.</p>
+<div class="figure align-center" id="fig-c1-photo51">
+<a class="reference internal image-reference" href="_images/C1_Photo51.png"><img alt="Photo 51 from the work by Franklin and Gosling published in 1953. Their process allowed them to produce highly ordered NaDNA samples that would scatter x-rays into a diffraction pattern (central black X in figure). This scattering profile could only occur if the DNA was a double helix, rather than other structures that had been proposed by theorists of the time." src="_images/C1_Photo51.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Photo 51 from the work by Franklin and Gosling published in 1953. Their process allowed them to produce highly ordered NaDNA samples that would scatter x-rays into a diffraction pattern (central black X in figure). This scattering profile could only occur if the DNA was a double helix, rather than other structures that had been proposed by theorists of the time.</span><a class="headerlink" href="#fig-c1-photo51" title="Permalink to this image">#</a></p>
+</div>
+<p><strong>Sidenote:</strong><br />
+Although this is not a textbook definition, one way that I differentiate between hard- and soft- matter relates to the individual units. Hard condensed solids are generally atomic systems, meaning that the individual units are an atom, or sometimes small molecules, and these units are found in an ordered structure when in the solid state. The units of a soft matter system are large molecules or supra-molecular units.</p>
+<p>Or as we will see when it comes to modelling molecules in systems and in motion, it is sometimes helpful to take the even more crude differentations of small spheres (atoms - hard matter) versus long strings (large molecules - soft matter).</p>
+</div>
+<div class="section" id="bonds-in-hard-and-soft-condensed-matter">
+<h2>Bonds in hard- and soft-condensed matter.<a class="headerlink" href="#bonds-in-hard-and-soft-condensed-matter" title="Permalink to this headline">#</a></h2>
+<p>The type and amount of order and structure does give some indication as to whether a material is classed as hard- or soft-condensed, as does the nature of the individual units that make up the solid. Another related element to consider is the type of bonds that these different types of units can make with each other when forming the solid phase.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Worth emphasising that <strong>within the molecule itself</strong> the bonds are of the stronger type previously mentioned. Here we consider the interactions <strong>between</strong> molecules and not the interactions that keep a molecule together.</p>
+</div>
+</div>
+<p>The atoms in a hard-matter crystal will form stronger interatomic bonds via covalent, ionic / electrostatic or metallic bonds. These should all be familiar to you from second year so I will not go into more detail here. The molecules in soft condensed matter tend to form weaker, typically temporary or transient bonds between molecules. Key processes to be aware of are in <a class="reference internal" href="#tab-c1-forces"><span class="std std-numref">Table 1</span></a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Types of interatomic bonds<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="colwidths-given table" id="tab-c1-forces">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Type and description of different interatomic / intermolecular forces that are important for soft matter systems</span><a class="headerlink" href="#tab-c1-forces" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Summary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Van der Waals interactions</p></td>
+<td><p class="sd-card-text">An asymmetry in the electron density of an atom or molecule creates a temporary dipole. This dipole can then interact with nearby atoms or molecules that are either already charged or it can induce an opposing dipole in a neighbouring molecule.<br />
+This interaction between molecules is anisotropic (i.e. depends on relative orientation of molecules), is only attractive in the range <span class="math notranslate nohighlight">\(0.4 - 0.6\text{ nm}\)</span> (smaller and it is repulsive, larger and it is too weak to observe), and is of order <span class="math notranslate nohighlight">\(1-40 \text{ meV}\)</span> in this range.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Hydrogen bonding</p></td>
+<td><p class="sd-card-text">When a hydrogen atom is covalently bound to a more electronegative atom, the asymmetry in the electron density of the hydrogen means that another electronegative atom can weakly bind with the more ‘positive side’ of the hydrogen. An example of hydrogen bonding is between base pairs of DNA (see <a class="reference internal" href="#fig-c1-hbond"><span class="std std-numref">Fig. 4</span></a>).<br />
+Hydrogen bonding ranges from weak (<span class="math notranslate nohighlight">\(\approx 10\text{ meV}\)</span>) to stronger (<span class="math notranslate nohighlight">\(\approx1.7\text{ eV}\)</span>) though it should be noted that the stronger examples of this type of bonding are typically for very small molecules such as bifluoride. Most of the systems that utilise hydrogen bonding that are covered in this course will be at the weaker end of this range.<br />
+Hydrogen bonding can also be intramolecular, meaning that some parts of a molecule interact with other parts of the same molecule. We will explore this more in <a class="reference internal" href="TopicXsecY.html#topic2"><span class="std std-ref">Topic 2</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">screened electrostatic interactions</p></td>
+<td><p class="sd-card-text">These types of interactions involve the molecules of interest (free or bound to a surface) <strong>and</strong> other ions that are typically dissolved in a solvent. These free ions are able to move and act as a screen in the electric field between two charged molecules that are otherwise attracted or repelled as per Coulombic forces.<br />
+Thinking back to first year electrostatics, the net charge is the sum of the charges in the volume of interest, and so these screening ions change the total charge within.<br />
+Alternatively if you had two negative charges <span class="math notranslate nohighlight">\(N_1\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span> some distance <span class="math notranslate nohighlight">\(d\)</span> apart the net force would be <span class="math notranslate nohighlight">\(F_{\text{rep}}=\dfrac{q_1q_2}{4\pi\epsilon_0 d^2}\)</span>, but introducing a positive charge <span class="math notranslate nohighlight">\(P\)</span> half way between these two the net repulsive force would be reduced by the attraction between <span class="math notranslate nohighlight">\(N_1\)</span> and <span class="math notranslate nohighlight">\(P\)</span> plus <span class="math notranslate nohighlight">\(N_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span>, i.e.<br />
+<span class="math notranslate nohighlight">\(F_{\text{net repulsion}} = \frac{q_1q_2}{4\pi\epsilon_0 d^2} - \frac{q_1q_P}{4\pi\epsilon_0 \left(\frac{d}{2}\right)^2} - \frac{q_2q_P}{4\pi\epsilon_0 \left(\frac{d}{2}\right)^2} = \frac{1}{\pi\epsilon_0 d^2}\left[\frac{q_1q_2}{4}-q_P\left(q_1+q_2\right)\right]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">hydrophobic interaction</p></td>
+<td><p class="sd-card-text">Although the molecules in liquid water are not in a crystalline ordered state, they still form a hydrogen-bonded network due to the asymmetry of the water molecule structure. When a molecule that cannot form hydrogen bonds is introduced to this network it perturbs the local structure which leads to a decrease in entropy and thus increases the free energy (more on this later). If more than one molecule is added to the water then each of them will cause a local perturbation, but this perturbation is decreased if the non-water molecules cluster; if you had a cluster of molecules then only the outer shell is interracting with the water network, and the total excluded volume is smaller than the sum of excluded volumes of individual molecules (again, more on this later). This tendancy for non-water water molecules to attract is the hydrophobic interaction and is of order <span class="math notranslate nohighlight">\(5-10\text{ meV}\)</span><br />
+This is a key interaction in biological systems that utilise polar molecules with a hydrophobic and hydrophillic ends or groups. The result of this is that sophisticated structures can be self-assembled just through hydrophobic interactions.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center" id="fig-c1-hbond">
+<a class="reference internal image-reference" href="_images/C1_Hbond.png"><img alt="Hydrogen bonding between base pairs of DNA. The hydrogen associated with an NH bond is weakly 'shared'  (dashed line) with either an oxygen or nitrogen atom (both are more electronegative than the hydrogen atom) in the opposing base pair unit. The stronger NH bond means that the single electron associated with the hydrogen atom is more likely to be 'found' near the N atom, which in turn creates a small hydrogen dipole that can interact with other atoms." src="_images/C1_Hbond.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Hydrogen bonding between base pairs of DNA. The hydrogen associated with an NH bond is weakly ‘shared’  (dashed line) with either an oxygen or nitrogen atom (both are more electronegative than the hydrogen atom) in the opposing base pair unit. The stronger NH bond means that the single electron associated with the hydrogen atom is more likely to be ‘found’ near the N atom, which in turn creates a small hydrogen dipole that can interact with other atoms.</span><a class="headerlink" href="#fig-c1-hbond" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</details><p>You’ll notice that I talked about the two different bonding groups in terms of them being strong or weak<a class="footnote-reference brackets" href="#strongweak" id="id1">1</a>. These are strong or weak in comparison to thermal energy. A carbon-carbon covalent bond has an average energy of <span class="math notranslate nohighlight">\(5.72\times10^{-19}\text{ J} (\approx 3.6\text{ eV})\)</span> whereas thermal energy at room temperature is of order <span class="math notranslate nohighlight">\(3\times10^{-21}\text{J} (\approx 0.02\text{ eV})\)</span>. In other words, the bonds associated with hard condensed matter are (very roughly) <span class="math notranslate nohighlight">\(100\)</span> times larger than thermal energy, which is the reason why hard-condensed matter remains solid at room temperature even taking into account the statistical fluctations we see in thermodynamics. As you can see in the values quoted in <a class="reference internal" href="#tab-c1-forces"><span class="std std-numref">Table 1</span></a> the bond energies associated with the weaker types of bonds are comparable to thermal energy.</p>
+</div>
+<div class="section" id="questions-for-practice">
+<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="strongweak"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This is <strong>not</strong> referring to the Strong and Weak fundamental forces</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topic 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic1sec2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1.2 Shearing a solid or liquid</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonds-in-hard-and-soft-condensed-matter">Bonds in hard- and soft-condensed matter.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

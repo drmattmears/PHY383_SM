@@ -1,0 +1,669 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.2 Polymers: Ideal Chain &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic2sec2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.3 Polymers: Real Chain" href="Topic2sec3.html" />
+    <link rel="prev" title="2.1 Polymers: Types" href="Topic2sec1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic2sec2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic2sec2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.2 Polymers: Ideal Chain</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-ideal-chain">Size of ideal chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-distribution-of-an-ideal-chain">Probability distribution of an ideal chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-short-range-interactions">Effect of short-range interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-chains">Gaussian Chains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="polymers-ideal-chain">
+<span id="sec-c2-idealchain"></span><h1>2.2 Polymers: Ideal Chain<a class="headerlink" href="#polymers-ideal-chain" title="Permalink to this headline">#</a></h1>
+<div class="section" id="size-of-ideal-chain">
+<span id="sec-c2-idealchainsize"></span><h2>Size of ideal chain<a class="headerlink" href="#size-of-ideal-chain" title="Permalink to this headline">#</a></h2>
+<p>In this model we assume that our polymer chain is made up of <span class="math notranslate nohighlight">\(N\)</span> units of individual length <span class="math notranslate nohighlight">\(a\)</span>. If we then attach a vector <span class="math notranslate nohighlight">\(\textbf{a}_i\)</span> to each unit pointing to the next (i.e. pointing from unit <span class="math notranslate nohighlight">\(i\)</span> to <span class="math notranslate nohighlight">\(i+1\)</span>) unit then we are describing our polymer as a random walk in space. There is an important assumption here in that <strong>the orientation of each unit is random and independent of the direction of any other unit</strong>. An odd outcome of this is that it is possible for units of the chain to occupy the same space. This is why it is called an <strong>ideal</strong> chain, and we will address partly by considering the <a class="reference internal" href="#sec-c2-idealshort"><span class="std std-ref">effect of short-range interactions</span></a> and then in more depth when we consider what are termed <a class="reference internal" href="Topic2sec3.html#sec-c2-realchain"><span class="std std-ref">real chains</span></a>.</p>
+<p>We shall consider simplest possible model where we assume that the chain follows a regular lattice. In the two dimensional case shown in <a class="reference internal" href="#fig-c2-ideallattice"><span class="std std-numref">Fig. 24</span></a> each vector has 4 possible directions (up, right, left, and down), and moves a single step in any of these direction. This step is denoted <span class="math notranslate nohighlight">\(\textbf{a}_i\)</span> and the size is equal to one lattice spacing.</p>
+<div class="figure align-center" id="fig-c2-ideallattice">
+<a class="reference internal image-reference" href="_images/C2_IdealLattice.png"><img alt="We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines." src="_images/C2_IdealLattice.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines.</span><a class="headerlink" href="#fig-c2-ideallattice" title="Permalink to this image">#</a></p>
+</div>
+<p>The end-to-end vector <span class="math notranslate nohighlight">\(\textbf{r}\)</span> is thus the sum of the individual vectors <span class="math notranslate nohighlight">\(\textbf{a}_i\)</span>. The average value of the end-to-end vector, <span class="math notranslate nohighlight">\(\left&lt;\textbf{r}\right&gt;\)</span> is zero - the random directions each vector can take means it is equally likely for it to point along opposing directions<a class="footnote-reference brackets" href="#c2-2" id="id1">1</a>. However the average square of the end-to-end vector, <span class="math notranslate nohighlight">\(\left&lt;\textbf{r}^2\right&gt;\)</span> will tell us what we want to know. We need to take the average of all possible products between individual vectors, as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-ideal1">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-c2-ideal1" title="Permalink to this equation">#</a></span>\[\begin{split}\left&lt;\textbf{r}^2\right&gt; &amp;= \left&lt;\left(\sum\limits_{i=1}^{N}\textbf{a}_i\right)\cdot\left(\sum\limits_{j=1}^{N}\textbf{a}_j\right)\right&gt;\\
+	&amp;= \left&lt;\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{N}\textbf{a}_i\cdot\textbf{a}_j\right&gt;\\
+	&amp;= Na^2 + \left&lt;\sum\limits_{i\neq j}\textbf{a}_i\cdot\textbf{a}_j\right&gt; \label{eq:C2_Ideal1}\end{split}\]</div>
+<p>where I have taken out the <span class="math notranslate nohighlight">\(N\)</span> cases for <span class="math notranslate nohighlight">\(i=j\)</span> which makes the dot product simply equal to <span class="math notranslate nohighlight">\(a^2\)</span>. The right hand side of equation <a class="reference internal" href="#equation-eq-c2-ideal1">(16)</a> is easy to evaluate when we remember that the direction of one vector is independent and not correlated with any other vector. This means that the dot product for <span class="math notranslate nohighlight">\(i\neq j\)</span> vectors <strong>averages</strong> to zero. Thus we can state that the average (that is, the root-mean-square) size of our polymer is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-ideal2">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-c2-ideal2" title="Permalink to this equation">#</a></span>\[\sqrt{\left&lt;\textbf{r}^2\right&gt;} = aN^\frac{1}{2}\label{eq:C2_Ideal2}\]</div>
+<p>The take home prediction is that the average size of our is proportional to the distance between units and the square root of the number of units in the chain. It turns out that this rather simple approximation is extremely good, more so than we would expect from the rather simple and constrained assumptions made.</p>
+</div>
+<div class="section" id="probability-distribution-of-an-ideal-chain">
+<h2>Probability distribution of an ideal chain<a class="headerlink" href="#probability-distribution-of-an-ideal-chain" title="Permalink to this headline">#</a></h2>
+<p>Now that we have some model for the average end-to-end distance, it is insightful to also calculate the probability distribution of <span class="math notranslate nohighlight">\(\textbf{r}\)</span> to get some feel for the spread of possible <span class="math notranslate nohighlight">\(\textbf{r}\)</span> values.<br />
+First we assume that one end of our chain of <span class="math notranslate nohighlight">\(N\)</span> bonds is fixed at the origin. Let <span class="math notranslate nohighlight">\(P(\textbf{r}, N)\)</span> be the probability that the other end of the polymer is at position <span class="math notranslate nohighlight">\(\textbf{r}\)</span>. If we state that <span class="math notranslate nohighlight">\(\textbf{a}_{i=1,\ldots,z}\)</span> are the possible bond vectors the polymer can take, we can see that if the polymer has position <span class="math notranslate nohighlight">\(\textbf{r}\)</span> and <span class="math notranslate nohighlight">\(N\)</span> steps then the position vector at the <span class="math notranslate nohighlight">\((N-1)^\text{th}\)</span> step must take one of the possible <span class="math notranslate nohighlight">\(\textbf{r}-\textbf{a}_i\)</span>. There are <span class="math notranslate nohighlight">\(z\)</span> possibilities here so, assuming each are equally likely, each has a probability of <span class="math notranslate nohighlight">\(\frac{1}{z}\)</span> of occuring.
+Thus the probability of the polymer end being at <span class="math notranslate nohighlight">\(\textbf{r}\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[P(\textbf{r},N) = \frac{1}{z}\sum\limits_{i=1}^zP(\textbf{r}-\textbf{a}_i,N-1)\]</div>
+<p>Assuming the polymer is very long, such that <span class="math notranslate nohighlight">\(N\gg1\)</span> and <span class="math notranslate nohighlight">\(\left|\textbf{r}\right|\gg\left|\textbf{a}_i\right|\)</span> then the right hand side can be expanded as</p>
+<div class="math notranslate nohighlight">
+\[P(\textbf{r}-\textbf{a}_i,N-1) = P(\textbf{r},N) - \frac{\partial P}{\partial N}-\frac{\partial P}{\partial r_\alpha}a_{i\alpha}+\frac{1}{2}\frac{\partial^2P}{\partial r_\alpha \partial r_\beta}a_{i\alpha}a_{i\beta}\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s not critical if you have never seen Einstein convention before. It is basically a shorthand notation for sums, in the same way we use dot notation to save writing full derivative format.</p>
+</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(a_{i\alpha}\)</span> and <span class="math notranslate nohighlight">\(R_\alpha\)</span> are components of <span class="math notranslate nohighlight">\(\textbf{a}_i\)</span> and <span class="math notranslate nohighlight">\(\textbf{r}\)</span>, and I have used the Einstein convention for summation over repeated indicies. We next use this expansion in the previous equation and simply using</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7da70333-15ec-4b12-9cf0-e754675063b9">
+<span class="eqno">(18)<a class="headerlink" href="#equation-7da70333-15ec-4b12-9cf0-e754675063b9" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{z}\sum\limits_{i=1}^za_{i\alpha}&amp;=0		&amp;		\frac{1}{z}\sum\limits_{i=1}^za_{i\alpha}a_{i\beta}=\frac{\delta_{\alpha\beta}a^2}{3}
+\end{align}\]</div>
+<p>means that</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-ideal3">
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq-c2-ideal3" title="Permalink to this equation">#</a></span>\[\frac{\partial P}{\partial N} = \frac{a^2}{6}\frac{\partial^2 P}{\partial \textbf{r}^2}\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-c2-ideal3">(19)</a> is a differential equation that can be solved using the condition that <span class="math notranslate nohighlight">\(\textbf{r}=0\)</span> when <span class="math notranslate nohighlight">\(N=0\)</span> (i.e. <span class="math notranslate nohighlight">\(\textbf{r}\)</span> is at the origin when <span class="math notranslate nohighlight">\(N=0\)</span> or at the start of the chain), which gives</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-idealprobability">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq-c2-idealprobability" title="Permalink to this equation">#</a></span>\[P(\textbf{r},N) = \left(\frac{3}{2\pi Na^2}\right)^{\frac{3}{2}}\,\exp\left(-\frac{3\textbf{r}^2}{2Na^2}\right)\]</div>
+</div>
+<div class="section" id="effect-of-short-range-interactions">
+<span id="sec-c2-idealshort"></span><h2>Effect of short-range interactions<a class="headerlink" href="#effect-of-short-range-interactions" title="Permalink to this headline">#</a></h2>
+<p>I previously mentioned the slightly unusual situation where our simple ideal chain model allows for units to occupy the same space. Or rather we have not introduced any constraints that prevent this obviously unphysical situation from occuring. We shall now address this issue in part - the most substantial approach will be covered when we look at <a class="reference internal" href="Topic2sec3.html#sec-c2-realchain"><span class="std std-ref">the Real chain</span></a>.</p>
+<p>Let us only consider the effect of short-range interactions. It is possible for us to introduce some constraint on adjacent units, and ensure that the bond vector <span class="math notranslate nohighlight">\(\textbf{r}_{n+1}\)</span> is not allowed to point back to the previous step / unit. In other works we impose the restriction that <span class="math notranslate nohighlight">\(\textbf{r}_{n+1}\neq-\textbf{r}_n\)</span>. Instead the <span class="math notranslate nohighlight">\((n+1)\)</span> vector must take one of the remaining <span class="math notranslate nohighlight">\((z-1)\)</span> directions at random. Thus the average value of <span class="math notranslate nohighlight">\(\textbf{r}_{n+1}\)</span> will not be zero for a given <span class="math notranslate nohighlight">\(\textbf{r}_{n}\)</span> because it can point along <span class="math notranslate nohighlight">\(\textbf{r}_{n}\)</span> but not <span class="math notranslate nohighlight">\(-\textbf{r}_{n}\)</span>, creating an asymmetry in the possible configuration space.<br />
+We can still make use of the fact that the sum of all possible vectors is zero but modify it slightly to include the constraint previously mentioned, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}0 &amp;= \sum\limits_{i=1}^z\textbf{a}_i\\
+	&amp;= (z-1)\left&lt;\textbf{r}_{n+1}\right&gt;_{\textbf{r}_n}-\textbf{r}_n\\
+	\therefore \left&lt;\textbf{r}_{n+1}\right&gt;_{\textbf{r}_n} &amp;= \frac{1}{z-1}\textbf{r}_n\end{split}\]</div>
+<p>from which we then find that</p>
+<div class="math notranslate nohighlight">
+\[\left&lt;\textbf{r}_{n+1}\cdot\textbf{r}_n\right&gt; = \frac{a^2}{z-1}\]</div>
+<p>That sorts out a relationship between adjacent chains, but what about the effect between the <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\((n+2)\)</span> chain? For this we want to calculate <span class="math notranslate nohighlight">\(\left&lt;\textbf{r}_{n+2}\cdot\textbf{r}_n\right&gt;\)</span> for a fixed <span class="math notranslate nohighlight">\(\textbf{r}_{n+1}\)</span> which is found by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left&lt;\textbf{r}_{n+2}\cdot\textbf{r}_n\right&gt; &amp;= \left&lt;\left&lt;\textbf{r}_{n+2}\right&gt;_{\textbf{r}_{n+1}}\cdot\textbf{r}_n\right&gt;\\
+	&amp;= \frac{1}{z-1}\left&lt;\textbf{r}_{n+1}\cdot\textbf{r}_n\right&gt;\\
+	&amp;=\frac{a^2}{\left(z-1\right)^2}\end{split}\]</div>
+<p>We can keep doing this for the <span class="math notranslate nohighlight">\(n+3\)</span>, <span class="math notranslate nohighlight">\(n+4\)</span>, etc, and from inspection we can find the general result that</p>
+<div class="math notranslate nohighlight">
+\[\left&lt;\textbf{r}_{m}\cdot\textbf{r}_n\right&gt; = \frac{a^2}{(z-1)^{\left|n-m\right|}}\]</div>
+<p>We can reuse the definiton stated in equation <a class="reference internal" href="#equation-eq-c2-ideal1">(16)</a> but this time use the general expression above to find the average size of a polymer chain <span class="math notranslate nohighlight">\(\left&lt;\textbf{r}^2\right&gt;\)</span> taking into account the short-range interactions.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left&lt;\textbf{r}^2\right&gt; &amp;= \sum\limits_{n=1}^N\sum\limits_{m=1}^N\left&lt;\textbf{r}_n\cdot\textbf{r}_m\right&gt;\\
+&amp;=\sum\limits_{n=1}^N\sum\limits_{k=-n+1}^{N-n}\frac{a^2}{\left(z-1\right)^{|k|}}\end{split}\]</div>
+<p>When <span class="math notranslate nohighlight">\(N\)</span> is very large the right hand summation can be replaced by one for <span class="math notranslate nohighlight">\(k\)</span> over the range <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span> giving</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left&lt;\textbf{r}^2\right&gt; &amp;=\sum\limits_{n=1}^N\sum\limits_{k=-\infty}^{\infty}\frac{a^2}{\left(z-1\right)^{|k|}}\\
+&amp;= Na^2\frac{z}{z-2}\\
+\therefore \sqrt{\left&lt;\textbf{r}^2\right&gt;}  &amp;= aN^{\frac{1}{2}}\left(\frac{z}{z-2}\right)^{\frac{1}{2}}\end{split}\]</div>
+<p>Compare this result to equation <a class="reference internal" href="#equation-eq-c2-ideal2">(17)</a>. Both models predict that the root-mean-square size of the polymer chain is proportional to the square root of the number of units. The only difference when taking into consideration the short-range interactions is this additional factor of <span class="math notranslate nohighlight">\(\sqrt{\dfrac{z}{z-2}}\)</span> that is determined by the possible number of directions a unit can take. In the two dimensional lattice case (<a class="reference internal" href="#fig-c2-ideallattice"><span class="std std-numref">Fig. 24</span></a>) this additional factor would be <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, for a three dimensional lattice this reduces to <span class="math notranslate nohighlight">\(\sqrt{\frac{6}{4}}=\sqrt{1.5}\)</span>, and as we give each bond vector more possible directions (for example going beyond a simple cubic lattice) the factor <span class="math notranslate nohighlight">\(\dfrac{z}{z-2}\)</span> gets closer and closer to unity meaning the simple ideal case once again gives a very good model for a polymer chain.</p>
+</div>
+<div class="section" id="gaussian-chains">
+<h2>Gaussian Chains<a class="headerlink" href="#gaussian-chains" title="Permalink to this headline">#</a></h2>
+<p>Now for something completely different. There is one implicit assumption that we made in the previous two sections that is worth exploring further, and that is the assumption that the bond vector <span class="math notranslate nohighlight">\(\textbf{r}\)</span> has a fixed length equal to <span class="math notranslate nohighlight">\(a\)</span>.<br />
+Instead let us assume that the bond vector possesses some flexibility such that it follows a Gaussian distribution about a mean value <span class="math notranslate nohighlight">\(a\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[p(\textbf{r}) = \left(\frac{3}{2\pi a^2}\right)^{\frac{3}{2}}\,\exp\left(-\frac{3\textbf{r}^2}{2a^2}\right)\]</div>
+<p>If we write the position vector of the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> segment as <span class="math notranslate nohighlight">\(\textbf{R}_n\)</span> such that the bond vector can be restated as <span class="math notranslate nohighlight">\(\textbf{r}_n = \textbf{R}_n-\textbf{R}_{n-1}\)</span> then the probability of the \textbf{set} of position vectors <span class="math notranslate nohighlight">\(\{\textbf{R}_n\}\equiv (\textbf{R}_0, \textbf{R}_1.\ldots,\textbf{R}_N)\)</span> is proportional to</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-beadspring">
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq-c2-beadspring" title="Permalink to this equation">#</a></span>\[p(\{\textbf{R}_n\}) = \left(\frac{3}{2\pi a^2}\right)^{\frac{3N}{2}}\,\exp\left(-\frac{3}{2a^2}\sum\limits_{n=1}^N\left(\textbf{R}_n-\textbf{R}_{n-1}\right)^2\right)\]</div>
+<p>Using this probability distribution function to find an average size for the polymer requires computational modelling and as such is beyond the scope of what we are covering in this module. We can however draw one final point from this Gaussian chain model, and that is by comparing it with a chain made of a series of beads connected by springs\footnote{It’s for this reason that some books and papers call this the bead-spring model.}. Each spring is a harmonic oscillator with some natural (‘resting’) length 0. Letting <span class="math notranslate nohighlight">\(k\)</span> be the spring constant, the energy of the total bead-spring chain is</p>
+<div class="math notranslate nohighlight">
+\[U = \frac{1}{2}k\sum\limits_{n=1}^N\left(\textbf{R}_n-\textbf{R}_{n-1}\right)^2\]</div>
+<p>We can describe the equilibrium state of the chain using a distribution function that is proportional to <span class="math notranslate nohighlight">\(\exp\left(-\dfrac{U}{k_\text{B}T}\right)\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[p_\text{bead-spring}(\textbf{r}_n) \propto \exp\left(-\frac{k}{2k_\text{B}T}\sum\limits_{n=1}^{N}\left(\textbf{R}_n-\textbf{R}_{n-1}\right)^2\right)\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specifically the exponentials are equivalent. The prefactor is less important as we’re dealing with proportionalities.</p>
+</div>
+</div>
+<p>Comparing this with equation <a class="reference internal" href="#equation-eq-c2-beadspring">(21)</a> we find that they are both equivalent when</p>
+<div class="math notranslate nohighlight">
+\[k =\frac{3k_\text{B}T}{a^2}\]</div>
+<p>The take home message here is that we are able to model a polymer chain as a series of connected springs with a spring constant that depends on the bond length and the temperature of the system. It logically follows that a chain with stiffer springs will be more coiled and compressed than softer springs, so there is the beginning of an expectation that the size of a polymer (and how coiled up it is) will depend on the temperature. Keep this logical, albeit very hand-wavey, argument in the back of your mind for later.</p>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Bibliography<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="target" id="id2"></span></div>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="questions-for-practice">
+<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Question 2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Question</label><div class="sd-tab-content docutils">
+<p>QUESTION TEXT HERE</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Hint</label><div class="sd-tab-content docutils">
+<p>HINT TEXT HERE</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>SOLUTION TEXT HERE</p>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="c2-2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Pointing along <span class="math notranslate nohighlight">\(+x\)</span> is equally likely to pointing along <span class="math notranslate nohighlight">\(-x\)</span>, for example, and similarly for any direction and its antiparallel direction. The fact that every direction has a possible antiparallel one is a key feature of the ideal model.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic2sec1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2.1 Polymers: Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic2sec3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.3 Polymers: Real Chain</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-ideal-chain">Size of ideal chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-distribution-of-an-ideal-chain">Probability distribution of an ideal chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-short-range-interactions">Effect of short-range interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-chains">Gaussian Chains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
