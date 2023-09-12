@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.2 - Liquid-liquid unmixing &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic3sec2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="3.1 - Introduction" href="Topic3sec1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1.html">Topic 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3.html">Topic 3 - Phase Transitions of Polymer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3sec1.html">3.1 - Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.2 - Liquid-liquid unmixing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic3sec2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic3sec2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3.2 - Liquid-liquid unmixing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium-phase-diagrams">Equilibrium phase diagrams.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixing-polymers-the-polymer-blend">Mixing polymers - the polymer blend.</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="section" id="liquid-liquid-unmixing">
+<h1>3.2 - Liquid-liquid unmixing<a class="headerlink" href="#liquid-liquid-unmixing" title="Permalink to this headline">#</a></h1>
+<div class="section" id="equilibrium-phase-diagrams">
+<h2>Equilibrium phase diagrams.<a class="headerlink" href="#equilibrium-phase-diagrams" title="Permalink to this headline">#</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Miscible: capable of being mixed.</p>
+</div>
+</div>
+<p>In this example we are going to consider to partially miscible liquids that are mixed at high temperatures but unmix at lower temperatures. We consider partially miscible because we want to understand the phase transition of two liquids A and B from mixed to unmixed or vice versa (shown in <a class="reference internal" href="#fig-c3-liquidliquid"><span class="std std-numref">Fig. 44</span></a>), in particular in understanding the free energy of these states.</p>
+<div class="figure align-center" id="fig-c3-liquidliquid">
+<a class="reference internal image-reference" href="_images/C3_LiquidLiquid.png"><img alt="A system comprised of two liquids A and B that are either unmixed (left) or completely mixed (right)." src="_images/C3_LiquidLiquid.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">A system comprised of two liquids A and B that are either unmixed (left) or completely mixed (right).</span><a class="headerlink" href="#fig-c3-liquidliquid" title="Permalink to this image">#</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not completely true as we will have some interaction energy at the interface between A and B, but we will assume that this is negligible in comparison.</p>
+</div>
+</div>
+<p>In the unmixed state the total free energy is equal to the sum of the free energies for the two phases, i.e. <span class="math notranslate nohighlight">\(F_A+F_B\)</span>. If the free energy of the mixed state is <span class="math notranslate nohighlight">\(F_{A+B}\)</span> then the free energy of mixing is</p>
+<div class="math notranslate nohighlight">
+\[F_{mix} = F_{A+B}-(F_A+F_B)\]</div>
+<p>and if we can predict how <span class="math notranslate nohighlight">\(F_{mix}\)</span> changes with respect to the change in entropy and energy on mixing, <span class="math notranslate nohighlight">\(S_{mix}\)</span> and <span class="math notranslate nohighlight">\(U_{mix}\)</span> respectively, we can predict the phase behaviour of our liquids.</p>
+<p>First we will consider the entropy of the system. To do this we are going return to the idea of constraining our molecules to a lattice (see <a class="reference internal" href="Topic2sec3.html#fig-c2-polymersolvent"><span class="std std-numref">Fig. 28</span></a> for example). In <a class="reference internal" href="#fig-c3-lattice"><span class="std std-numref">Fig. 45</span></a> the liquids are mixed and sites are occupied by <strong>either</strong> an A <strong>or</strong> B molecule.</p>
+<div class="figure align-center" id="fig-c3-lattice">
+<a class="reference internal image-reference" href="_images/C3_Lattice.png"><img alt="A lattice model of a mixed liquid-liquid system. Despite using a lattice model we are not assuming there is any long range order in the system. The lattice acts as a tool to simplify how we identify and count neighbouring interactions." src="_images/C3_Lattice.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">A lattice model of a mixed liquid-liquid system. Despite using a lattice model we are not assuming there is any long range order in the system. The lattice acts as a tool to simplify how we identify and count neighbouring interactions.</span><a class="headerlink" href="#fig-c3-lattice" title="Permalink to this image">#</a></p>
+</div>
+<p>We can consider the concentration of molecules in terms of the volume fractions <span class="math notranslate nohighlight">\(\phi_A\)</span> and <span class="math notranslate nohighlight">\(\phi_B\)</span> where we assume the volume of each molecule is the same. If the material is incompressible then <span class="math notranslate nohighlight">\(\phi_A+\phi_B=1\)</span>.<br />
+The lattice shown in <a class="reference internal" href="#fig-c3-lattice"><span class="std std-numref">Fig. 45</span></a> is just a sample ‘snapshot’ of the system; in reality we do not know whether a given site on the lattice is occupied by an A or B molecule, but we do know it must be one or the other. This allows us to use some statistical mechanics, namely the Boltzmann equation</p>
+<div class="math notranslate nohighlight">
+\[S=-k_\text{B}\sum_ip_i\ln p_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the probability that a lattice site is in a particular state <span class="math notranslate nohighlight">\(i\)</span>, which in our case is either A or B. Thus the entropy of mixing <strong>per site</strong> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{mix} &amp;= -k_\text{B}\left(p_A\ln p_A + p_B\ln p_B\right)\\
+		&amp;= -k_\text{B}\left(\phi_A\ln \phi_A + \phi_B\ln \phi_B\right)\end{split}\]</div>
+<p>where the probabilities are equal to the volume fractions because the total volume <span class="math notranslate nohighlight">\(V\)</span> is constant.</p>
+<p>But what about the energy of mixing? We’ve actually already covered the concepts behind defining this change in energy when we discussed the <a class="reference internal" href="Topic2sec3.html#fig-c2-epsilon"><span class="std std-ref"><span class="math notranslate nohighlight">\(\Theta\)</span> temperature</span></a>. Instead of considering a polymer-solvent interaction we now need to think about A-B interactions.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We assume that only neighbouring interactions contribute, and any next nearest neighbours and beyond have no energy of interaction.</p>
+</div>
+</div>
+<p>Looking at our lattice again there are three types of energy interactions between neighbouring sites. Two of these are for similar molecules, i.e. AA and BB, and the third is for different molecules AB. The interaction energy for each of these is thus <span class="math notranslate nohighlight">\(\epsilon_{AA}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{BB}\)</span> and <span class="math notranslate nohighlight">\(\epsilon_{AB}\)</span> respectively.</p>
+<p>We use a mean field assumption that everything looks roughly the same across the whole mixed solution, meaning there are no local fluctuations. If each site has <span class="math notranslate nohighlight">\(z\)</span> nearest neighbours then the interaction energy per site in the <strong>mixed state</strong> is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c3-umixed">
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-c3-umixed" title="Permalink to this equation">#</a></span>\[U_\text{fully mixed}= \frac{z}{2}\left(U_A\phi_A+U_B\phi_B\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(U_A\)</span> is the average interaction energy an A molecule would have at a given site, and is</p>
+<div class="math notranslate nohighlight">
+\[U_A = \phi_A\epsilon_{AA}+\phi_B\epsilon_{AB}\]</div>
+<p>and similarly</p>
+<div class="math notranslate nohighlight">
+\[U_B = \phi_A\epsilon_{AB}+\phi_B\epsilon_{BB}\]</div>
+<p>which means that equation <a class="reference internal" href="#equation-eq-c3-umixed">(51)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[U_\text{fully mixed} =\frac{z}{2}\left(\phi_A^2\epsilon_{AA}+\phi_B^2\epsilon_{BB}+2\phi_A\phi_B\epsilon_{AB} \right).\]</div>
+<p>In the completely unmixed state\footnote{Again, we ignore the interface between the unmixed volumes.} is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U_\text{unmixed} &amp;= U_A + U_B\\
+		&amp;= \frac{z}{2}\left(\phi_A\epsilon_{AA}+\phi_B\epsilon_{BB}\right)\end{split}\]</div>
+<p>The total energy of mixing is thus the difference between the mixed and unmixed states above. This is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U_{mix} &amp;= \frac{z}{2}\left[\left(\phi_A^2\epsilon_{AA}+\phi_B^2\epsilon_{BB}+2\phi_A\phi_B\epsilon_{AB} \right) - \left(\phi_A\epsilon_{AA}+\phi_B\epsilon_{BB}\right)\right]\\
+	&amp;=\frac{z}{2}\left[\epsilon_{AA}(\phi_A^2-\phi_A)+\epsilon_B(\phi_B^2-\phi_B)+2\phi_A\phi_B\epsilon_{AB}\right]\end{split}\]</div>
+<p>Remembering again that we assume the system is incompressible and only contains A and B molecules, then <span class="math notranslate nohighlight">\(\phi_A+\phi_B=1\)</span>. If we now only consider everything in terms of polymer A such that <span class="math notranslate nohighlight">\(\phi_A=\phi\)</span> then <span class="math notranslate nohighlight">\(\phi_B = 1-\phi\)</span> and so the expression for the interaction energy of mixing is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U_{mix} &amp;= \frac{z}{2}\left[\epsilon_{AA}\left(\phi^2-\phi\right)+\epsilon_B\left((1-\phi)^2-(1-\phi)\right)+2\phi(1-\phi)\epsilon_{AB}\right]\\
+&amp;= \frac{z}{2}\left[\epsilon_{AA}\phi\left(\phi-1\right)+\epsilon_B\phi\left(\phi - 1\right)+2\phi(1-\phi)\epsilon_{AB}\right]\\
+&amp;= \frac{z}{2}\phi(1-\phi)\left[2\epsilon_{AB}-\epsilon_{AA}-\epsilon_{BB}\right]\\
+&amp;= \chi\phi(1-\phi)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi\)</span> is the Flory interaction parameter that we first saw back in equation <a class="reference internal" href="Topic2sec3.html#equation-eq-c2-polymersolvent3">(31)</a> and is</p>
+<div class="math notranslate nohighlight">
+\[\chi = \frac{z}{2k_\text{B}T}\left(2\epsilon_{AB}-\epsilon_{AA}-\epsilon_{BB}\right)\]</div>
+<p>Bringing this all together means we can state the <strong>free energy of mixing</strong> per lattice site as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c3-mixing">
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq-c3-mixing" title="Permalink to this equation">#</a></span>\[\begin{split}F_{mix} &amp;= U_{mix}-TS_{mix}\\
+	&amp;= \phi\ln\phi + (1-\phi)\ln(1-\phi) + \chi\phi(1-\phi)\\
+	[&amp;=\phi_A\ln\phi_A + \phi_B\ln\phi_B + \chi\phi_A\phi_B]\end{split}\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-c3-mixing">(52)</a> is, despite the simplicity of the expression, very powerful in describing how a liquid-liquid system will behave in terms of phase transitions. The two key terms here are the composition <span class="math notranslate nohighlight">\(\phi\)</span> and the interaction parameter <span class="math notranslate nohighlight">\(\chi\)</span>, so we can seek to understand the phase behaviour by plotting the free energy for different <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\chi\)</span> as shown in <a class="reference internal" href="#fig-c3-mixing"><span class="std std-numref">Fig. 46</span></a>.</p>
+<div class="figure align-center" id="fig-c3-mixing">
+<a class="reference internal image-reference" href="_images/C3_Mixing.png"><img alt="Equation {eq}`eq:C3_Mixing` for simple molecular liquid-liquid system plotted as a function of volume fraction, with curves for different interaction parameters included." src="_images/C3_Mixing.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Equation <a class="reference internal" href="#equation-eq-c3-mixing">(52)</a> for simple molecular liquid-liquid system plotted as a function of volume fraction, with curves for different interaction parameters included.</span><a class="headerlink" href="#fig-c3-mixing" title="Permalink to this image">#</a></p>
+</div>
+<p>For values of <span class="math notranslate nohighlight">\(\chi\leq2\)</span> the curve has a single minimum at <span class="math notranslate nohighlight">\(\phi=0.5\)</span> whereas for <span class="math notranslate nohighlight">\(\chi\geq2\)</span> we find a <strong>maximum</strong> at <span class="math notranslate nohighlight">\(\phi=0.5\)</span> and two minima either side of this.</p>
+<p>Great, you’ve got a pretty graph with one bump or two. So what? Well we can interpret what these graphs mean physically if we consider how a physical system will behave in terms of a mixed versus unmixed states.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are only considering molecule A, so <span class="math notranslate nohighlight">\(\phi_0=\phi_{0,A}\)</span>, and similarly <span class="math notranslate nohighlight">\(\phi_1=\phi_{1,A}\)</span>, etc.</p>
+</div>
+</div>
+<p>To do this we consider a volume <span class="math notranslate nohighlight">\(V_0\)</span> whose starting volume fraction of molecule A is <span class="math notranslate nohighlight">\(\phi_0\)</span>. The mixture is then allowed to separate into two phases with volumes <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(V_2\)</span> and corresponding volume fractions of A <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span>. The process of unmixing would not change the total amount of A and B in the system, and so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi_0V_0 &amp;= \phi_1V_1 + \phi_2V_2\\
+\therefore \phi_0 &amp;= \alpha_1\phi_1 + \alpha_2\phi_2\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the relative proportion of the two phases, and consequently <span class="math notranslate nohighlight">\(\alpha_1+\alpha_2 = 1\)</span>. Thus the total energy of the phase-separate system is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F_\text{sep} &amp;= \alpha_1F_{mix}(\phi_1)+\alpha_2F_{mix}(\phi_2)\\
+		&amp;= \frac{\phi_0-\phi_2}{\phi_1-\phi_2}F_{mix}(\phi_1) + \frac{\phi_1-\phi_0}{\phi_1-\phi_2}F_{mix}(\phi_2)\end{split}\]</div>
+<p>Interpreting this is insightful but not immediately obvious. The free energy at separation is related to the sum of the individual free energies of phases 1 and 2, which we expect. The prefactors to these free energies are a weighting term that considers the ‘distance’ between the unmixed and mixed compositions normalised by the total ‘distance’ between the two unmixed compositions. This is a little easier to see graphically in <a class="reference internal" href="#fig-c3-mix12"><span class="std std-numref">Fig. 47</span></a>.</p>
+<div class="figure align-center" id="fig-c3-mix12">
+<a class="reference internal image-reference" href="_images/C3_Mix12.png"><img alt="Free energy curves for $\chi&lt;2$ (left) and $\chi&gt;2$ (right). The free energy of unmixing into two separate volume fractions $\phi_1$ and $\phi_2$ is compared to that at the mixed phase $\phi_0$." src="_images/C3_Mix12.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Free energy curves for <span class="math notranslate nohighlight">\(\chi&lt;2\)</span> (left) and <span class="math notranslate nohighlight">\(\chi&gt;2\)</span> (right). The free energy of unmixing into two separate volume fractions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span> is compared to that at the mixed phase <span class="math notranslate nohighlight">\(\phi_0\)</span>.</span><a class="headerlink" href="#fig-c3-mix12" title="Permalink to this image">#</a></p>
+</div>
+<p>In this figure we can see the free energy of the mixed state <span class="math notranslate nohighlight">\(F_0\)</span> (black) by simply finding the value of the curve when <span class="math notranslate nohighlight">\(\phi=\phi_0\)</span>. For the unmixed states we find the two free energies associated with the two compositions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span>, and draw a line between the two free energies. We then find the value of the free energy on this line when <span class="math notranslate nohighlight">\(\phi=\phi_0\)</span>.\
+In the case of the left hand curve of <a class="reference internal" href="#fig-c3-mix12"><span class="std std-numref">Fig. 47</span></a> we see that <span class="math notranslate nohighlight">\(F_0&lt;F_\text{sep}\)</span> which means the free energy of the mixed system is lower than the separated system, and consequently any unmixing would require additional energy. Remaining mixed is more energetically favourable meaning the system is stable.</p>
+<p>Turning our attention to the right hand curve we see that, for the starting composition <span class="math notranslate nohighlight">\(\phi_0\)</span> there are some compositions of an unmixed system that have a <strong>lower</strong> total free energy, and the one with the lowest possible free energy is formed when there is a common tangent at both points <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span>. These compositions are known as the <strong>coexisting</strong> compositions, and the line that is formed when the interaction parameter <span class="math notranslate nohighlight">\(\chi\)</span> is changed (normally by changing the temperature) is known as the binodal or <strong>coexistence curve</strong>. We will come back to this shortly, but before then we need to think more deeply about the curvature of <a class="reference internal" href="#fig-c3-mix12"><span class="std std-numref">Fig. 47</span></a> as this will tell us about the <strong>local</strong> stability of a mixture.</p>
+<div class="figure align-center" id="fig-c3-mix3">
+<a class="reference internal image-reference" href="_images/C3_Mix3.png"><img alt="Local stability is determined by the curvature of the free energy diagram. If the curvature is negative (around $\phi_B$) then the system is unstable, whereas a positive curvature (around $\phi_A$) is metastable." src="_images/C3_Mix3.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Local stability is determined by the curvature of the free energy diagram. If the curvature is negative (around <span class="math notranslate nohighlight">\(\phi_B\)</span>) then the system is unstable, whereas a positive curvature (around <span class="math notranslate nohighlight">\(\phi_A\)</span>) is metastable.</span><a class="headerlink" href="#fig-c3-mix3" title="Permalink to this image">#</a></p>
+</div>
+<p>When the curvature <span class="math notranslate nohighlight">\(\dfrac{\mathrm{d}^2F}{\mathrm{d}\phi^2}\)</span> is negative, such as the region about <span class="math notranslate nohighlight">\(\phi_B\)</span> in <a class="reference internal" href="#fig-c3-mix3"><span class="std std-numref">Fig. 48</span></a> then the free energy due to separation is lower when the system locally separates out into two phases. All that is required is for a small local fluctuation to occur, which will occur due to the statistical nature of thermodynamics, that causes the system to phase separate. We would say that <span class="math notranslate nohighlight">\(\phi_B\)</span> composition is <strong>unstable</strong>.</p>
+<p>However for <span class="math notranslate nohighlight">\(\phi_A\)</span> (i.e. when the curvature is positive) any small fluctuations in phases will increase the free energy and so even though <span class="math notranslate nohighlight">\(\phi_A\)</span> does not have the lowest free energy possible, there needs to be a significant driving process to cause the system to phase separate; small scale fluctuations will not cause the system, but the system could phase separate out under the right conditions. As such we would call <span class="math notranslate nohighlight">\(\phi_A\)</span> <strong>metastable</strong>.</p>
+<p>Finally the condition when <span class="math notranslate nohighlight">\(\dfrac{\mathrm{d}^2F}{\mathrm{d}\phi^2}=0\)</span> defines the boundary between meta- and unstable, and the locus of these points on a <span class="math notranslate nohighlight">\(\phi,\chi\)</span> curve is known as the <strong>spinodal line</strong>. We can combine the spinodal and coexistence curves into a single <strong>phase diagram</strong> as shown in <a class="reference internal" href="#fig-c3-mix4"><span class="std std-numref">Fig. 49</span></a>.</p>
+<div class="figure align-center" id="fig-c3-mix4">
+<a class="reference internal image-reference" href="_images/C3_Mix4.png"><img alt="A phase diagram for a simple molecular liquid-liquid system." src="_images/C3_Mix4.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">A phase diagram for a simple molecular liquid-liquid system.</span><a class="headerlink" href="#fig-c3-mix4" title="Permalink to this image">#</a></p>
+</div>
+<p>Plotting these requires us to have a slightly more rigorous understanding of both the coexistence and spinodal lines, but we already have the starting points in the qualitative descriptions above.<br />
+For the coexistence curve we need to find a common tangent of the free energy at the compositions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span>, which means</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial F_{mix}}{\partial \phi}\right)_{\phi=\phi_1} = \left(\frac{\partial F_{mix}}{\partial \phi}\right)_{\phi=\phi_2}\]</div>
+<p>For the simple case of a symmetric lattice mixture (i.e. A and B are the same size) then the common tangent has gradient of zero, and so</p>
+<div class="math notranslate nohighlight" id="equation-eq-c3-coexistence">
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq-c3-coexistence" title="Permalink to this equation">#</a></span>\[\left(\frac{\partial F_{mix}}{\partial \phi}\right)_{\phi=\phi_1} = \left(\frac{\partial F_{mix}}{\partial \phi}\right)_{\phi=\phi_2} = k_\text{B}T\left[\ln\phi-\ln(1-\phi)+\chi(1-2\phi)\right) = 0\]</div>
+<p>We can rearrange this to find the binodal <span class="math notranslate nohighlight">\(\chi_b\)</span>;</p>
+<div class="math notranslate nohighlight" id="equation-eq-c3-binodal">
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq-c3-binodal" title="Permalink to this equation">#</a></span>\[\begin{split}\chi_b &amp;= \frac{1}{2\phi-1}\left(\ln\phi - \ln(1-\phi)\right)\\
+	&amp;= \frac{1}{2\phi-1}\ln\left(\frac{\phi}{1-\phi}\right)\end{split}\]</div>
+<p>which when plotted on the phase diagram in <a class="reference internal" href="#fig-c3-mix4"><span class="std std-numref">Fig. 49</span></a> gives the red (lower, solid) curve.</p>
+<p>The spinodal line is found through</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 F_{mix}}{\partial \phi^2}=k_\text{B}T\left[\frac{1}{\phi}+\frac{1}{1-\phi}-2\chi\right]  =0\]</div>
+<p>from which we can solve to find the spinodal <span class="math notranslate nohighlight">\(\chi_s\)</span>;</p>
+<div class="math notranslate nohighlight" id="equation-eq-c3-spinodal">
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq-c3-spinodal" title="Permalink to this equation">#</a></span>\[\chi_s = \frac{1}{2}\left[\frac{1}{\phi}+\frac{1}{1-\phi}\right]\]</div>
+<p>We can use this to find the <strong>critical point</strong> which is the point where the coexistence and spinodal curves meet. It is also the lowest point on the spinodal curve meaning</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \chi_s}{\partial \phi} = \frac{1}{2}\left[-\frac{1}{\phi^2}+\frac{1}{(1-\phi)^2}\right]=0\]</div>
+<p>which occurs at <span class="math notranslate nohighlight">\(\phi = \frac{1}{2}\)</span> in the case of a symmetric, molecular liquid. Plugging this in to equation <a class="reference internal" href="#equation-eq-c3-spinodal">(55)</a> gives the critical interaction parameter <span class="math notranslate nohighlight">\(\chi_c=2\)</span>.</p>
+<p>All of this has considered the phase behaviour of two <strong>molecular</strong> liquids. Now we will extend the system to consider a binary mixture of polymers, known as a <strong>polymer blend</strong>.</p>
+</div>
+<div class="section" id="mixing-polymers-the-polymer-blend">
+<h2>Mixing polymers - the polymer blend.<a class="headerlink" href="#mixing-polymers-the-polymer-blend" title="Permalink to this headline">#</a></h2>
+<p>Now instead of having two species A and B comprising of small molecules that each sit neatly in one lattice site, we now have two species of polymers with degree of polymerisation <span class="math notranslate nohighlight">\(N_A\)</span> and <span class="math notranslate nohighlight">\(N_B\)</span> respectively.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See page 139 of <span id="id1">[<a class="reference internal" href="Topic2sec4.html#id24" title="Michael Rubinstein. Polymer physics. Oxford University Press, Oxford ; New York, N.Y., 2003. ISBN 9780198520597.">Rubinstein, 2003</a>]</span> if interested in the derivation.</p>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{F_{mix}}{k_\text{B}T} = \frac{\phi}{N_A}\ln\phi + \frac{1-\phi}{N_B}\ln(1-\phi)+\chi\phi(1-\phi)\]</div>
+<p>The good news is that we’ve already gone through the process once before to find the coexistence and spinodal curves, so all we need to do now is repeat the process but instead using the free energy of mixing for a polymer blend stated above. To simplify things a little we will consider only the symmetric case where <span class="math notranslate nohighlight">\(N_A = N_B = N\)</span></p>
+<p>For the coexistence curve we reuse equation <a class="reference internal" href="#equation-eq-c3-coexistence">(53)</a> and find</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(\frac{\partial F_{mix}}{\partial \phi}\right) &amp;= k_\text{B}T\left[\frac{\ln\phi}{N}-\frac{ln(1-\phi)}{N}+\chi(1-2\phi) \right] = 0\\
+\therefore \chi_b &amp;= \frac{1}{(2\phi-1)N}\ln\left(\frac{\phi}{1-\phi}\right)\end{split}\]</div>
+<p>Comparing this to equation <a class="reference internal" href="#equation-eq-c3-binodal">(54)</a> for a simple liquid we find that</p>
+<div class="math notranslate nohighlight">
+\[\chi_{b, \text{blend}}=\frac{\chi_{b, \text{simple}}}{N}\]</div>
+<p>We find a similar result for the spinodal</p>
+<div class="math notranslate nohighlight">
+\[\chi_{s, \text{blend}} = \frac{1}{2N}\left[\frac{1}{\phi}+\frac{1}{1-\phi}\right] = \frac{\chi_{s,\text{ simple}}}{N}\]</div>
+<p>The most important result here is that the critical interaction parameter also decreases by a factor of <span class="math notranslate nohighlight">\(N\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\chi_{c, \text{ blend}} = \frac{\chi_{c, \text{ simple}}}{N} = \frac{2}{N}\]</div>
+<p>and to understand why this is important we need to look back at <a class="reference internal" href="#fig-c3-mix4"><span class="std std-numref">Fig. 49</span></a>. Notice that the critical interaction parameter is the <strong>lowest</strong> point on both the spinodal and coexistence curve and it also sets the upper value on <span class="math notranslate nohighlight">\(\chi\)</span> for which all volume fractions are stable. As we increase the degree of polymerisation <span class="math notranslate nohighlight">\(N\)</span> the critical value decreases, meaning the one phase / stable region on the phase diagram gets smaller and smaller.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is why it’s necessary to separate out plastic types when recycling, and why it’s a costly and more complicated process than one might initially think.</p>
+</div>
+</div>
+<p>This restricts the possible volume fractions in which a polymer blend can remain stable and, consequently, most <strong>polymers will not mix</strong> unless we can make <span class="math notranslate nohighlight">\(\chi\leq\frac{2}{N}\)</span>. Remembering that our simple model gives <span class="math notranslate nohighlight">\(\chi\propto T^{-1}\)</span> this requires high temperatures for mixing to occur, and even then a small fluctuation will often cause phase separation to occur.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic3sec1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3.1 - Introduction</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium-phase-diagrams">Equilibrium phase diagrams.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixing-polymers-the-polymer-blend">Mixing polymers - the polymer blend.</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

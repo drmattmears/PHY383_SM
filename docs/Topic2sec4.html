@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.4 Polymers: Back to macroscopic &#8212; PHY383 - Soft Matter Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic2sec4';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2.3 Polymers: Real Chain" href="Topic2sec3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY383: Introduction to Soft Matter and Biological Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.4 Polymers: Back to macroscopic</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic2sec4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic2sec4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.4 Polymers: Back to macroscopic</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rubber-elasticity">Rubber elasticity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelasticity">Viscoelasticity.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creep-compliance">Creep compliance.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stress-relaxation-modulus">Stress relaxation modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#characterising-the-viscoelastic-behaviour">Characterising the viscoelastic behaviour.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelasticity-for-polymer-melts">Viscoelasticity for polymer melts.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-and-reptation">Entanglement and reptation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tube-model-and-reptation">Tube model and reptation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-gels-and-polymer-brushes">Polymer gels and polymer brushes.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-gels">Polymer gels}</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#swelling-a-gel-in-theta-solvents">Swelling a gel in <span class="math notranslate nohighlight">\(\theta\)</span>-solvents}</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-brushes">Polymer brushes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="polymers-back-to-macroscopic">
+<h1>2.4 Polymers: Back to macroscopic<a class="headerlink" href="#polymers-back-to-macroscopic" title="Permalink to this headline">#</a></h1>
+<div class="section" id="rubber-elasticity">
+<h2>Rubber elasticity<a class="headerlink" href="#rubber-elasticity" title="Permalink to this headline">#</a></h2>
+<p>We have spent the past few sections considering polymers at the individual molecular level, and somewhat abstractly thought about how polymer chains behave in different concentrations. We can now take this knowledge of the molecular domain and see whether it can explain some of the macroscopic properties we covered at the start of the course when we examined <a class="reference internal" href="Topic1sec2.html#sec-c1-shearing"><span class="std std-ref">shearing of different materials</span></a>. We will first consider the elastic properties of rubber materials with the understanding that these materials are made up of many many polymer chains.</p>
+<div class="figure align-center" id="fig-c2-crosslink">
+<a class="reference internal image-reference" href="_images/C2_Crosslink.png"><img alt="A conceptual model of a rubbery material. The rubber is made up of lots of polymer chains (blue lines) with crosslinks where chains cross over one another (red dots)." src="_images/C2_Crosslink.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">A conceptual model of a rubbery material. The rubber is made up of lots of polymer chains (blue lines) with crosslinks where chains cross over one another (red dots).</span><a class="headerlink" href="#fig-c2-crosslink" title="Permalink to this image">#</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Crosslink: a site where two or more polymer chains intersect. These could be <strong>physical</strong> crosslinks where chains entangle, or <strong>chemical</strong> crosslinks where the crosslink monomers allow for a cross or star shape topology. In this model we are not concerned which type they are.</p>
+</div>
+</div>
+<p>Start by assuming our rubber material is made up of polymer chains with <span class="math notranslate nohighlight">\(n\)</span> crosslinks per unit volume (i.e. the <strong>crosslink density</strong>.) <a class="reference internal" href="#fig-c2-crosslink"><span class="std std-numref">Fig. 33</span></a> provides a schematic of this, with the red dots indicating crosslinks in the system.</p>
+<p>At this point we make use of the <strong>affine deformation assumption</strong>, which can be summarised as any linear transformation of the macroscopic material is also applied at the molecular level. So, if the sample dimensions change by some linear transformation</p>
+<div class="math notranslate nohighlight">
+\[l_x,l_y,l_z \rightarrow \lambda_xl_x,\lambda_yl_y,\lambda_zl_z\]</div>
+<p>then any point of a polymer chain will also transform by the same scales, i.e.</p>
+<div class="math notranslate nohighlight">
+\[(x,y,z) \rightarrow (\lambda_xx,\lambda_yy,\lambda_zz)\]</div>
+<div class="figure align-center" id="fig-c2-affine">
+<a class="reference internal image-reference" href="_images/C2_Affine.png"><img alt="The affine deformation assumption means that any linear transformation applied to the macroscopic material is 'replicated' at the molecular level. The thicker blue line is a single chain with one end fixed at the origin." src="_images/C2_Affine.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">The affine deformation assumption means that any linear transformation applied to the macroscopic material is ‘replicated’ at the molecular level. The thicker blue line is a single chain with one end fixed at the origin.</span><a class="headerlink" href="#fig-c2-affine" title="Permalink to this image">#</a></p>
+</div>
+<p>Let us focus on a single polymer strand in the material. We shall fix one end of the chain at the origin (bottom left in <a class="reference internal" href="#fig-c2-affine"><span class="std std-numref">Fig. 34</span></a>, emphasised with a thicker line). The coordinate of the other end of the chain is <span class="math notranslate nohighlight">\((x,y,z)\)</span> and <span class="math notranslate nohighlight">\((\lambda_xx,\lambda_yy,\lambda_zz)\)</span> respectively, which allows us to calculate the original chain length <span class="math notranslate nohighlight">\(r_0\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[r_0^2 = x^2+y^2+z^2\]</div>
+<p>and the length after stretching is</p>
+<div class="math notranslate nohighlight">
+\[r_1^2 = \lambda_x^2x^2 + \lambda_y^2y^2 + \lambda_z^2z^2\]</div>
+<p>Recall that the entropy of a chain with length <span class="math notranslate nohighlight">\(r\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[S(r) = -\frac{3k_\text{B}r^2}{2Na^2} + \text{constant}\]</div>
+<p>and so the <strong>change</strong> in entropy due to stretching our rubber polymer chain is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-affine1">
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-c2-affine1" title="Permalink to this equation">#</a></span>\[\Delta S_\text{molecule} = -\frac{3k_\text{B}}{2Na^2}\left[\left(\lambda_x^2-1\right)x^2+\left(\lambda_y^2-1\right)y^2+\left(\lambda_z^2-1\right)z^2\right]\]</div>
+<p>As the unstretched molecule obeys random walk statistics we can reuse a previous result that</p>
+<div class="math notranslate nohighlight">
+\[\left&lt;x^2\right&gt; = \left&lt;y^2\right&gt; = \left&lt;z^2\right&gt; = \frac{Na^2}{3}\]</div>
+<p>which means that equation <a class="reference internal" href="#equation-eq-c2-affine1">(36)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[\Delta S_\text{molecule} = -\frac{k_\text{B}}{2}\left(\lambda_x^2+\lambda_y^2+\lambda_z^2-3\right)\]</div>
+<p>If there are <span class="math notranslate nohighlight">\(n\)</span> molecules per unit volume the change in entropy per unit volume of the rubbery material is thus</p>
+<div class="math notranslate nohighlight">
+\[\Delta S_\text{volume} = -\frac{nk_\text{B}}{2}\left(\lambda_x^2+\lambda_y^2+\lambda_z^2-3\right)\]</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Example - linear stretch of an ideal rubber.</p>
+<p>For this example let us stretch an ideal rubbery material (i.e. it has a Poisson ratio of <span class="math notranslate nohighlight">\(v=0.5\)</span> and is incompressible such that the total volume remains constant) in the <span class="math notranslate nohighlight">\(x\)</span> direction, where the inital length along this direction is <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p>We are applying the force along <span class="math notranslate nohighlight">\(x\)</span> which results in a length change from <span class="math notranslate nohighlight">\(L\)</span> to <span class="math notranslate nohighlight">\(\lambda L\)</span> - here I have noted that <span class="math notranslate nohighlight">\(\lambda_x=\lambda\)</span> as this is the only direction in which the deformation is <strong>applied</strong>.</p>
+<p>As this ideal material is incompressible we can state that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lambda_x\lambda_y\lambda_z &amp;=1\\
+\therefore \lambda_y = \lambda_z &amp;= \frac{1}{\sqrt{\lambda}}\end{split}\]</div>
+<p>The entropy will decrease:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S_\text{volume} = -\frac{nk_\text{B}}{2}\left(\lambda^2+\frac{2}{\lambda}-3\right)\]</div>
+<p>and the free energy increases</p>
+<div class="math notranslate nohighlight">
+\[\Delta F_\text{volume} = \frac{nk_\text{B}T}{2}\left(\lambda^2+\frac{2}{\lambda}-3\right)\]</div>
+<p>which is the stored elastic energy in the material and is equal to the work done on the rubber.</p>
+</div>
+<p>We are going to use the result from the previous example in order to find a general expression for the stress/strain of a material. We could do it from first principles but starting from a specific example is quicker but yields the same result.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reminder:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\gamma=\dfrac{\Delta L}{L} &amp;= \dfrac{\lambda L - L}{L}\\ &amp;= \lambda - 1\end{split}\]</div>
+</div>
+</div>
+<p>First we note that <span class="math notranslate nohighlight">\(\lambda = 1+\gamma\)</span>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is the tensile strain from way back in equation <a class="reference internal" href="Topic1sec2.html#equation-eq-c1-youngs">(4)</a>. Next we note that the tensile stress <span class="math notranslate nohighlight">\(\sigma_\text{tensile} = \dfrac{\mathrm{d}F}{\mathrm{d}\gamma}\)</span> where <span class="math notranslate nohighlight">\(F\)</span> is the free energy.<a class="footnote-reference brackets" href="#c2-jones" id="id1">1</a> This means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sigma_\text{tensile} &amp;= \dfrac{\mathrm{d}}{\mathrm{d}\gamma}\left[\frac{nk_\text{B}T}{2}\left((1+\gamma)^2+\frac{2}{1+\gamma}-3\right)\right]\\
+	&amp;=nk_\text{B}T\left((1+\gamma)-\frac{1}{(1+\gamma)^2}\right)\end{split}\]</div>
+<p>This is a non-Hookean relationship between stress and strain, but we can expand in the region of small strain (small <span class="math notranslate nohighlight">\(\gamma\)</span>) to find:</p>
+<div class="math notranslate nohighlight">
+\[Y = \frac{\sigma_\text{tensile}}{\gamma} \approx 3nk_\text{B}T\]</div>
+<p>If we assume again that our material is incompressible then <span class="math notranslate nohighlight">\(\nu=0.5\)</span> which can be combined with the expression above for the Young’s modulus (using equation <a class="reference internal" href="Topic1sec2.html#equation-eq-c1-shearyoung">(8)</a>)  to get an expression for the shear modulus</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-shearmod">
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-c2-shearmod" title="Permalink to this equation">#</a></span>\[\begin{split}G&amp;=nk_\text{B}T\\
+&amp;\left(=\frac{\rho RT}{M_x}\right)\end{split}\]</div>
+<p>where in equation <a class="reference internal" href="#equation-eq-c2-shearmod">(37)</a> <span class="math notranslate nohighlight">\(\rho\)</span> is the density, <span class="math notranslate nohighlight">\(M_x\)</span> is the average molecular mass between crosslinks and <span class="math notranslate nohighlight">\(R\)</span> is the molar gas constant. Ignore this second form of the equation for now - we will return to it later when we look at <a class="reference internal" href="#sec-c2-entanglement"><span class="std std-ref">entanglement</span></a>.</p>
+<p>There’s something particularly pleasing about this result. It tells us that, at least for small strains, the mechanical properties of the material depends only on the temperature of the material and how crosslinked the molecules in the material are.</p>
+<p>Reality is, of course, not so simple. The experimental data shows that the actual behaviour when stretching a rubber is more complicated. We do see an initial linear response but for intermediate extension there is some softening compared to our predictions (i.e. force is lower than expected) which is likely due to chains being pulled apart enough to have some extra conformations made available to them. At large extension ratios the force is greater than predicted because the chains cannot be stretched indefinitely - at some point the chains will reach their maximum length when fully stretched into a line.</p>
+</div>
+<div class="section" id="viscoelasticity">
+<h2>Viscoelasticity.<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">#</a></h2>
+<p>The previous section dealt with the macroscopic behaviour of a rubbery material in terms of the underlying molecular structure, but we have seen in the first chapter that some materials exhibit a <strong>viscoelastic</strong> behaviour. As a reminder these materials behave either elastically or viscously, and the key property that determines which behaviour is observed in the timescale over which a deformation is applied.</p>
+<p>There are two functions we can define that describe the behaviour of a viscoelastic material, the <strong>creep compliance</strong> and the <strong>stress relaxation modulus</strong>. We define both of these with respect to an idealised experiment where we apply either a constant stress or constant strain, and see how the material behaves over time.</p>
+<div class="section" id="creep-compliance">
+<h3>Creep compliance.<a class="headerlink" href="#creep-compliance" title="Permalink to this headline">#</a></h3>
+<p>The creep compliance <span class="math notranslate nohighlight">\(J(t)\)</span> is defined from the idealised experiment where a constant stress <span class="math notranslate nohighlight">\(\sigma_0\)</span> is applied at time <span class="math notranslate nohighlight">\(t=0\)</span> and the strain is measured as a function of time, i.e. we observe <span class="math notranslate nohighlight">\(\gamma(t)\)</span>. The creep compliance is thus</p>
+<div class="math notranslate nohighlight">
+\[\gamma(t) = \sigma_0J(t)\]</div>
+<p>and the form of this function is shown in <a class="reference internal" href="#fig-c2-creep"><span class="std std-numref">Fig. 35</span></a>. After an initial rapid elastic response the sample slowly creeps (hence the name) before settling down to the long-term viscous behaviour where the strain rate is constant, as we already discussed in previously when looking at <a class="reference internal" href="Topic1sec2.html#sec-c1-viscoelastic"><span class="std std-ref">viscoelasticity</span></a>.</p>
+<div class="figure align-center" id="fig-c2-creep">
+<a class="reference internal image-reference" href="_images/C2_Creep.png"><img alt="A stress is applied at time $t=0$ and held constant. The strain $\gamma$ is observed as a function of time." src="_images/C2_Creep.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">A stress is applied at time <span class="math notranslate nohighlight">\(t=0\)</span> and held constant. The strain <span class="math notranslate nohighlight">\(\gamma\)</span> is observed as a function of time.</span><a class="headerlink" href="#fig-c2-creep" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="stress-relaxation-modulus">
+<h3>Stress relaxation modulus<a class="headerlink" href="#stress-relaxation-modulus" title="Permalink to this headline">#</a></h3>
+<p>Similar to the creep compliance, we define the stress relaxation modulus <span class="math notranslate nohighlight">\(G(t)\)</span> by considering an experiment in which a constant strain <span class="math notranslate nohighlight">\(\gamma_0\)</span> is applied at time <span class="math notranslate nohighlight">\(t=0\)</span>, and this time the stress is measured as a function of time. Therefore the stress relaxation modulus is</p>
+<div class="math notranslate nohighlight">
+\[\sigma(t) = \gamma_0G(t)\]</div>
+<p>and the form of this function is shown in <a class="reference internal" href="#fig-c2-stressrelaxation"><span class="std std-numref">Fig. 36</span></a>. The initial response is elastic, reaching a maximum <span class="math notranslate nohighlight">\(\propto G_0\)</span>, but decreases towards zero as the material starts to flow.</p>
+<div class="figure align-center" id="fig-c2-stressrelaxation">
+<a class="reference internal image-reference" href="_images/C2_StressRelaxation.png"><img alt="A strain is applied at time $t=0$ and held constant. The stress $\sigma$ is observed as a function of time." src="_images/C2_StressRelaxation.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">A strain is applied at time <span class="math notranslate nohighlight">\(t=0\)</span> and held constant. The stress <span class="math notranslate nohighlight">\(\sigma\)</span> is observed as a function of time.</span><a class="headerlink" href="#fig-c2-stressrelaxation" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="characterising-the-viscoelastic-behaviour">
+<h3>Characterising the viscoelastic behaviour.<a class="headerlink" href="#characterising-the-viscoelastic-behaviour" title="Permalink to this headline">#</a></h3>
+<p>These conceptual experiments are a good place to start but at some point we will want to test this experimentally to see how well the model holds up in the real world. One of the earliest but still incredibly useful techniques is to apply an oscillatory deformation at a certain frequency <span class="math notranslate nohighlight">\(\omega\)</span>. This is useful experimentally as the equipment is not too challenging to build as shown in <a class="reference internal" href="#fig-c2-oscillatory"><span class="std std-numref">Fig. 37</span></a>, but also the theoretical model is quite simple to understand.</p>
+<div class="figure align-center" id="fig-c2-oscillatory">
+<a class="reference internal image-reference" href="_images/C2_Oscillatory.png"><img alt="A schematic of a cone and plate rheometer that applies an oscillatory strain to a sample." src="_images/C2_Oscillatory.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">A schematic of a cone and plate rheometer that applies an oscillatory strain to a sample.</span><a class="headerlink" href="#fig-c2-oscillatory" title="Permalink to this image">#</a></p>
+</div>
+<p>If the strain is oscillatory then it takes the form</p>
+<div class="math notranslate nohighlight">
+\[\gamma(t) = \gamma_0\,\sin(\omega t)\]</div>
+<p>If the material studied is a perfectly elastic solid then the stress in the sample will be related to the strain through Hookes’ law and so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sigma(t) &amp;= G_0\gamma(t)\\
+		&amp;=G_0\gamma_0\sin(\omega t)\end{split}\]</div>
+<p>The stress is perfectly in phase with the strain for a Hookean solid. On the other hand if the material being studied is a Newtonian liquid then the stress in the liquid will be related to the strain <strong>rate</strong>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sigma(t) = \eta\dot{\gamma} &amp;= \eta\gamma_0\omega\cos(\omega t)\\
+		&amp;= \eta\gamma_0\omega\sin\left(\omega t + \frac{\pi}{2}\right)\end{split}\]</div>
+<p>The stress in a Newtonian liquid still oscillates with the same angular frequency <span class="math notranslate nohighlight">\(\omega\)</span> but is out of phase with the strain by <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>.</p>
+<p>You may wonder why I suddenly reverted back to considering these simple, non-viscoelastic materials. The reasoning is that the more interesting viscoelastic materials show both elastic and viscous behaviours so we can combine the Hookean and Newtonian cases to build our model for a viscoelastic material.</p>
+<p>The critical observation here is that we can generalise the linear response of a viscoelastic material by introducing a general phase angle <span class="math notranslate nohighlight">\(\delta\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\sigma(t) =G_0\gamma_0\sin(\omega t + \delta)\]</div>
+<p>where <span class="math notranslate nohighlight">\(0\leq\delta\leq\frac{\pi}{2}\)</span>. Since the stress is always a sinusoidal function with the same frequency as the strain, we can separate the stress into two orthogonal functions that oscillate with the same frequency, one in phase with the strain and one <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> out of phase with the strain,</p>
+<div class="math notranslate nohighlight">
+\[\sigma(t) = \gamma_0\left[G'(\omega)\sin(\omega t)+G''(\omega)\cos(\omega t)\right]\]</div>
+<p>where the <strong>complex modulus</strong> is <span class="math notranslate nohighlight">\(G^*(\omega) = G'(\omega)+G''(\omega)\)</span>. Here <span class="math notranslate nohighlight">\(G'(\omega)\)</span> is the <strong>real</strong> part of <span class="math notranslate nohighlight">\(G^*(\omega)\)</span> which corresponds to the <strong>storage modulus</strong> and relates to the <strong>elastic</strong> component of the response. The imaginary part, <span class="math notranslate nohighlight">\(G''(\omega)\)</span> is the <strong>loss modulus</strong> and relates to the <strong>viscous</strong> component of the response.</p>
+<p>Finally the complex modulus (a function in frequency) to the stress relaxation modulus (a function in time) are related by</p>
+<div class="math notranslate nohighlight">
+\[G^*(\omega) = i\omega\int\limits_0^\infty \exp(-i\omega t)\,G(t)\,\mathrm{d}t\]</div>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Time-temperature superposition - an experimental aside</p>
+<p>We have seen that the viscoelastic responses of a material are a function of time, and experimental evidence shows that the viscoelastic properties of polymers are a strong function of temperature. A key discovery in this topic is that the relaxation times of all the modes have the same temperature dependence; this means it is possible to superimpose linear viscoelastic data taken at different temperatures, a process known as the <strong>time-temperature superposition</strong> principle. Stress relaxation modulus data taken at any given temperature <span class="math notranslate nohighlight">\(T\)</span> can be superimposed on data at a reference temperature <span class="math notranslate nohighlight">\(T_0\)</span> using a time scale muliplicative shift factor <span class="math notranslate nohighlight">\(\alpha_T\)</span>, such that</p>
+<div class="math notranslate nohighlight">
+\[G(t,T) = G(\alpha_Tt,T_0)\]</div>
+<p>and the temperature dependence of the shift factor has been found (empirically) to take the form</p>
+<div class="math notranslate nohighlight">
+\[\log\alpha_T = \frac{-C_1(T-T_0)}{C_2+(T-T_0)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> are empirical constants. If we take the glass transition temperature as the reference emperature, i.e. <span class="math notranslate nohighlight">\(T_0 = T_g\)</span> then we find that these two empirical constants have <strong>very</strong> similar values for many different polymers. If the logarithm in the previous equation is in base 10 then <span class="math notranslate nohighlight">\(C_1^g=17.4\)</span> and <span class="math notranslate nohighlight">\(C_2^g=51.6\text{ K}\)</span> are quasi-universal values. The superscript ‘g’ corresponds to ‘glass’ and emphasises the point that these values are true when the reference temperature is the glass transition temperature.</p>
+<p>You might ask why this is a useful principle. In a perfect and hypothetical world we would be able to use our (perfect and hypothetical) experimental equipment to measure the module-time dependence across the entire range of time (or frequencies). In reality though our equipment is limited to a particular range of frequencies, and so this superposition principle allows us to shift our measured data into those lower or higher frequency ranges that our equipment cannot probe. We can use the data measured at some temperature <span class="math notranslate nohighlight">\(T\)</span> and shift it onto a <strong>master curve</strong> for that particular polymer at a chosen reference temperature. An example of this is shown in <a class="reference internal" href="#fig-c2-timetemp"><span class="std std-numref">Fig. 38</span></a>.</p>
+<div class="figure align-center" id="fig-c2-timetemp">
+<a class="reference internal image-reference" href="_images/C2_TimeTemp.png"><img alt="The dynamic modulus for a polymer is measured within a range of testing frequencies limited by the equipment used. The time-temperature superposition principle allows for these measured values to be shifted onto a master curve, where the dynamic modulus (as a function of frequency) is determined at a specific reference temperature." src="_images/C2_TimeTemp.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">The dynamic modulus for a polymer is measured within a range of testing frequencies limited by the equipment used. The time-temperature superposition principle allows for these measured values to be shifted onto a master curve, where the dynamic modulus (as a function of frequency) is determined at a specific reference temperature.</span><a class="headerlink" href="#fig-c2-timetemp" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="viscoelasticity-for-polymer-melts">
+<h3>Viscoelasticity for polymer melts.<a class="headerlink" href="#viscoelasticity-for-polymer-melts" title="Permalink to this headline">#</a></h3>
+<p>Coming back to the matter at hand. If our simple materials have well defined phase shifts (zero for Hookean solid, <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> for Newtonian fluid), then there must be some molecular explanation for why viscoelastic materials behave somewhere inbetween that explains the complex modulus behaviour we observe.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Monodisperse means the polymer chains in the melt have the same (or a narrow range) of the degree of polymerisation, <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p>Physicists would wonder why this is not the case by default but practically it is more challenging to synthesise molecules of a specific size. This may explain why chemists are often stressed.</p>
+</div>
+</div>
+<p>The way we study this is by experimentally measuring the relaxation modulus of different <strong>monodisperse</strong> polymer melts. Consider <a class="reference internal" href="#fig-c2-mono"><span class="std std-numref">Fig. 39</span></a> in which two different monodispersions are depicted.</p>
+<div class="figure align-center" id="fig-c2-mono">
+<a class="reference internal image-reference" href="_images/C2_Mono.png"><img alt="The relaxation curves are independent of $N$ in the initital relaxation (short time) and plateau (intermediate time) regions, but have a different terminal time in which the relaxation decreases again (longer timescales)." src="_images/C2_Mono.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">The relaxation curves are independent of <span class="math notranslate nohighlight">\(N\)</span> in the initital relaxation (short time) and plateau (intermediate time) regions, but have a different terminal time in which the relaxation decreases again (longer timescales).</span><a class="headerlink" href="#fig-c2-mono" title="Permalink to this image">#</a></p>
+</div>
+<p>At short timescales the behaviour of the relaxation modulus is independent of <span class="math notranslate nohighlight">\(N\)</span>. At intermediate times the relaxation modulus is effectively constant at some plateau value, <span class="math notranslate nohighlight">\(G_P\)</span>, which is also independent of <span class="math notranslate nohighlight">\(N\)</span>. But at some longer characteristic timescale known as the <strong>terminal time</strong>, <span class="math notranslate nohighlight">\(\tau_\text{T}\)</span>, the relaxation modulus deviates from this plateau value. This terminal time does depend strongly on <span class="math notranslate nohighlight">\(N\)</span> and is found to take the form <span class="math notranslate nohighlight">\(\tau_\text{T}\sim N^m\)</span>.</p>
+<p>In the plateau region the polymer behaves like an elastic solid. After <span class="math notranslate nohighlight">\(\tau_\text{T}\)</span> the polymer flows in a viscous-like manner and the creep compliance varies as <span class="math notranslate nohighlight">\(J(t)\sim t\)</span>. The <strong>zero shear viscosity</strong>, <span class="math notranslate nohighlight">\(\eta_0\)</span>, i.e. the viscosity a polymer melt would have in the absence of an external shear  is related to both the terminal time and plateau modulus as</p>
+<div class="math notranslate nohighlight">
+\[\eta_0 \sim \tau_\text{T}G_P\]</div>
+<p>Noting again that because the plateau modulus is independent of <span class="math notranslate nohighlight">\(N\)</span>, any relationship between zero shear viscosity and <span class="math notranslate nohighlight">\(N\)</span> should be the same as that between terminal time and <span class="math notranslate nohighlight">\(N\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[\eta_0 \sim N^m\]</div>
+<p>Experimental data tells us that <span class="math notranslate nohighlight">\(m\approx3.4\)</span>, but only above some certain critical value <span class="math notranslate nohighlight">\(N_C\)</span>. Below this the relationship between <span class="math notranslate nohighlight">\(\eta_0\)</span> and <span class="math notranslate nohighlight">\(N\)</span> is linear, i.e.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\eta_0 \sim
+\begin{cases}
+N &amp;\text{if $N&lt;N_C$}\\
+N^{3.4} &amp; \text{if $N&gt;N_C$}
+\end{cases}
+\end{align*}\]</div>
+<p>If you don’t believe me then take a look at the first experimental evidence of this on the polymer polybutediene <span id="id2">[<a class="reference internal" href="#id23" title="Ralph H. Colby, Lewis J. Fetters, and William W. Graessley. The melt viscosity-molecular weight relationship for linear polymers. Macromolecules, 20(9):2226-2237, 1987. URL: https://doi.org/10.1021/ma00175a030, arXiv:https://doi.org/10.1021/ma00175a030, doi:10.1021/ma00175a030.">Colby <em>et al.</em>, 1987</a>]</span>, and the relevant figure from this paper is shown in <a class="reference internal" href="#fig-c2-colby"><span class="std std-numref">Fig. 40</span></a>.</p>
+<div class="figure align-center" id="fig-c2-colby">
+<a class="reference internal image-reference" href="_images/C2_Colby.png"><img alt="Zero shear velocity measured for different relative molecular masses (which depends on $N$) of polybutadiene. Dashed lines in blue have been added by me to show the two different behaviours below and above $N_C$. The critical molecular mass $M_C$ is indicated here, but this is proportional to $N_C$." src="_images/C2_Colby.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Zero shear velocity measured for different relative molecular masses (which depends on <span class="math notranslate nohighlight">\(N\)</span>) of polybutadiene. Dashed lines in blue have been added by me to show the two different behaviours below and above <span class="math notranslate nohighlight">\(N_C\)</span>. The critical molecular mass <span class="math notranslate nohighlight">\(M_C\)</span> is indicated here, but this is proportional to <span class="math notranslate nohighlight">\(N_C\)</span>.</span><a class="headerlink" href="#fig-c2-colby" title="Permalink to this image">#</a></p>
+</div>
+<p>Let us pull together a lot of the different topics we’ve covered so far. This last section tells us that the viscosity of a viscoelastic material depends on the number of units in a chain, <span class="math notranslate nohighlight">\(N\)</span>. We have previous seen that the size of a polymer chain also depends on <span class="math notranslate nohighlight">\(N\)</span>. Finally we also saw that the charactistic timescales in which particles can ‘escape’ from a ‘cage’ depends on the size of the molecule (through the interaction between it and surrounding molecules).</p>
+<p>This leads us to a nice point of convergence: can we understand why viscoelastic materials behave they way they do if we understand how long chain molecules of a characteristic size can move when also interacting with neighbouring molecules? The answer lies in how polymer chains in the melt are <strong>entangled</strong>, which (with a little thought) could come out from the data in <a class="reference internal" href="#fig-c2-colby"><span class="std std-numref">Fig. 40</span></a>; short chain polymers behave more like small colloidal particles, but once the chains get to a certain length they are able to intertwine and entangle. An alternative view is that it is unlikely that a bunch of really short lengths of string mixed in a container will form a tangled mess, but this is very likely for long lengths of string.</p>
+</div>
+</div>
+<div class="section" id="entanglement-and-reptation">
+<span id="sec-c2-entanglement"></span><h2>Entanglement and reptation.<a class="headerlink" href="#entanglement-and-reptation" title="Permalink to this headline">#</a></h2>
+<p>If our polymers are long, linear objects which cannot pass through one another, then we can imagine that a polymer melt is a mess of long and extended in some random network of interpenetrating chains. If we apply a shear to this network of chains then they will become more tangled up which would then make it harder to shear the material any further.</p>
+<p>With this conceptual model in mind we can imagine the rubber-like plateau modulus arising from the entanglements between chains acting as temporary physical crosslinks. As the plateau modulus is independent of <span class="math notranslate nohighlight">\(N\)</span> we can estimate the <strong>density</strong> of entanglements or the average distance between entanglement points. We can modify equation <a class="reference internal" href="#equation-eq-c2-shearmod">(37)</a> as</p>
+<div class="math notranslate nohighlight">
+\[G = \frac{\rho R T}{M_e}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M_e\)</span> is the average relative molecular mass between entanglements. These entanglements are not permanent and can disentangle with a characteristic timescale comparable to the terminal time <span class="math notranslate nohighlight">\(\tau_\text{T}\)</span>. Intuitively we expect shorter chains (smaller <span class="math notranslate nohighlight">\(N\)</span>) to require less time to disentangle, but can we formalise this more to see whether the concept of entanglement can predict the <span class="math notranslate nohighlight">\(\tau_\text{T}\sim N^{3.4}\)</span> behaviour seen previously.<br />
+The short answer is yes, sort of. We will consider one of the initial models proposed that does go some part of the way, known as the <strong>tube model of reptation</strong>.</p>
+<div class="section" id="tube-model-and-reptation">
+<span id="sec-c2-reptation"></span><h3>Tube model and reptation<a class="headerlink" href="#tube-model-and-reptation" title="Permalink to this headline">#</a></h3>
+<p>Let us consider the behaviour of a single chain amongst all others in the melt. These other chains act as fixed barriers that our single chain of interest cannot pass, and so we can represent these other chains as points in space. Consequently there exists a tube volume around our single chain in which it can move around. This is shown schematically in <a class="reference internal" href="#fig-c2-rep"><span class="std std-numref">Fig. 41</span></a> where for simplicity we align our single chain in the plane of the page and have the fixed chains aligned perpendicular to the page. Crosses show the position of where these fixed chains intersect the plane.</p>
+<div class="figure align-center" id="fig-c2-rep">
+<a class="reference internal image-reference" href="_images/C2_Rep.png"><img alt="The tube model of a polymer melt. The single chain of interest (black line) is found in the plane of the page, and the other fixed chains point into / out of the page, indicated by crosses. The red tube encloses the volume in which our single chain can move without 'hitting' a fixed chain." src="_images/C2_Rep.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">The tube model of a polymer melt. The single chain of interest (black line) is found in the plane of the page, and the other fixed chains point into / out of the page, indicated by crosses. The red tube encloses the volume in which our single chain can move without ‘hitting’ a fixed chain.</span><a class="headerlink" href="#fig-c2-rep" title="Permalink to this image">#</a></p>
+</div>
+<p>We can now determine the characteristic time that it would take for this single polymer chain to wiggle its way out of the chain. This type of motion is known as <strong>reptation</strong> and is indeed a wiggle much in the same way that a snake moves. The difference is that a snake moves in a well choreographed way whereas our polymer chain will be moving under random walk statistics with the constraint that a step cannot cause any part of the single chain to pass through a fixed chain.</p>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Deriving the Stokes-Einstein model for a single particle.</p>
+<p><strong>Important: This dropdown section is included for completeness but falls outside of the core curriculum for this module. Understanding it will help reinforce your knowledge of random walk systems, but the derivation itself is not examinable</strong></p>
+<p>I am making an assumption that you are familiar with the history and concept of Brownian motion, so will just start from the idea that a <strong>particle</strong> undergoing Brownian motion is displaying a <strong>random walk</strong> type of motion. We see that the particle is changing position at successive small intervals of time but these position changes are not correlated - the direction of the <span class="math notranslate nohighlight">\(n^\text{th}\)</span> step is not influenced by the direction of the <span class="math notranslate nohighlight">\((n-1)^\text{th}\)</span> step.</p>
+<p>Because the direction of each step is random we expect the time average of the displacement vector <span class="math notranslate nohighlight">\(\textbf{R}(t)\)</span> to be zero, however the mean value of the square of the displacement will be proportional to the time we have observed the particle for (i.e. the number of steps the particle has taken). We can formalise this as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-78491be9-f00d-4f9a-a403-f0ebca09f51d">
+<span class="eqno">(38)<a class="headerlink" href="#equation-78491be9-f00d-4f9a-a403-f0ebca09f51d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left&lt;\left(\textbf{R}(t)\right)^2\right&gt;&amp;= \zeta t
+\end{align}\]</div>
+<p>where the constant of proportionality <span class="math notranslate nohighlight">\(\zeta\)</span> the drag coefficient and relates to the resistance of motion through a fluid.</p>
+<p>So what is the net force acting on our particle? You have already seen this as part of your first year mechanics course but I’ll be nice and give a bit of a reminder! We assume that the drag force on a particle moving through a fluid is proportional to the velocity - in my first year notes I used <span class="math notranslate nohighlight">\(F_\text{drag}=bv\)</span> but now we use <span class="math notranslate nohighlight">\(F_\text{drag}=\zeta v\)</span>. This is nothing more than a symbol change.</p>
+<p>Thus the net force on a particle undergoing random motion is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-brownian1">
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-c1-brownian1" title="Permalink to this equation">#</a></span>\[F_\text{random} = m\frac{\mathrm{d}^2\textbf{R}}{\mathrm{d}t^2}+\zeta\frac{\mathrm{d}\textbf{R}}{\mathrm{d}t}\]</div>
+<p>Before moving on I’ll emphasise the difference between this and what you saw in the first year mechanics. The mechanics case was a body falling vertically under gravity but also through a resistive medium, which is why the first year notes include an <span class="math notranslate nohighlight">\(mg\)</span> term. In this Brownian motion case we are dealing with a system in which the particles are small enough such that the effect of gravity is significantly small compared to the forces and interactions causing the Brownian motion.</p>
+<p>This different allows us to make a generalisation about the displacement vector. If gravity is not a signficiant factor in the system then there is no difference in the way the particle behaves in the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions. Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left&lt;x^2\right&gt; &amp;= \left&lt;y^2\right&gt; = \left&lt;z^2\right&gt;\\
+\therefore \left&lt;\textbf{R}^2\right&gt; &amp;= \left&lt;x^2\right&gt;+\left&lt;y^2\right&gt;+\left&lt;z^2\right&gt;\\
+	&amp;= 3\left&lt;x^2\right&gt;\end{split}\]</div>
+<p>which allows us to rewrite equation <a class="reference internal" href="#equation-eq-c1-brownian1">(39)</a> as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-brownian2">
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-c1-brownian2" title="Permalink to this equation">#</a></span>\[\begin{split}F_\text{random} &amp;= 3m\frac{\mathrm{d}^2(x^2)}{\mathrm{d}t^2}+3\zeta\frac{\mathrm{d}(x^2)}{\mathrm{d}t}\\
+\zeta\frac{\mathrm{d}(x^2)}{\mathrm{d}t} &amp;= \frac{F_\text{random}}{3} - m\frac{\mathrm{d}^2(x^2)}{\mathrm{d}t^2}\end{split}\]</div>
+<p>Take care here. We need to remember that <span class="math notranslate nohighlight">\(x\)</span> is a function of <span class="math notranslate nohighlight">\(t\)</span>, so we need to simplify the differential terms using the chain and product rules, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}(x^2)}{\mathrm{d}t} &amp;= \frac{\mathrm{d}x^2}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}t} = 2x\frac{\mathrm{d}x}{\mathrm{d}t}\\
+\frac{\mathrm{d}^2(x^2)}{\mathrm{d}t^2} &amp;= 2\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + 2\frac{\mathrm{d}}{\mathrm{d}t}\left(x\frac{\mathrm{d}x}{\mathrm{d}t}\right)\end{split}\]</div>
+<p>Chuck all of these into equation <a class="reference internal" href="#equation-eq-c1-brownian2">(40)</a> and take the time average of each term to get</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-brownian3">
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-c1-brownian3" title="Permalink to this equation">#</a></span>\[\frac{\zeta}{2} \frac{\mathrm{d}\left&lt;x^2\right&gt;}{\mathrm{d}t} = \frac{\left&lt;F_\text{random}\right&gt;}{6} - m\left&lt;\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\right&gt;^2 - m \frac{\mathrm{d}}{\mathrm{d}t}\left&lt;x\frac{\mathrm{d}x}{\mathrm{d}t}\right&gt;\]</div>
+<p>We can make some simplifications here based on the time average. As there is no directional preference of the force we expect the average force to be zero. Similarly there is no correlation between the position and velocity of the particle, so the right hand term of equation <a class="reference internal" href="#equation-eq-c1-brownian3">(41)</a> is also zero. The remaining middle term is simply twice the kinetic energy, and we can thus drop the minus sign in front. The kinetic energy associated with our Brownian particle comes from the thermal energy of the system at temperature <span class="math notranslate nohighlight">\(T\)</span>, which gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}\left&lt;x^2\right&gt;}{\mathrm{d}t} &amp;= 2\frac{k_\text{B}T}{\zeta}\\
+\therefore \left&lt;\textbf{R}^2\right&gt; &amp;= \frac{6k_\text{B}T}{\zeta}t = 6Dt\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-einstein1">
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-c2-einstein1" title="Permalink to this equation">#</a></span>\[D=\dfrac{k_\text{B}T}{\zeta}=k_\text{B}T\mu\]</div>
+<p><span class="math notranslate nohighlight">\(D\)</span> is the diffusion coefficient that was derived by Einstein in his seminal work on Brownian motion and <span class="math notranslate nohighlight">\(\mu\)</span> is the mobility of the particle (defined as <span class="math notranslate nohighlight">\(\mu=\frac{1}\zeta\)</span>).</p>
+<p>Without going into the details around the derivation, Stokes’ theorem allows us to define the drag coefficient in terms of the viscosity of the surrounding medium <span class="math notranslate nohighlight">\(\eta\)</span> and the radius of the diffusing particle <span class="math notranslate nohighlight">\(a\)</span>, namely</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-stokeseq">
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-c1-stokeseq" title="Permalink to this equation">#</a></span>\[\zeta = 6\pi\eta a\label{eq:C1_StokesEq}\]</div>
+<p>and so we finally can show that the diffusion coefficient (a measure of mobility of single particles) is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c1-stokeseinstein">
+<span class="eqno">(44)<a class="headerlink" href="#equation-eq-c1-stokeseinstein" title="Permalink to this equation">#</a></span>\[D_\text{SE} = \frac{k_\text{B}T}{6\pi \eta a}\label{eq:C1_StokesEinstein}\]</div>
+</div>
+<p>The key equation we need going forward from the Stokes-Einstein derivation is <a class="reference internal" href="#equation-eq-c2-einstein1">(42)</a>, i.e. <span class="math notranslate nohighlight">\(D=k_\text{B}T\mu\)</span>.</p>
+<p>In the dropdown box above we considered the Brownian motion of a single particle (<span class="math notranslate nohighlight">\(N=1\)</span>) but for our polymer chain we have <span class="math notranslate nohighlight">\(N\)</span> segments forming the chain. Thus if we define the mobility of an individual segment as <span class="math notranslate nohighlight">\(\mu_\text{seg}\)</span> then the total mobility of the tube is</p>
+<div class="math notranslate nohighlight">
+\[\mu_\text{tube} = \frac{\mu_\text{seg}}{N}\]</div>
+<p>where we have assumed that the viscous force of the whole chain is the sum of the forces experienced by the individual segments. Plugging this into the Einstein relation above gives.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D_\text{tube} &amp;= k_\text{B}T\mu_\text{tube}\\
+							&amp;= \frac{k_\text{B}T\mu_\text{seg}}{N}\end{split}\]</div>
+<p>Our single chain is essentially undergoing a one dimensional random walk within the tube. If the tube length is <span class="math notranslate nohighlight">\(L\)</span> then the time taken for the polymer to random walk this length is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau_\text{T} &amp;= \frac{L^2}{D_\text{tube}}\\
+	&amp;= \frac{NL^2}{k_\text{B}T\mu_\text{seg}}\end{split}\]</div>
+<p>As the chain is extended we expect the length of the tube to be proportional to the number of units in the chain, meaning</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau_\text{T} &amp;\sim NN^2\\
+&amp;\sim N^3\end{split}\]</div>
+<p>So this simple tube model predicts <span class="math notranslate nohighlight">\(\tau_\text{T} \sim N^3\)</span> compared to the <span class="math notranslate nohighlight">\(\tau_\text{T}\sim N^{3.4}\)</span> found experimentally. This is not too bad but refinements to the model allow us to get closer to the experimentally determined value. Two of these changes are</p>
+<ol class="arabic simple">
+<li><p>Constraint release, in which we recognise that the originally fixed chains (crosses in figure \label{fig:C2_Rep} are themselves single chains moving in their own tubes, and</p></li>
+<li><p>Contour length fluctuations, in which the length of the tube is assumed to be linear with <span class="math notranslate nohighlight">\(N\)</span> the fluctuationing, <span class="math notranslate nohighlight">\(a\sqrt{N}\)</span> end-to-end distance is more appropriate for the tube length.</p></li>
+</ol>
+<p>These are included here for you to think about but the detail is beyond the scope of the course.</p>
+</div>
+</div>
+<div class="section" id="polymer-gels-and-polymer-brushes">
+<h2>Polymer gels and polymer brushes.<a class="headerlink" href="#polymer-gels-and-polymer-brushes" title="Permalink to this headline">#</a></h2>
+<p>Before we finish this section I wanted to consider two different types of polymer systems that I think are pretty cool but, probably more importantly, have some wider applicability in materials science and biophysics. Both of these systems arise when we somehow <strong>permanently</strong> bond the polymer chains to something, either to each other to form a <a class="reference internal" href="#sec-c2-gels"><span class="std std-ref">gel</span></a> or to a surface to form a <a class="reference internal" href="#sec-c2-brush"><span class="std std-ref">polymer brush</span></a>.</p>
+<div class="section" id="polymer-gels">
+<span id="sec-c2-gels"></span><h3>Polymer gels}<a class="headerlink" href="#polymer-gels" title="Permalink to this headline">#</a></h3>
+<p>Consider the case in which the chains in a polymer melt are entangled, and these entanglements are sufficiently long lived that they act as (semi) permanent crosslinks. If this <strong>network</strong> of polymer chains is swollen in a solvent, such that solvent molecules try to permeate the network and cause it to expand, then the resulting material is known as a gel[^C2_Sol-Gel]. The gel effectively becomes a single, almost infinite hyperbranched polymer.</p>
+<p>The volume fraction <span class="math notranslate nohighlight">\(\phi\)</span> of a swollen polymer gel is the ratio of the swollen and dried state volumes, <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(V_\text{dry}\)</span>, namely</p>
+<div class="math notranslate nohighlight">
+\[\phi = \frac{V}{V_\text{dry}}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(V\)</span> is the total volume of the polymer <strong>and</strong> of the solvent within the gel.</p>
+<p>Let <span class="math notranslate nohighlight">\(\phi_0\)</span> be the polymer volume fraction in the preparation state when the crosslinking was performed (i.e. when we made the gel) with an associated gel volume <span class="math notranslate nohighlight">\(V_0\)</span>. Assuming that the gel is well developed (and not a sol-gel<a class="footnote-reference brackets" href="#c2-sol-gel" id="id3">2</a>) then the <strong>total</strong> amount of polymer in the gel does not change when the gel is swollen or deswollen. Under this assumption the change in volume when swelling is due entirely to the change in the amount of solvent in the gel, meaning</p>
+<div class="math notranslate nohighlight">
+\[V_0\phi_0 = V\phi = V_\text{dry}\]</div>
+<p>We now make use of the affine deformation assumption such that an unconstrained network polymer with swell uniformly by the same amount in each direction. Thus the linear deformation <span class="math notranslate nohighlight">\(\lambda\)</span> is simply</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \left(\frac{V}{V_0}\right)^{\frac{1}{3}} =  \left(\frac{\phi_0}{\phi}\right)^{\frac{1}{3}}\]</div>
+<p>When the network is swollen each network strand is stretched as the crosslink junctions move further apart. Recalling the free energy required to stretch an ideal chain (see equation <a class="reference internal" href="Topic2sec3.html#equation-eq-c2-springfree">(29)</a>) we can state that the free energy associated with this affine deformation is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-floryform">
+<span class="eqno">(45)<a class="headerlink" href="#equation-eq-c2-floryform" title="Permalink to this equation">#</a></span>\[F_\text{el} \approx k_\text{B}T\frac{\left(\lambda R_0\right)^2}{Na^2}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-panyukov">
+<span class="eqno">(46)<a class="headerlink" href="#equation-eq-c2-panyukov" title="Permalink to this equation">#</a></span>\[F_\text{el} \approx k_\text{B}T\frac{\left(\lambda R_0\right)^2}{R_\text{Ref}^2}\label{eq:C2_Panyukov}\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-c2-panyukov">(46)</a> is known as the Panyukov form and considers the elastic energy of a swollen network strand in terms of <span class="math notranslate nohighlight">\(R_\text{Ref}^2\)</span>, the mean-square <strong>fluctuations</strong> of the end-to-end distance of the network strand. In many cases <span class="math notranslate nohighlight">\(R_\text{Ref}^2\)</span> is equal to the mean-squared end-to-end distance of a free chain with the same <span class="math notranslate nohighlight">\(N\)</span> as the network strand<a class="footnote-reference brackets" href="#c2-panyukov" id="id4">3</a>.</p>
+<p>As the network swells, either because more solvent is permeating the network or because the quality of the solvent changes, the strand elasticity changes because <span class="math notranslate nohighlight">\(R_\text{Ref}^2\)</span> changes.<br />
+The modulus of the gel in the swollen state, <span class="math notranslate nohighlight">\(G(\phi)\)</span> is proportional to the chain number density <span class="math notranslate nohighlight">\(\nu=\dfrac{\phi}{Na^3}\)</span> times the elastic free energy per chain given above, so</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-gelmod">
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq-c2-gelmod" title="Permalink to this equation">#</a></span>\[\begin{split} G(\phi) &amp;\approx \nu k_\text{B}T\frac{\left(\lambda R_0\right)^2}{R_\text{Ref}^2}\\
+ 			&amp;\approx \frac{k_\text{B}T}{a^3}\frac{\phi}{N}\frac{\left(\lambda R_0\right)^2}{R_\text{Ref}^2}\end{split}\]</div>
+<p>At the swelling equilibrium the elasticity is balanced by the osmotic pressure <span class="math notranslate nohighlight">\(\Pi\)</span> of a semidilute solution of uncrosslinked chains at the same concentration. We’ve already seen that the modulus is proportional to the elastic free energy (per unit volume) which means the gel will swell until the <strong>modulus</strong> and <strong>osmotic pressure</strong> are balanced.</p>
+<p>At this equilibrium point we can define the swelling ratio <span class="math notranslate nohighlight">\(Q\)</span> in terms of the equilibrium volume <span class="math notranslate nohighlight">\(V_\text{eq}\)</span> and the dried state volume <span class="math notranslate nohighlight">\(V_\text{dry}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-swell">
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-c2-swell" title="Permalink to this equation">#</a></span>\[Q = \frac{V_\text{eq}}{V_\text{dry}} \qquad\qquad \text{when $G\approx\Pi$}\]</div>
+<p>This may seem like a rather flippant and irrelevant definition but it gives us a good link between the experimental (macroscopic) domain and quantifying the molecular structure. We will only consider a particular special case but if you are interested there is a more comprehensive coverage in Polymer Physics by Rubinstein and Colby <span id="id5">[<a class="reference internal" href="#id24" title="Michael Rubinstein. Polymer physics. Oxford University Press, Oxford ; New York, N.Y., 2003. ISBN 9780198520597.">Rubinstein, 2003</a>]</span>.</p>
+<div class="section" id="swelling-a-gel-in-theta-solvents">
+<h4>Swelling a gel in <span class="math notranslate nohighlight">\(\theta\)</span>-solvents}<a class="headerlink" href="#swelling-a-gel-in-theta-solvents" title="Permalink to this headline">#</a></h4>
+<p>Firstly, a definition. A <span class="math notranslate nohighlight">\(\theta\)</span>-solvent is the solvent in a polymer-solvent pair for which there exists a <a class="reference internal" href="Topic2sec3.html#sec-c2-theta"><span class="std std-ref"><span class="math notranslate nohighlight">\(\Theta\)</span> temperature</span></a>.<br />
+By definition, the mean-squared end-to-end distance of a free chain in a <span class="math notranslate nohighlight">\(\theta\)</span>-solvent is independent of concentration, with <span class="math notranslate nohighlight">\(R_0^2\approx a^2N\)</span>. The fluctuations of a network strand that control its elasticity are also independent of concentration, so</p>
+<div class="math notranslate nohighlight">
+\[R_\text{ref}^2\approx R_0^2 \approx a^2N\]</div>
+<p>Hence the more general Panyukov form (equation <a class="reference internal" href="#equation-eq-c2-panyukov">(46)</a>) reduces to the Flory form (equation <a class="reference internal" href="#equation-eq-c2-floryform">(45)</a>) for swelling in <span class="math notranslate nohighlight">\(\theta\)</span>-solvents.<br />
+Substituting this into equation <a class="reference internal" href="#equation-eq-c2-gelmod">(47)</a> gives us the gel modulus in a <span class="math notranslate nohighlight">\(\theta\)</span>-solvent</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-gelmod2">
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq-c2-gelmod2" title="Permalink to this equation">#</a></span>\[\begin{split}G(\phi) &amp;\approx \frac{k_\text{B}T}{a^3}\frac{\phi}{N}\lambda^2\\
+		&amp;\approx \frac{k_\text{B}T}{Na^3}\phi_0^\frac{2}{3}\phi^\frac{1}{3}\end{split}\]</div>
+<p>I will now introduce without proof<a class="footnote-reference brackets" href="#c2-rubinstein" id="id6">4</a> a definition for the osmotic pressure of a semidilute solution in a <span class="math notranslate nohighlight">\(\theta\)</span>-solvent, namely</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-osmotic">
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq-c2-osmotic" title="Permalink to this equation">#</a></span>\[\Pi \approx \frac{k_\text{B}T}{a^3}\phi^3\label{eq:C2_Osmotic}\]</div>
+<p>We can combine this equation with equations <a class="reference internal" href="#equation-eq-c2-swell">(48)</a> and <a class="reference internal" href="#equation-eq-c2-gelmod2">(49)</a> gives</p>
+<div class="math notranslate nohighlight">
+\[Q\approx \frac{N^\frac{3}{8}}{\phi_0^\frac{1}{4}}\]</div>
+<p>and if the network was prepared in the dry, solvent-free state such that <span class="math notranslate nohighlight">\(\phi_0=1\)</span> then we find that</p>
+<div class="math notranslate nohighlight">
+\[N \approx Q^\frac{8}{3}\]</div>
+<p>Pause and reflect on what this is telling us. When working with a network in a <span class="math notranslate nohighlight">\(\theta\)</span>-solvent we can determine the average number of monomers in a network strand by simply weighing a piece of gel when it is dry and again after it has reached an equilibrium swelling volume. These two measurements are so incredibly easy to do that we could do it using the weighing scales in the teaching lab, whereas determining <span class="math notranslate nohighlight">\(N\)</span> directly (using neutron scattering, x-ray scattering, FCS, etc…) requires very sophisticated equipment and analysis.</p>
+</div>
+</div>
+<div class="section" id="polymer-brushes">
+<span id="sec-c2-brush"></span><h3>Polymer brushes<a class="headerlink" href="#polymer-brushes" title="Permalink to this headline">#</a></h3>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not a typo. <strong>ad</strong>sorbed means onto whereas <strong>ab</strong>sorbed means into.</p>
+</div>
+</div>
+<p>Let us now conclude this section by considering polymers interacting with a surface. There are two cases that we could consider (shown in <a class="reference internal" href="#fig-c2-brush"><span class="std std-numref">Fig. 42</span></a>) where either the polymers are adsorbed onto the surface through relatively weak interactions or one end of the polymer chains is strongly tethered to the surface.</p>
+<div class="figure align-center" id="fig-c2-brush">
+<a class="reference internal image-reference" href="_images/C2_Brush.png"><img alt="Polymer chains are either laying on the surface with random monomer units interacting with the surface or are affixed at one end to a horizontal surface and the free ends are dangling upwards into the solvent." src="_images/C2_Brush.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Polymer chains are either laying on the surface with random monomer units interacting with the surface (<strong>adsorbed</strong>) or are affixed at one end to a horizontal surface and the free ends are dangling upwards into the solvent (<strong>polymer brush</strong>).</span><a class="headerlink" href="#fig-c2-brush" title="Permalink to this image">#</a></p>
+</div>
+<p>We will skip the former because that topic in itself is a whole module, but the tethered molecules case is much simpler to model.</p>
+<p>We will consider the case in which the molecules are relatively densely packed in terms of their grafting density.\footnote{The other extreme is isolated chains that have no interaction with other tethered chains. This is less interesting because they tend to follow non-ideal chain statistics, i.e. <span class="math notranslate nohighlight">\(\left&lt;R^2\right&gt;\sim N^\frac{3}{5}\)</span>.} If we define this grafting density as <span class="math notranslate nohighlight">\(\dfrac{\sigma}{a^2}\)</span> chains per unit area and note that the volume per chain is <span class="math notranslate nohighlight">\(\dfrac{ha^2}{\sigma}\)</span> then the total energy is</p>
+<div class="math notranslate nohighlight">
+\[F_\text{Total} = F_\text{el}+F_\text{rep}+U_\text{int}\]</div>
+<p>where <span class="math notranslate nohighlight">\(F_\text{el}\)</span> is the free energy of stretching like an elastic chain, i.e.</p>
+<div class="math notranslate nohighlight">
+\[F_\text{el} = k_\text{B}T\frac{h^2}{Na^2}\]</div>
+<p>and <span class="math notranslate nohighlight">\(F_\text{rep}+U_\text{int}\)</span> are the combined excluded volume and interaction energies</p>
+<div class="math notranslate nohighlight">
+\[F_\text{rep}+U_\text{int} = k_\text{B}Tb(1-2\chi)\frac{\sigma N^2}{2ha^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(b\)</span> corresponds to the finite volume of a polymer of <span class="math notranslate nohighlight">\(N\)</span> units collapsed into a sphere. Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F_\text{Total} &amp;= k_\text{B}T\frac{h^2}{Na^2} + k_\text{B}Tb(1-2\chi)\frac{\sigma N^2}{2ha^2}\\
+&amp;= \frac{k_\text{B}T}{a^2}  \left[ \frac{h^2}{N} + b(1-2\chi)\frac{\sigma N^2}{2h}\right]\end{split}\]</div>
+<p>Minimising this free energy with respect to brush height (i.e. when <span class="math notranslate nohighlight">\(\dfrac{\mathrm{d}F}{\mathrm{d}h}=0\)</span>) allows us to find the equilibrium brush height of</p>
+<div class="math notranslate nohighlight">
+\[h \sim \left[\sigma b(1-2\chi)\right]^\frac{1}{3}N\]</div>
+<p>This tells us that chains grafted to a surface at a sufficiently high density will overlap significantly and the result is that the chains are strongly stretched to approximately a straight chain where <span class="math notranslate nohighlight">\(h\sim N\)</span>.</p>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Bibliography<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="id7">
+<dl class="citation">
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id2">CFG87</a></span></dt>
+<dd><p class="sd-card-text">Ralph H. Colby, Lewis J. Fetters, and William W. Graessley. The melt viscosity-molecular weight relationship for linear polymers. <em>Macromolecules</em>, 20(9):2226–2237, 1987. URL: <a class="reference external" href="https://doi.org/10.1021/ma00175a030">https://doi.org/10.1021/ma00175a030</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1021/ma00175a030">arXiv:https://doi.org/10.1021/ma00175a030</a>, <a class="reference external" href="https://doi.org/10.1021/ma00175a030">doi:10.1021/ma00175a030</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">Rub03</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id29">2</a>)</span></dt>
+<dd><p class="sd-card-text">Michael Rubinstein. <em>Polymer physics</em>. Oxford University Press, Oxford ; New York, N.Y., 2003. ISBN 9780198520597.</p>
+</dd>
+</dl>
+</div>
+</div>
+</details><hr class="docutils" />
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="c2-jones"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The core textbook by Jones uses <span class="math notranslate nohighlight">\(\tau\)</span> for tensile stress. I prefer not to because <span class="math notranslate nohighlight">\(\tau\)</span> to me is a time constant, and one that we’ve used heavily in this chapter already.}</p>
+</dd>
+<dt class="label" id="c2-sol-gel"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Textbooks may refer to a sol-gel. This is the general form that recognises some of the polymer chains (the sol) may not be attached to the gel. Given that this is a brief introduction we will assume that all of the polymer chains form part of the network.</p>
+</dd>
+<dt class="label" id="c2-panyukov"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>The size the network strand (i.e. polymer chain) would have if it were detached from the network and put into a vacuum or solvent, depending on which model you use.</p>
+</dd>
+<dt class="label" id="c2-rubinstein"><span class="brackets"><a class="fn-backref" href="#id6">4</a></span></dt>
+<dd><p>Section 5.4.2 of <span id="id29">[<a class="reference internal" href="#id24" title="Michael Rubinstein. Polymer physics. Oxford University Press, Oxford ; New York, N.Y., 2003. ISBN 9780198520597.">Rubinstein, 2003</a>]</span> if interested but it is not required for this course.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic2sec3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2.3 Polymers: Real Chain</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rubber-elasticity">Rubber elasticity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelasticity">Viscoelasticity.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creep-compliance">Creep compliance.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stress-relaxation-modulus">Stress relaxation modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#characterising-the-viscoelastic-behaviour">Characterising the viscoelastic behaviour.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscoelasticity-for-polymer-melts">Viscoelasticity for polymer melts.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-and-reptation">Entanglement and reptation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tube-model-and-reptation">Tube model and reptation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-gels-and-polymer-brushes">Polymer gels and polymer brushes.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-gels">Polymer gels}</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#swelling-a-gel-in-theta-solvents">Swelling a gel in <span class="math notranslate nohighlight">\(\theta\)</span>-solvents}</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymer-brushes">Polymer brushes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Matt Mears
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

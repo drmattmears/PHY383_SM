@@ -64,6 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Topic2sec3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.4 Polymers: Back to macroscopic" href="Topic2sec4.html" />
     <link rel="prev" title="2.2 Polymers: Ideal Chain" href="Topic2sec2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -163,6 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
 </ul>
 
     </div>
@@ -358,9 +360,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-volume-model">Excluded volume model</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Excluded volume model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-model-in-3d">Building the model in 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-building-the-real-chain-model">(Re)building the real chain model.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-solvent-and-the-theta-temperature">Effect of solvent and the <span class="math notranslate nohighlight">\(\Theta\)</span> temperature</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactions-with-solvent">Interactions with solvent.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theta-temperature"><span class="math notranslate nohighlight">\(\Theta\)</span> temperature.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-single-polymers-dilute-vs-concentrated">Beyond single polymers - dilute vs concentrated.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-polymer-types-sizes-and-solutions">Summary - Polymer types, sizes and solutions</a></li>
 </ul>
             </nav>
         </div>
@@ -379,9 +389,9 @@ document.write(`
 <p>So far we have considered the <a class="reference internal" href="Topic2sec2.html#sec-c2-idealchain"><span class="std std-ref">ideal chain case</span></a>, and imposed some short-range restrictions between nearby monomers. However the ideal chain model does allow for a chain to loop back on itself such that segments that are widely separated along the chain could occupy the same region in space.<br />
 We shall now introduce another level of complexity to the model that prevents any segment from occuyping the same space - in essence we are ascribing a volume to each of our original bond vectors, and imposing the condition that volumes cannot overlap, and the presence of one volume excludes the possibility of another volume being found there.. This model is thus known as the <strong>excluded volume model</strong> model.</p>
 <p>Let us return to the lattice model of a <strong>random walk system</strong> that we saw in <a class="reference internal" href="Topic2sec2.html#fig-c2-ideallattice"><span class="std std-numref">Fig. 24</span></a>, which I’m including here again to save you jumping between pages.</p>
-<div class="figure align-center" id="id24">
+<div class="figure align-center" id="id28">
 <a class="reference internal image-reference" href="_images/C2_IdealLattice.png"><img alt="We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines." src="_images/C2_IdealLattice.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines.</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines.</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
 </div>
 <p>In the ideal case the end of the chain, which I am taking to be the point near the bottom right of the figure, could continue to the left and overlap the existing segments (the <span class="math notranslate nohighlight">\(4^\text{th}\)</span> segment would be the first overlapped). Our <a class="reference internal" href="Topic2sec2.html#sec-c2-idealshort"><span class="std std-ref">short-range limitation</span></a> would not prevent this new overlap because the overlapping segments are separated by a good number of other segments. Instead we need to move to a lattice model known as a <strong>self avoiding random walk</strong> that introduces the requirement that a segment cannot pass through any site that has been traversed previously. This imposition is realised by reducing the number of possible directions a segment step can take to the number of <strong>unoccupied</strong> adjacent sites.</p>
 <p>Before we get into the detail, let us make a prediction to see how our intuition fares. The segments on an ideal chain can step in any of the directions available in the model used (in the 2D lattice, there are 4 directions available), whereas the real chain segments will have some directions removed from the possible options. As the chain grows in size we would expect the initial segments to be around the start of the chain, so the segments further along the chain will be required to occupy sites further from the start. In short, we would expect the volume occupied by a real chain to be larger than an ideal chain of the same length.</p>
@@ -389,14 +399,237 @@ We shall now introduce another level of complexity to the model that prevents an
 <h3>Excluded volume model<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>In previous section we considered the <a class="reference internal" href="Topic2sec2.html#sec-c2-idealchain"><span class="std std-ref">ideal chain case</span></a>, and imposed some short-range restrictions between nearby monomers. However the ideal chain model does allow for a chain to loop back on itself such that segments that are widely separated along the chain could occupy the same region in space.<br />
 We shall now introduce another level of complexity to the model that prevents any segment from occuyping the same space - in essence we are ascribing a volume to each of our original bond vectors, and imposing the condition that volumes cannot overlap, and the presence of one volume excludes the possibility of another volume being found there. This model is thus known as the <strong>excluded volume model</strong> model.</p>
-<p>Let us return to the lattice model of a <strong>random walk system</strong> that we saw in <a class="reference internal" href="Topic2sec2.html#fig-c2-ideallattice"><span class="std std-numref">Fig. 24</span></a>, which I’m including here again to save jumping between pages.</p>
+<p>Let us return to the lattice model of a <strong>random walk system</strong> that we saw in <a class="reference internal" href="Topic2sec2.html#fig-c2-ideallattice"><span class="std std-numref">Fig. 24</span></a> above but with some additions indicated in blue.</p>
 <div class="figure align-center" id="fig-c2-ideallattice2">
-<a class="reference internal image-reference" href="_images/C2_IdealLattice.png"><img alt="We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines." src="_images/C2_IdealLattice.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines.</span><a class="headerlink" href="#fig-c2-ideallattice2" title="Permalink to this image">#</a></p>
+<a class="reference internal image-reference" href="_images/C2_IdealLattice2.png"><img alt="We can model a polymer chain (black) as a two-dimensional lattice where the ends of the segments are circles and as such the segments themselves lie only on the lattice lines." src="_images/C2_IdealLattice2.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">There are two permitted places where an additional monomer can go, up or down from the end point. In the not permitted case option (a) (“doubling back”) is not permitted in either the short-range ideal or real case, whereas option (b) is permitted under the short-range ideal but <strong>not</strong> under the real chain model.</span><a class="headerlink" href="#fig-c2-ideallattice2" title="Permalink to this image">#</a></p>
 </div>
-<p>In the ideal case the end of the chain, which I am taking to be the point near the bottom right of the figure\footnote{Coordinate <span class="math notranslate nohighlight">\((4,1)\)</span> if we take the bottom left to be the origin}, could continue to the left and overlap the existing segments (the <span class="math notranslate nohighlight">\(4^\text{th}\)</span> segment would be the first overlapped). Our short-range limitation seen in section \ref{sec:C2_IdealShort} would not prevent this new overlap because the overlapping segments are separated by a good number of other segments. Instead we need to move to a lattice model known as a \textbf{self avoiding random walk} that introduces the requirement that a segment cannot pass through any site that has been traversed previously. This imposition is realised by reducing the number of possible directions a segment step can take to the number of \textbf{unoccupied} adjacent sites.\
-\par
-Before we get into the detail, let us make a prediction to see how our intuition fares. The segments on an ideal chain can step in any of the directions available in the model used (in the 2D lattice, there are 4 directions available), whereas the real chain segments will have some directions removed from the possible options. As the chain grows in size we would expect the initial segments to be around the start of the chain, so the segments further along the chain will be required to occupy sites further from the start. In short, we would expect the volume occupied by a real chain to be larger than an ideal chain of the same length.</p>
+<p>In the ideal case a new momoner (blue) is added to the end of the chain, which I am taking to be the point near the bottom right of the figure could continue to the left and overlap the existing segments. The <a class="reference internal" href="Topic2sec2.html#sec-c2-idealshort"><span class="std std-ref">short-range limitation</span></a> would not prevent this new overlap because the overlapping segments are separated by a good number of other segments. Instead we need to move to a lattice model known as a <strong>self avoiding random walk</strong> that introduces the requirement that a segment cannot pass through any site that has been traversed previously. This imposition is realised by reducing the number of possible directions a segment step can take to the number of <strong>unoccupied</strong> adjacent sites.</p>
+<p>Before we get into the detail, let us make a prediction to see how our intuition fares. The segments on an ideal chain can step in any of the directions available in the model used (in the 2D lattice, there are 4 directions available), whereas the real chain segments will have some directions removed from the possible options. As the chain grows in size we would expect the initial segments to be around the start of the chain, so the segments further along the chain will be required to occupy sites further from the start. In short, we would expect the volume occupied by a real chain to be larger than an ideal chain of the same length.</p>
+</div>
+<div class="section" id="building-the-model-in-3d">
+<span id="sec-c2-sarw-1"></span><h3>Building the model in 3D<a class="headerlink" href="#building-the-model-in-3d" title="Permalink to this headline">#</a></h3>
+<p>Let us consider the total number of excluded volume chains whose <span class="math notranslate nohighlight">\(N^\text{th}\)</span> step lies at a distance between <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(R+\mathrm{d}R\)</span> from the origin. I’ve shown this schematically in <a class="reference internal" href="#fig-c2-excluded"><span class="std std-numref">Fig. 27</span></a> where the blue chains meet this requirement but the yellow do not. We shall call this total number quantity <span class="math notranslate nohighlight">\(W(R)\,\mathrm{d}R\)</span>.</p>
+<div class="figure align-center" id="fig-c2-excluded">
+<a class="reference internal image-reference" href="_images/C2_Excluded.png"><img alt="We consider the number of chains whose $N^\text{th}$ step lies in the ring of inner radius $R$ and outer radius $R+\mathrm{d}R$ (the grey ring). The chains who meet this condition are in blue (the upper two chains) whereas those chains outside of this region of interest are in orange (lower two chains)." src="_images/C2_Excluded.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">We consider the number of chains whose <span class="math notranslate nohighlight">\(N^\text{th}\)</span> step lies in the ring of inner radius <span class="math notranslate nohighlight">\(R\)</span> and outer radius <span class="math notranslate nohighlight">\(R+\mathrm{d}R\)</span> (the grey ring). The chains who meet this condition are in blue (the upper two chains) whereas those chains outside of this region of interest are in orange (lower two chains).</span><a class="headerlink" href="#fig-c2-excluded" title="Permalink to this image">#</a></p>
+</div>
+<p>Since all possible paths have the same statistical weight, <span class="math notranslate nohighlight">\(W(R)\)</span> is proportional to the distribution function of <span class="math notranslate nohighlight">\(R\)</span> that we have already considered in previous sections.<br />
+In order to calculate <span class="math notranslate nohighlight">\(W(R)\,\mathrm{d}R\)</span> we are going to take a conceptual step backwards and return to the ideal chain case. If we ignore the excluded volume effect then the total number of ideal chains with <span class="math notranslate nohighlight">\(N^\text{th}\)</span> step lying at a distance between <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(R+\mathrm{d}R\)</span> is <span class="math notranslate nohighlight">\(W_0(R)\,\mathrm{d}R\)</span>. The total number of ideal chains with <span class="math notranslate nohighlight">\(N\)</span> steps is <span class="math notranslate nohighlight">\(z^N\)</span>, and so the probability of the distance being between <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(R+\mathrm{d}R\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[P(\textbf{R},N)\,4\pi R^2\,\mathrm{d}R\]</div>
+<p>where <span class="math notranslate nohighlight">\(P(\textbf{R},N)\)</span> has previously been defined (equation <a class="reference internal" href="Topic2sec2.html#equation-eq-c2-idealprobability">(20)</a>). Therefore we find</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded1">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq-c2-excluded1" title="Permalink to this equation">#</a></span>\[W_0(R) = z^N4\pi R^2 \left(\frac{3}{2\pi Na^2}\right)^{\frac{3}{2}}\,\exp\left(-\frac{3R^2}{2Na^2}\right)\]</div>
+<p>Our next step is to recognise that there will be some subset of these ideal configurations that are not allowed under the excluded volume condition. Let us use <span class="math notranslate nohighlight">\(p(R)\)</span> as the probability that an ideal chain configuration (as counted in equation <a class="reference internal" href="#equation-eq-c2-excluded1">(22)</a>) is <strong>also</strong> allowable under the excluded volume condition.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(v_c\)</span> is quivalent to the volume of a single monomer unit, or the excluded volume of a single segment vector.</p>
+</div>
+</div>
+<p>We estimate <span class="math notranslate nohighlight">\(p(R)\)</span> by assuming that the polymer segments are evenly distributed in a region of volume <span class="math notranslate nohighlight">\(R^3\)</span>, which means there are <span class="math notranslate nohighlight">\(\dfrac{R^3}{v_c}\)</span> lattice sites where <span class="math notranslate nohighlight">\(v_c\)</span> is the volume of a single lattice element. We can now calculate the probability that no overlaps occur if we place <span class="math notranslate nohighlight">\(N\)</span> segments on these lattice sites.<br />
+The probability that one particular segment will not overlap with another is <span class="math notranslate nohighlight">\(\left(1-\frac{v_c}{R^3}\right)\)</span> and since there are <span class="math notranslate nohighlight">\(\dfrac{N(N-1)}{2}\)</span> possible combinations of segment pairs the probability that no overlap occurs in all of these combinations is</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded2">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq-c2-excluded2" title="Permalink to this equation">#</a></span>\[\begin{split}p(R) &amp;= \left(1-\frac{v_c}{R^3}\right)^{\frac{N(N-1)}{2}}\nonumber\\
+	&amp;= \exp\left( \ln\left[\left(1-\frac{v_c}{R^3}\right)^{\frac{N(N-1)}{2}}\right] \right)\nonumber\\
+	&amp;= \exp\left(\frac{N(N-1)}{2}\,\ln\left(1-\frac{v_c}{R^3}\right)\right)\end{split}\]</div>
+<p>Here we can make two simplifications. The first is that when <span class="math notranslate nohighlight">\(R^3\gg v_c\)</span> then <span class="math notranslate nohighlight">\(\ln\left(\dfrac{v_c}{R^3}\right)\approx \dfrac{v_c}{R^3}\)</span>, and secondly if <span class="math notranslate nohighlight">\(N\gg 1\)</span> then <span class="math notranslate nohighlight">\(N(N-1)\approx N^2\)</span>. Using both of these approximations simplifies equation <a class="reference internal" href="#equation-eq-c2-excluded2">(23)</a> as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded3">
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq-c2-excluded3" title="Permalink to this equation">#</a></span>\[p(R) = \exp\left(-\frac{N^2v_c}{2R^3}\right)\]</div>
+<p>Let us take a moment to recentre ourselves in what we are trying to establish. Equation <a class="reference internal" href="#equation-eq-c2-excluded3">(24)</a> tells us the probability that a configuration in the ideal chain conditions <strong>is also</strong> allowed under the excluded volume condition. So the product of this probability and the number of ideal chain configurations <span class="math notranslate nohighlight">\(W_0(R)\)</span> (equation <a class="reference internal" href="#equation-eq-c2-excluded1">(22)</a>) will be the number of configurations allowed in the excluded volume conditions, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded4">
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-c2-excluded4" title="Permalink to this equation">#</a></span>\[\begin{split}W(R) &amp;= W_0(R)\,p(R)\\
+		&amp;\propto R^2\,\exp\left(-\frac{3R^2}{2Na^2}-\frac{N^2v_c}{2R^3}\right)\end{split}\]</div>
+<p>where for equation <a class="reference internal" href="#equation-eq-c2-excluded4">(25)</a> I’ve dropped a number of prefactors and constants to simplify it to the proportionality that is of interest.</p>
+<p>Both <span class="math notranslate nohighlight">\(W(R)\)</span> and <span class="math notranslate nohighlight">\(W_0(R)\)</span> have a maximum for a certain value of <span class="math notranslate nohighlight">\(R\)</span> which will tell us the most likely size of the real and ideal chains respectively. We can find these maxima, which I will label <span class="math notranslate nohighlight">\(R^*\)</span> and <span class="math notranslate nohighlight">\(R_0^*\)</span> respectively, using a bit of calculus.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I am dropping the <span class="math notranslate nohighlight">\(4\pi z^N\exp\left(\dfrac{3}{2\pi N a^2}\right)^{\frac{3}{2}}\)</span> term under the assumption that it is never zero, so the only part of interest is the parts that involve <span class="math notranslate nohighlight">\(R\)</span>.</p>
+</div>
+</div>
+<p>Finding <span class="math notranslate nohighlight">\(R_0^*\)</span> is fairly trivial, in that we use part of equation <a class="reference internal" href="#equation-eq-c2-excluded1">(22)</a> with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}0 &amp;= \frac{\mathrm{d}W_0(R)}{\mathrm{d}R}\bigg\rvert_{R=R_0^*}\\
+	&amp;= \frac{\mathrm{d}}{\mathrm{d}R}\left[R^2\,\exp\left(-\frac{3R^2}{2Na^2}\right)\right]\bigg\rvert_{R=R_0^*}\\
+	&amp;= 2R_0^*\left(1-\frac{3(R_0^*)^2}{2Na^2}\right)\exp\left(-\frac{3(R_0^*)^2}{2Na^2}\right)\end{split}\]</div>
+<p>for which there are three conditions in which the equality can hold: <span class="math notranslate nohighlight">\(R_0^*=0\)</span>, <span class="math notranslate nohighlight">\(R_0^*\rightarrow\infty\)</span> and</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excludedideal">
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq-c2-excludedideal" title="Permalink to this equation">#</a></span>\[\begin{split}0 &amp;= \left(1-\frac{3(R_0^*)^2}{2Na^2}\right)\\
+\therefore R_0^* &amp;= \sqrt{\frac{2Na^2}{3}}\\
+							&amp;= \sqrt{\frac{2}{3}}aN^{\frac{1}{2}}\end{split}\]</div>
+<p>The reason I’ve rearranged into the final step is simply to highlight how this relationship is almost identical to the one we found for the <a class="reference internal" href="Topic2sec2.html#sec-c2-idealchainsize"><span class="std std-ref">ideal chain case</span></a> (equation <a class="reference internal" href="Topic2sec2.html#equation-eq-c2-ideal2">(17)</a>). It is somewhat reassuring that the two different approaches, namely a vector average and a probability distribution approach, give the same form of relationship with only a numerical prefactor difference.</p>
+<p>Moving on now to the excluded volume case. Once again we can find <span class="math notranslate nohighlight">\(R^*\)</span> via calculus but this time we start from equation <a class="reference internal" href="#equation-eq-c2-excluded4">(25)</a>. This is a bit more complicated to differentiate directly, although you can do it if you want the practice, but I instead will instead look for the maximum in the natural logarithm of equation <a class="reference internal" href="#equation-eq-c2-excluded4">(25)</a>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ln W(R) = \ln\left[ R^2\,\exp\left(-\frac{3R^2}{2Na^2}-\frac{N^2v_c}{2R^3}\right) \right] &amp;= -\frac{3R^2}{2Na^2}-\frac{N^2v_c}{2R^3} +2\ln R\\
+\therefore \frac{\mathrm{d}\left(\ln W(R)\right)}{\mathrm{d}R}\bigg\rvert_{R=R^*} &amp;= -\frac{3R^*}{Na^2}+\frac{3N^2v_c}{2(R^*)^4}+\frac{2}{R^*}=0\\\end{split}\]</div>
+<p>Rearranging this expression gives</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded5">
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-c2-excluded5" title="Permalink to this equation">#</a></span>\[-\frac{3(R^*)^2}{2Na^2}+\frac{3N^2v_c}{4(R^*)^3}+1=0\]</div>
+<p>Throughout the construction of this model we have been comparing the ideal chain case with the excluded volume case. Thus we combine equations <a class="reference internal" href="#equation-eq-c2-excluded5">(27)</a> and <a class="reference internal" href="#equation-eq-c2-excludedideal">(26)</a> to find an expression for the ratio of the two sizes,</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{R^*}{R_0^*}\right)^5-\left(\frac{R^*}{R_0^*}\right)^3=\frac{\sqrt{486}}{16}\frac{v_c}{a^3}\sqrt{N}\]</div>
+<p>In the case that <span class="math notranslate nohighlight">\(N\gg 1\)</span> then the first term on the left hand side is much larger than the second term, so we can drop the cubic bracket and simplify the remaining expression as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-excluded6">
+<span class="eqno">(28)<a class="headerlink" href="#equation-eq-c2-excluded6" title="Permalink to this equation">#</a></span>\[\begin{split}R^* &amp;\approx R_0^*\left(\frac{N^{\frac{1}{2}}v_c}{a^3}\right)^{\frac{1}{5}}\\
+		&amp;\propto N^{\frac{3}{5}}\end{split}\]</div>
+<p>There we have it. Our excluded volume model of a real chain predicts that the size of the polymer is proportional to <span class="math notranslate nohighlight">\(N^{\frac{3}{5}}\)</span> rather than the <span class="math notranslate nohighlight">\(N^\frac{1}{2}\)</span> predicted by the ideal chain model.</p>
+<p>In general then our simple models are predicting a relationship that has the following form:</p>
+<div class="math notranslate nohighlight">
+\[R \approx N^\nu b\]</div>
+<p>and what is most surprising is that years of experimental data and sophisticated numerical simulations put the exponent value to be approximately <span class="math notranslate nohighlight">\(0.588\)</span>, which is pretty darn close to the <span class="math notranslate nohighlight">\(\frac{3}{5}=0.6\)</span> we found from a fairly simple excluded volume model.</p>
+</div>
+<div class="section" id="re-building-the-real-chain-model">
+<span id="sec-c2-sarw-2"></span><h3>(Re)building the real chain model.<a class="headerlink" href="#re-building-the-real-chain-model" title="Permalink to this headline">#</a></h3>
+<p>I’m going to rederive an expression for the real chain but using a different approach, namely one where the energy of the system is considered. The reason why I am doing it again, and why I’m presenting this approach second, is that it is one of those models that requires a good grasp of important but nebulous ideas. These ideas will be better reinforced throughout the module so you may find that this derivation is less obvious first time through but is clearer and more simple when you come to re-read it at the end of the course.</p>
+<p>We start again from the idea that our <span class="math notranslate nohighlight">\(N\)</span> segments are uniformly distributed across some volume <span class="math notranslate nohighlight">\(R^3\)</span>. Thus the concentration of segments <span class="math notranslate nohighlight">\(c\)</span> is approximately</p>
+<div class="math notranslate nohighlight">
+\[c\sim\frac{N}{R^3}\]</div>
+<p>I say approximately because there may be some prefactors that give an exact answer when taking into account the rough “surface” of the volume and restrictions on packing segments into the volume. But we can confidently state that the concentration varies with <span class="math notranslate nohighlight">\(N\)</span> and inversely with <span class="math notranslate nohighlight">\(R^3\)</span>.<br />
+The effective repulsion between segments, <span class="math notranslate nohighlight">\(F_\text{rep}\)</span>, makes a positive contribution to the free energy, and this contribution is proportional to both the concentration and the number of segments. So</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F_\text{rep} &amp;\propto cN\\
+	&amp;\propto \frac{N}{R^3}N\\
+	&amp;= k_\text{B}Tb\frac{N^2}{2R^3}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(b\)</span> is a constant of proportionality and has dimensions of volume. The <span class="math notranslate nohighlight">\(k_\textbf{B}T\)</span> has been included for two reasons: to give the expression the correct units, but more importantly the excluded volume effect is (broadly speaking) entropic in origin.</p>
+<p>So if the repulsions between segments makes this positive contribution to the free energy of the chain, why does the whole chain not expand until it is a single straight line? This configuration would give the smallest possible interaction between segments and consequently minimise the free energy. The answer is <strong>entropy</strong> - by limiting the possible states a segment can be in we would decrease the associated entropy. Having a larger entropy will also reduce the free energy of the system, so our chain will try to find a happy medium state between minimising the repulsive interaction between segments and increasing the entropy of the chain.<br />
+We can model the entropy, <span class="math notranslate nohighlight">\(S\)</span>, as an entropic spring (from equation <a class="reference internal" href="Topic2sec2.html#equation-eq-c2-idealprobability">(20)</a>) which in turn gives an associated contribution to the free energy</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-springfree">
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq-c2-springfree" title="Permalink to this equation">#</a></span>\[\begin{split}S &amp;= -\frac{3k_\text{B}r^2}{2Na^2} + \text{constant}\\
+\therefore F_\text{el} &amp;= k_\text{B}T\frac{r^2}{Na^2}\end{split}\]</div>
+<p>I’ve given the vague statement that the polymer will find this “happy medium” between repulsion and elastic entropy, but we can formalise this mathematically. The optimal configuration of the polymer is the one that minimises the total free energy <span class="math notranslate nohighlight">\(F_\text{total} = F_\text{rep}+F_\text{el}\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F_\text{total} &amp;= k_\text{B}Tb\frac{N^2}{2R^3} + k_\text{B}T\frac{R^2}{Na^2}\\
+				&amp;= k_\text{B}T\left(\frac{bN^2}{2R^3} + \frac{R^2}{Na^2}\right)\\
+\therefore \frac{\mathrm{d}F_\text{total}}{\mathrm{d}R} &amp;= k_\text{B}T\left(\frac{2R}{Na^2}-\frac{3bN^2}{2R^4}\right) = 0\end{split}\]</div>
+<p>Assuming that <span class="math notranslate nohighlight">\(k_\text{B}T\neq0\)</span>, the term within the bracket must equal zero and so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{2R}{Na^2}&amp;=\frac{3bN^2}{2R^4}\\
+R^5 &amp;= \frac{3a^2b}{4}N^3\\
+\therefore R &amp;= \left(\frac{3a^2b}{4}\right)^{\frac{1}{5}}N^{\frac{3}{5}}\\
+\text{or  } R &amp;\propto N^\frac{3}{5}\end{split}\]</div>
+<p>Exactly the same result as found previously (equation <a class="reference internal" href="#equation-eq-c2-excluded6">(28)</a>)!</p>
+<div class="dropdown hint admonition">
+<p class="admonition-title">Homework hint</p>
+<p>For one of the homework questions you are asked to comment on why we expect a different value for <span class="math notranslate nohighlight">\(\nu\)</span> depending on the dimensionality of the self avoiding random walk (i.e. 2D versus 3D), and why this doesn’t happen for the ideal case.</p>
+<p>To answer this have a look through the two different ways of deriving the 3D self avoiding random walk result (i.e. <a class="reference internal" href="#sec-c2-sarw-1"><span class="std std-ref">probability method</span></a> and <a class="reference internal" href="#sec-c2-sarw-2"><span class="std std-ref">energy method</span></a>) and find terms that relate to volume and surface area of 3D shapes.</p>
+<p>Note that the question doesn’t require you to fully derive the result for the 2D case, but this is one approach you could take if you prefer the quantitative method over the qualitative description.</p>
+</div>
+</div>
+</div>
+<div class="section" id="effect-of-solvent-and-the-theta-temperature">
+<span id="sec-c2-theta"></span><h2>Effect of solvent and the <span class="math notranslate nohighlight">\(\Theta\)</span> temperature<a class="headerlink" href="#effect-of-solvent-and-the-theta-temperature" title="Permalink to this headline">#</a></h2>
+<div class="section" id="interactions-with-solvent">
+<h3>Interactions with solvent.<a class="headerlink" href="#interactions-with-solvent" title="Permalink to this headline">#</a></h3>
+<p>It will probably come as no surprise to you that most polymers in the world do not exist in a vacuum. I know, right!? But in all of the models we have seen so far we have only considered whether the units or segments of a polymer chain occupy a space on the lattice or not. What we need to consider next is that when a polymer is found surrounded by some other material, and for the purposes of this course we will only consider polymers surrounded by solvent or by other polymers.<br />
+We will focus on the polymer in solvent case. Returning to the lattice model this means that lattice sites are occupied either by a polymer segment or a solvent molecule. In <a class="reference internal" href="#fig-c2-polymersolvent"><span class="std std-numref">Fig. 28</span></a> the real polymer chain is depicted in black and white circles are solvent molecules. For simplicity we will assume that the polymer segments (p) and solvent molecules (s) have the same volume and can only occupy a single site on the lattice, and that there are no empty sites.</p>
+<div class="figure align-center" id="fig-c2-polymersolvent">
+<a class="reference internal image-reference" href="_images/C2_PolymerSolvent.png"><img alt="We can expand the two-dimensional lattice model to include solvent molecules. The polymer chain lies on the lattice lines, with their ends indicated with black circles and aligned with the centre of a lattice unit. Any unit not occupied with a polymer end is filled with a solvent molecule (white)." src="_images/C2_PolymerSolvent.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">We can expand the two-dimensional lattice model to include solvent molecules. The polymer chain lies on the lattice lines, with their ends indicated with black circles and aligned with the centre of a lattice unit. Any unit not occupied with a polymer end is filled with a solvent molecule (white).</span><a class="headerlink" href="#fig-c2-polymersolvent" title="Permalink to this image">#</a></p>
+</div>
+<p>The interaction energies between neighbouring elements on the lattice are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-\epsilon_{pp}\)</span> = polymer-polymer interactions</p></li>
+<li><p><span class="math notranslate nohighlight">\(-\epsilon_{ps}\)</span> = polymer-solvent interactions</p></li>
+<li><p><span class="math notranslate nohighlight">\(-\epsilon_{ss}\)</span> = solvent-solvent interactions</p></li>
+</ul>
+<p>These energies originate from the van der Waals interaction and so are all positive.<br />
+For a given configuration of the chain <span class="math notranslate nohighlight">\(i\)</span>, let <span class="math notranslate nohighlight">\(N_{pp}^i\)</span> be the number of neighbouring polymer-polymer pairs on the lattice. Similarly <span class="math notranslate nohighlight">\(N_{ps}^i\)</span> and <span class="math notranslate nohighlight">\(N_{ss}^i\)</span> are the number of neighbouring polymer-solvent and solvent-solvent parts respectively. Thus the total energy of the system for this configuration <span class="math notranslate nohighlight">\(E_i\)</span> is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-polymersolvent1">
+<span class="eqno">(30)<a class="headerlink" href="#equation-eq-c2-polymersolvent1" title="Permalink to this equation">#</a></span>\[E_i = -N_{pp}^i\epsilon_{pp} -N_{ps}^i\epsilon_{ps} -N_{ss}^i\epsilon_{ss}\]</div>
+<p>Now that we are considering the additional interactions between polymer-solvent and solvent-solvent, the probability of a real chain having size <span class="math notranslate nohighlight">\(R\)</span> is no longer proportional to <span class="math notranslate nohighlight">\(W(R)\)</span> but instead needs to be modified by a thermodynamic term, namely</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-polymersolvent3">
+<span class="eqno">(31)<a class="headerlink" href="#equation-eq-c2-polymersolvent3" title="Permalink to this equation">#</a></span>\[P(R) \propto W(R)\,\exp\left(-\frac{\left&lt;E(R)\right&gt;}{k_\text{B}T}\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\left&lt;E(R)\right&gt;\)</span> is the average energy of a polymer of size <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<p>We again assume that the polymer segments are uniformly distributed in a region of volume <span class="math notranslate nohighlight">\(R^3\)</span> so that the probability of a lattice site being occupied by a polymer segment <span class="math notranslate nohighlight">\(\phi\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\phi=\frac{Nv_c}{R^3}\]</div>
+<p>Therefore the average number of pairs can be estimated as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left&lt;N_{pp}^i\right&gt; &amp;\approx \frac{1}{2}zN\phi\\
+\left&lt;N_{ps}^i\right&gt; &amp;\approx zN(1-\phi)\\
+\left&lt;N_{ss}^i\right&gt;   &amp;\approx N_{ss}^0 - \left(\left&lt;N_{pp}^i\right&gt; + \left&lt;N_{ps}^i\right&gt;\right)\\
+											&amp;= N_{ss}^0-\left[\frac{1}{2}zN\phi + zN(1-\phi)\right]\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_{ss}^0\)</span> is the numer of pairs of neighbouring solvent molecules when there is no polymer molecule in the system.<br />
+Substituting these three expressions into equation <a class="reference internal" href="#equation-eq-c2-polymersolvent1">(30)</a> gives us the following expression for the average energy of a polymer of size <span class="math notranslate nohighlight">\(R\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-polymersolvent2">
+<span class="eqno">(32)<a class="headerlink" href="#equation-eq-c2-polymersolvent2" title="Permalink to this equation">#</a></span>\[\begin{split}\left&lt;E(R)\right&gt; &amp;\approx -\frac{1}{2}zN\phi\left(\epsilon_{pp}+\epsilon_{ss}-2\epsilon_{ps}\right) + \text{terms independent of }\phi\\
+&amp;= -\frac{zN^2v_c}{R^3}\Delta \epsilon + \text{terms independent of }\phi\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta \epsilon\)</span> is defined as</p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-epsilon">
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-c2-epsilon" title="Permalink to this equation">#</a></span>\[\Delta \epsilon = \frac{1}{2}\left(\epsilon_{pp}+\epsilon_{ss}\right)-\epsilon_{ps}\]</div>
+<p>We can substitute our expression for the energy is the polymer (equation <a class="reference internal" href="#equation-eq-c2-polymersolvent1">(30)</a>) and the number of states <span class="math notranslate nohighlight">\(W(R)\)</span> (equation <a class="reference internal" href="#equation-eq-c2-excluded4">(25)</a>) into our expression for the probability of a chain having a size <span class="math notranslate nohighlight">\(R\)</span> (equation <a class="reference internal" href="#equation-eq-c2-polymersolvent3">(31)</a>) to find</p>
+<div class="math notranslate nohighlight" id="equation-c2-polymersolvent3">
+<span class="eqno">(34)<a class="headerlink" href="#equation-c2-polymersolvent3" title="Permalink to this equation">#</a></span>\[\begin{split}P(R) &amp;\propto R^2\,\exp\left(-\frac{3R^2}{2Na^2}-\frac{N^2v_c}{2R^3}\right)\,\exp\left(\frac{zN^2v_c\Delta\epsilon}{k_\text{B}TR^3}\right)\\
+	&amp;= R^2 \exp\left(-\frac{3R^2}{2Na^2}-\frac{N^2v_c}{2R^3}+\frac{zN^2v_c\Delta\epsilon}{k_\text{B}TR^3}\right)\\
+	&amp;= R^2 \exp\left(-\frac{3R^2}{2Na^2} - \frac{N^2v_c}{2R^3}\left(1 - \frac{2z\Delta\epsilon}{k_\text{B}T}\right)\right)\\
+	&amp;= R^2 \exp\left(-\frac{3R^2}{2Na^2} - \frac{N^2v_c}{2R^3}\left(1 - 2\chi\right)\right)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi=\dfrac{z\Delta\epsilon}{k_\text{B}T}\)</span> is a dimensionless quantity known as the interaction parameter. We will explore what this parameter really means more when we come to study <span class="xref myst">phase transitions and liquid-liquid unmixing</span>.</p>
+<p>Finally let us compare equation <a class="reference internal" href="#equation-eq-c2-polymersolvent3">(31)</a> here with that found in the excluded volume model (equation <a class="reference internal" href="#equation-eq-c2-excluded4">(25)</a>). By comparing these two equations we can combine the effects of excluded volume and solvent interactions into a single parameter known as the <strong>excluded volume parameter</strong> <span class="math notranslate nohighlight">\(v\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-c2-interactionparameter">
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-c2-interactionparameter" title="Permalink to this equation">#</a></span>\[\begin{split}v &amp;= v_c\left(1-2\chi\right)\\
+	&amp;= v_c\left(1-\frac{2z}{k_\text{B}T}\Delta\epsilon\right)\end{split}\]</div>
+</div>
+<div class="section" id="theta-temperature">
+<h3><span class="math notranslate nohighlight">\(\Theta\)</span> temperature.<a class="headerlink" href="#theta-temperature" title="Permalink to this headline">#</a></h3>
+<p>Take a few moments to think about what equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> actually tells us. The parameter <span class="math notranslate nohighlight">\(v\)</span> not only depends on excluded volume effects (through <span class="math notranslate nohighlight">\(v_c\)</span> and partly through <span class="math notranslate nohighlight">\(z\)</span>) but also on the effections of solvent interactions as expressed by <span class="math notranslate nohighlight">\(\Delta \epsilon\)</span>.</p>
+<p>Let us see how <span class="math notranslate nohighlight">\(\Delta \epsilon\)</span> relates to changes in our lattice configuration. In <a class="reference internal" href="#fig-c2-epsilon"><span class="std std-numref">Fig. 29</span></a> we have two polymer segments (black circles) in amongst solvent molecules (white circles) - for simplicity we are only considering single polymer units rather than the full chain.</p>
+<div class="figure align-center" id="fig-c2-epsilon">
+<a class="reference internal image-reference" href="_images/C2_Epsilon.png"><img alt="Initially the two polymer segments (black) are separated such that there are solvent molecules between them (left-hand side of image). Each polymer is interacting with four nearest neighbour solvent molecules. We then move the polymer segments to adjacent lattice spaces meaning the polymer segments now only interact with three solvent molecules but also with one polymer segment (right-hand side of image)" src="_images/C2_Epsilon.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Initially the two polymer segments (black) are separated such that there are solvent molecules between them (left-hand side of image). Each polymer is interacting with four nearest neighbour solvent molecules. We then move the polymer segments to adjacent lattice spaces meaning the polymer segments now only interact with three solvent molecules but also with one polymer segment (right-hand side of image)</span><a class="headerlink" href="#fig-c2-epsilon" title="Permalink to this image">#</a></p>
+</div>
+<p>In part (a) of the figure we have two polymer segments that are initially separated, meaning they are completely surrounded by solvent molecules. We assume that molecules can only interact with their nearest neighbours, just to keep things simple. Then we move the right hand polymer molecule to the left, switching places with the solvent molecule that was originally there. This has three effects on the energy of the system:</p>
+<ol class="arabic simple">
+<li><p>add a polymer-polymer interaction, <span class="math notranslate nohighlight">\(+\epsilon_{pp}\)</span></p></li>
+<li><p>item add a solvent-solvent interaction, <span class="math notranslate nohighlight">\(+\epsilon_{ss}\)</span></p></li>
+<li><p>item remove two polymer solvent interactions, <span class="math notranslate nohighlight">\(-2\epsilon_{ps}\)</span></p></li>
+</ol>
+<p>The third of these comes from the polymers originally interacting with 4 solvent molecules each but then having one of these interactions each replaced with a polymer-polymer interaction. Thus the total change in energy is</p>
+<div class="math notranslate nohighlight">
+\[\epsilon_{pp}+\epsilon_{ss} - 2\epsilon_{ps} = 2\Delta\epsilon\]</div>
+<p>where we have pulled in the definition from equation <a class="reference internal" href="#equation-eq-c2-epsilon">(33)</a> here.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The quotation marks are to emphasise that the polymer chain itself does not dissolve in the sense that it breaks apart. What happens is that the chain unfolds so that the segments are surrounded by solvent.</p>
+</div>
+</div>
+<p>This tells us that if <span class="math notranslate nohighlight">\(\Delta\epsilon &gt;0\)</span> then the polymer segments will tend to aggregate together - the polymer-polymer interaction energy is greater than polymer-solvent interactions. In the case where <span class="math notranslate nohighlight">\(\Delta\epsilon&lt;0\)</span> then the interactions between polymer-solvent molecules is greater meaning the polymer will tend to “dissolve” into the solvent.</p>
+<p>In a good solvent <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> is small such that <span class="math notranslate nohighlight">\(v\)</span> is always positive - this is implied within the definition of what a good solvent <strong>is</strong>. A good solvent by definition has a favourable interaction with the polymer, which is why the polymer will “dissolve” in it.</p>
+<p>In a poor solvent we find that <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> is large as the energy of polymer-polymer and solvent-solvent interactions are much larger than polymer-solvent ones. This leads to an interesting result when we consider equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> again. When <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> is sufficiently large (of order <span class="math notranslate nohighlight">\(10^{-21}\text{ J}\)</span>) then under typical experimental conditions we are in the realm of <span class="math notranslate nohighlight">\(\Delta\epsilon\sim k_\text{B}T\)</span>. Consequently there exists some temperature for a system with some <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> and <span class="math notranslate nohighlight">\(z\)</span> such that the bracket term in equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> becomes zero. This temperature, known as the <span class="math notranslate nohighlight">\(\Theta\)</span> temperature, is the temperature<a class="footnote-reference brackets" href="#c2-temperatures" id="id2">1</a> at which the excluded volume parameter <span class="math notranslate nohighlight">\(v\)</span> equals zero, meaning the repulsive excluded volume effect perfectly balances the attractive force between the segments. At the theta temperature <strong>the polymer behaves as an ideal chain</strong>. Finally we can define an expression for <span class="math notranslate nohighlight">\(\Theta\)</span> using equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> under the condition that <span class="math notranslate nohighlight">\(v=0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\Theta = \frac{2z\Delta\epsilon}{k_\text{B}}\]</div>
+<p>You’ll be reassured to know that this checks out in experimental data. One of the earliest studies <span id="id3">[<a class="reference internal" href="#id19" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span> looked how the radius of polystyrene molecules changes with temperature.</p>
+<div class="figure align-center" id="fig-c2-sun">
+<a class="reference internal image-reference" href="_images/C2_Sun.png"><img alt="The radius of gyration and hydrodynamic radius of polystyrene measured as a function of temperatue. At the theta temperature there is a sharp increase in both types of radius." src="_images/C2_Sun.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">The radius of gyration and hydrodynamic radius of polystyrene measured as a function of temperatue. At the theta temperature there is a sharp increase in both types of radius. Taken from <span id="id4">[<a class="reference internal" href="#id19" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span>, and includes their original caption.</span><a class="headerlink" href="#fig-c2-sun" title="Permalink to this image">#</a></p>
+</div>
+<p>The data are shown in <a class="reference internal" href="#fig-c2-sun"><span class="std std-numref">Fig. 30</span></a> and show a marked change in the radius of the polymer around the theta temperature of <span class="math notranslate nohighlight">\(35^\circ\text{C}\)</span> compared to the smaller changes at temperatures above and below <span class="math notranslate nohighlight">\(\Theta\)</span>. There is still a temperature dependence on the radius, but the gradient <span class="math notranslate nohighlight">\(\dfrac{\mathrm{d}R}{\mathrm{d}T}\)</span> is largest at <span class="math notranslate nohighlight">\(T=\Theta\)</span>.</p>
+</div>
+</div>
+<div class="section" id="beyond-single-polymers-dilute-vs-concentrated">
+<h2>Beyond single polymers - dilute vs concentrated.<a class="headerlink" href="#beyond-single-polymers-dilute-vs-concentrated" title="Permalink to this headline">#</a></h2>
+<p>In all of the previous sections we have considered the individual polymer chain, how it moves and how it responds to changes in environment. But what happens when we have a few chains? What about a few more? And what about a lot?</p>
+<p>To try and impose some structure to our discussions we will define the different concentration domains of a polymer in solvent solution, as shown in <a class="reference internal" href="#fig-c2-melt"><span class="std std-numref">Fig. 31</span></a>. At one extreme end we have no polymer chains whatsoever meaning the system is pure solvent. Next we have a <strong>dilute</strong> system in which the small number of polymer chains in the solutions are, on average, sufficiently separated that they do not interact with each other. We next have the <strong>semi-dilute</strong> where chains begin to overlap and interact, but there are still distinct regions of pure solvent. Next we have the <strong>concentrated solution</strong> in which the polymer chains <strong>and</strong> solvent are uniformly distributed in the solution. Finally we have the other extreme of a pure polymer system in which there is no solvent whatsoever.</p>
+<div class="figure align-center" id="fig-c2-melt">
+<a class="reference internal image-reference" href="_images/C2_Melt.png"><img alt="Five broad domains of polymer solutions, ranging from pure solvent (left) to pure polymer (right)." src="_images/C2_Melt.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Five broad domains of polymer solutions, ranging from pure solvent (left) to pure polymer (right).</span><a class="headerlink" href="#fig-c2-melt" title="Permalink to this image">#</a></p>
+</div>
+<p>In the dilute regime the polymers do not follow random walk statistics as excluded volume effects cause the chain to swell. Somewhat counterintuitively, the system becomes easier to model as the solution becomes more and more concentrated; in the polymer melt and concentrated systems the chains follow <strong>ideal</strong> random walk statistics.</p>
+<p>We’ll take an argument from Flory who considered the segment concentration <span class="math notranslate nohighlight">\(c\)</span> across a one-dimensional ‘slice’ of our solution, which we will align along <span class="math notranslate nohighlight">\(x\)</span>. The excluded volume effect introduces an unfavourable energy of interaction that is proportional to the probability of two segments being close together, i.e. proportional to <span class="math notranslate nohighlight">\(c^2\)</span>. This leads to a force on the segments proportional to <span class="math notranslate nohighlight">\(c\,\frac{\mathrm{d}c}{\mathrm{d}x}\)</span>.</p>
+<p>Now take a look at <a class="reference internal" href="#fig-c2-meltdist"><span class="std std-numref">Fig. 32</span></a>. This force is proportional to the gradient of the concentration-position curves. In the dilute regime the gradient is large but as segments start to overlap the gradient decreases. Once in the concentrated domain there are no large gradients in the concentration<a class="footnote-reference brackets" href="#c2-flory" id="id5">2</a> which thus tells us the excluded volume effect is no longer involved.</p>
+<div class="figure align-center" id="fig-c2-meltdist">
+<a class="reference internal image-reference" href="_images/C2_MeltDist.png"><img alt="In the dilute domain the segment concentration has a large concentration gradient between polymer and solvent. As the solution becomes more concentrated these gradients decrease, and in the concentrated domain there is no concentration gradient throughout the solution." src="_images/C2_MeltDist.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">In the dilute domain the segment concentration has a large concentration gradient between polymer and solvent. As the solution becomes more concentrated these gradients decrease, and in the concentrated domain there is no concentration gradient throughout the solution.</span><a class="headerlink" href="#fig-c2-meltdist" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="summary-polymer-types-sizes-and-solutions">
+<h2>Summary - Polymer types, sizes and solutions<a class="headerlink" href="#summary-polymer-types-sizes-and-solutions" title="Permalink to this headline">#</a></h2>
+<p>So that concludes our work in understanding how big a polymer chain is, and how we differentiate between dilute polymer systems and concentrated / polymer melt systems. Seems like a lot of effort and maths, but what I hope you can take away from this is that we are able to develop some models based on fairly simple premises that lead to a surprisingly good estimate when compared to results from simulations and experiments.</p>
 <hr class="docutils" />
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -405,52 +638,24 @@ Bibliography<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<span class="target" id="id2"></span></div>
-</details></div>
-</div>
-<hr class="docutils" />
-<div class="section" id="questions-for-practice">
-<h2>Questions for Practice<a class="headerlink" href="#questions-for-practice" title="Permalink to this headline">#</a></h2>
-<div class="dropdown hint admonition">
-<p class="admonition-title">Question 1</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
-Question</label><div class="sd-tab-content docutils">
-<p>QUESTION TEXT HERE</p>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Hint</label><div class="sd-tab-content docutils">
-<p>HINT TEXT HERE</p>
-</div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-Solution</label><div class="sd-tab-content docutils">
-<p>SOLUTION TEXT HERE</p>
+<div class="docutils container" id="id6">
+<dl class="citation">
+<dt class="label" id="id19"><span class="brackets">SNST80</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p class="sd-card-text">Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. <em>The Journal of Chemical Physics</em>, 73(12):5971–5975, 1980. URL: <a class="reference external" href="https://doi.org/10.1063/1.440156">https://doi.org/10.1063/1.440156</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1063/1.440156">arXiv:https://doi.org/10.1063/1.440156</a>, <a class="reference external" href="https://doi.org/10.1063/1.440156">doi:10.1063/1.440156</a>.</p>
+</dd>
+</dl>
 </div>
 </div>
-</div>
-<div class="dropdown hint admonition">
-<p class="admonition-title">Question 2</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Question</label><div class="sd-tab-content docutils">
-<p>QUESTION TEXT HERE</p>
-</div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-Hint</label><div class="sd-tab-content docutils">
-<p>HINT TEXT HERE</p>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-Solution</label><div class="sd-tab-content docutils">
-<p>SOLUTION TEXT HERE</p>
-</div>
-</div>
-</div>
+</details><hr class="docutils" />
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="c2-temperatures"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Yes, three “temperatures” in a row. I couldn’t figure a better way to phrase it…</p>
+</dd>
+<dt class="label" id="c2-flory"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p>For the sake of completeness, there may be local fluctuations in concentration due to thermodynamics. This can lead to interesting effects but for the purpose of this thought experiment we can neglect them.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -494,6 +699,15 @@ Solution</label><div class="sd-tab-content docutils">
         <p class="prev-next-title">2.2 Polymers: Ideal Chain</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Topic2sec4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.4 Polymers: Back to macroscopic</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -514,9 +728,17 @@ Solution</label><div class="sd-tab-content docutils">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-volume-model">Excluded volume model</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Excluded volume model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-model-in-3d">Building the model in 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-building-the-real-chain-model">(Re)building the real chain model.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-practice">Questions for Practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-solvent-and-the-theta-temperature">Effect of solvent and the <span class="math notranslate nohighlight">\(\Theta\)</span> temperature</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactions-with-solvent">Interactions with solvent.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theta-temperature"><span class="math notranslate nohighlight">\(\Theta\)</span> temperature.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-single-polymers-dilute-vs-concentrated">Beyond single polymers - dilute vs concentrated.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-polymer-types-sizes-and-solutions">Summary - Polymer types, sizes and solutions</a></li>
 </ul>
   </nav></div>
 

@@ -1,7 +1,7 @@
 # PHY383: Introduction to Soft Matter and Biological Physics
 ## Soft Matter Course Notes
 
-Welcome to the course notes for 
+Welcome to the course notes for the Soft Matter half of this module. As this is a shared module these notes will only refer to the Soft Matter part of the course, and for any information about the assessment, deadlines, etc please refer to Blackboard.
 
 ```{tableofcontents}
 ```
