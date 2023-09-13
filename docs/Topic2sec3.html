@@ -157,14 +157,25 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.3 Polymers: Real Chain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic1.html">Topic 1 - Macroscopic systems</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic3.html">Topic 3 - Phase Transitions of Polymer Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec1.html">3.1 - Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec2.html">3.2 - Liquid-liquid unmixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec3.html">3.3 - Mechanisms of phase separation.</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -603,10 +614,10 @@ Substituting these three expressions into equation <a class="reference internal"
 <p>In a poor solvent we find that <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> is large as the energy of polymer-polymer and solvent-solvent interactions are much larger than polymer-solvent ones. This leads to an interesting result when we consider equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> again. When <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> is sufficiently large (of order <span class="math notranslate nohighlight">\(10^{-21}\text{ J}\)</span>) then under typical experimental conditions we are in the realm of <span class="math notranslate nohighlight">\(\Delta\epsilon\sim k_\text{B}T\)</span>. Consequently there exists some temperature for a system with some <span class="math notranslate nohighlight">\(\Delta\epsilon\)</span> and <span class="math notranslate nohighlight">\(z\)</span> such that the bracket term in equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> becomes zero. This temperature, known as the <span class="math notranslate nohighlight">\(\Theta\)</span> temperature, is the temperature<a class="footnote-reference brackets" href="#c2-temperatures" id="id2">1</a> at which the excluded volume parameter <span class="math notranslate nohighlight">\(v\)</span> equals zero, meaning the repulsive excluded volume effect perfectly balances the attractive force between the segments. At the theta temperature <strong>the polymer behaves as an ideal chain</strong>. Finally we can define an expression for <span class="math notranslate nohighlight">\(\Theta\)</span> using equation <a class="reference internal" href="#equation-eq-c2-interactionparameter">(35)</a> under the condition that <span class="math notranslate nohighlight">\(v=0\)</span></p>
 <div class="math notranslate nohighlight">
 \[\Theta = \frac{2z\Delta\epsilon}{k_\text{B}}\]</div>
-<p>You’ll be reassured to know that this checks out in experimental data. One of the earliest studies <span id="id3">[<a class="reference internal" href="#id19" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span> looked how the radius of polystyrene molecules changes with temperature.</p>
+<p>You’ll be reassured to know that this checks out in experimental data. One of the earliest studies <span id="id3">[<a class="reference internal" href="markdown.html#id15" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span> looked how the radius of polystyrene molecules changes with temperature.</p>
 <div class="figure align-center" id="fig-c2-sun">
 <a class="reference internal image-reference" href="_images/C2_Sun.png"><img alt="The radius of gyration and hydrodynamic radius of polystyrene measured as a function of temperatue. At the theta temperature there is a sharp increase in both types of radius." src="_images/C2_Sun.png" style="width: 40%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">The radius of gyration and hydrodynamic radius of polystyrene measured as a function of temperatue. At the theta temperature there is a sharp increase in both types of radius. Taken from <span id="id4">[<a class="reference internal" href="#id19" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span>, and includes their original caption.</span><a class="headerlink" href="#fig-c2-sun" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">The radius of gyration and hydrodynamic radius of polystyrene measured as a function of temperatue. At the theta temperature there is a sharp increase in both types of radius. Taken from <span id="id4">[<a class="reference internal" href="markdown.html#id15" title="Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. The Journal of Chemical Physics, 73(12):5971-5975, 1980. URL: https://doi.org/10.1063/1.440156, arXiv:https://doi.org/10.1063/1.440156, doi:10.1063/1.440156.">Sun <em>et al.</em>, 1980</a>]</span>, and includes their original caption.</span><a class="headerlink" href="#fig-c2-sun" title="Permalink to this image">#</a></p>
 </div>
 <p>The data are shown in <a class="reference internal" href="#fig-c2-sun"><span class="std std-numref">Fig. 30</span></a> and show a marked change in the radius of the polymer around the theta temperature of <span class="math notranslate nohighlight">\(35^\circ\text{C}\)</span> compared to the smaller changes at temperatures above and below <span class="math notranslate nohighlight">\(\Theta\)</span>. There is still a temperature dependence on the radius, but the gradient <span class="math notranslate nohighlight">\(\dfrac{\mathrm{d}R}{\mathrm{d}T}\)</span> is largest at <span class="math notranslate nohighlight">\(T=\Theta\)</span>.</p>
 </div>

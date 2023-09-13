@@ -153,13 +153,25 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1.html">Topic 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic1.html">Topic 1 - Macroscopic systems</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec3.html">1.3 Glasses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic3.html">Topic 3 - Phase Transitions of Polymer Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec1.html">3.1 - Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec2.html">3.2 - Liquid-liquid unmixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec3.html">3.3 - Mechanisms of phase separation.</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -410,6 +422,9 @@ For example, if the references for your book are stored in <code class="docutils
 then the bibliography is inserted with:</p>
 <div class="docutils container" id="id2">
 <dl class="citation">
+<dt class="label" id="id18"><span class="brackets">CFG87</span></dt>
+<dd><p>Ralph H. Colby, Lewis J. Fetters, and William W. Graessley. The melt viscosity-molecular weight relationship for linear polymers. <em>Macromolecules</em>, 20(9):2226–2237, 1987. URL: <a class="reference external" href="https://doi.org/10.1021/ma00175a030">https://doi.org/10.1021/ma00175a030</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1021/ma00175a030">arXiv:https://doi.org/10.1021/ma00175a030</a>, <a class="reference external" href="https://doi.org/10.1021/ma00175a030">doi:10.1021/ma00175a030</a>.</p>
+</dd>
 <dt class="label" id="id9"><span class="brackets">Har99</span></dt>
 <dd><p>C. A. Harper, editor. <em>Modern Plastics Handbook</em>. McGraw-Hill, 1999.</p>
 </dd>
@@ -419,11 +434,17 @@ then the bibliography is inserted with:</p>
 <dt class="label" id="id4"><span class="brackets">LC08</span></dt>
 <dd><p>M. Paula Longinotti and Horacio R. Corti. Viscosity of concentrated sucrose and trehalose aqueous solutions including the supercooled regime. <em>Journal of Physical and Chemical Reference Data</em>, 37(3):1503, jul 2008. URL: <a class="reference external" href="https://aip.scitation.org/doi/abs/10.1063/1.2932114">https://aip.scitation.org/doi/abs/10.1063/1.2932114</a>, <a class="reference external" href="https://doi.org/10.1063/1.2932114">doi:10.1063/1.2932114</a>.</p>
 </dd>
+<dt class="label" id="id19"><span class="brackets">Rub03</span></dt>
+<dd><p>Michael Rubinstein. <em>Polymer physics</em>. Oxford University Press, Oxford ; New York, N.Y., 2003. ISBN 9780198520597.</p>
+</dd>
 <dt class="label" id="id16"><span class="brackets">Sad14</span></dt>
 <dd><p>Martin H. (Martin Howard) Sadd. <em>Elasticity : theory, applications, and numerics</em>. Elsevier, Amsterdam, third edition. edition, 2014. ISBN 0-12-410432-0.</p>
 </dd>
 <dt class="label" id="id7"><span class="brackets">Sch95</span></dt>
 <dd><p>J. E.K. Schawe. Principles for the interpretation of modulated temperature DSC measurements. Part 1. Glass transition. <em>Thermochimica Acta</em>, 261(C):183–194, sep 1995. <a class="reference external" href="https://doi.org/10.1016/0040-6031(95)02315-S">doi:10.1016/0040-6031(95)02315-S</a>.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">SNST80</span></dt>
+<dd><p>Shao‐Tang Sun, Izumi Nishio, Gerald Swislow, and Toyoichi Tanaka. The coil–globule transition: radius of gyration of polystyrene in cyclohexane. <em>The Journal of Chemical Physics</em>, 73(12):5971–5975, 1980. URL: <a class="reference external" href="https://doi.org/10.1063/1.440156">https://doi.org/10.1063/1.440156</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1063/1.440156">arXiv:https://doi.org/10.1063/1.440156</a>, <a class="reference external" href="https://doi.org/10.1063/1.440156">doi:10.1063/1.440156</a>.</p>
 </dd>
 <dt class="label" id="id13"><span class="brackets">BeaucageSteinHashimotoHasegawa91</span></dt>
 <dd><p>G. Beaucage, R. S. Stein, T. Hashimoto, and H. Hasegawa. Tacticity effects on polymer blend miscability. <em>Macromolecules</em>, 24(11):3443 – 3448, 1991.</p>

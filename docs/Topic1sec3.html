@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Topic1sec3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2.1 Polymers: Types" href="Topic2sec1.html" />
+    <link rel="next" title="Topic 2 - Polymers" href="Topic2.html" />
     <link rel="prev" title="1.2 Shearing a solid or liquid" href="Topic1sec2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -157,14 +157,25 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CourseOverview.html">Course Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.3 Glasses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Topic1.html">Topic 1 - Macroscopic systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec1.html">1.1 What is soft matter?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic1sec2.html">1.2 Shearing a solid or liquid</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3 Glasses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic2.html">Topic 2 - Polymers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec1.html">2.1 Polymers: Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec2.html">2.2 Polymers: Ideal Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec3.html">2.3 Polymers: Real Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic2sec4.html">2.4 Polymers: Back to macroscopic</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Topic3.html">Topic 3 - Phase Transitions of Polymer Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec1.html">3.1 - Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec2.html">3.2 - Liquid-liquid unmixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topic3sec3.html">3.3 - Mechanisms of phase separation.</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -418,7 +429,7 @@ The glass forming liquid only has a discontinuity in gradient without the vertic
 <p>A non-glass forming material that undergoes a second order phase transition (e.g. ferromagnetic transition, superconducting transition) will show the continuous transition but, and this is the important bit, it will always happen at the same temperature for any given material. So ferromagnetic material A will (generally) have a transition temperature at <span class="math notranslate nohighlight">\(T_A\)</span> regardless of the surrounding environment or factors. Glasses are much more fickle type of material in that their glass transition temperature depends strongly on factors such as the cooling <strong>rate</strong>, the number of times it has been heated and cooled, age of sample… So instead of trying to measure <span class="math notranslate nohighlight">\(T_g\)</span> for a given material, what glass transition scientists are trying to understand is how <span class="math notranslate nohighlight">\(T_g\)</span> is influenced by so many factors. To date we do not have a complete picture.</p>
 <p>So now that we are armed with the foreknowledge that <span class="math notranslate nohighlight">\(T_g\)</span> is sensitive to experimental conditions, let us finally get to the substance of this section which is how to use ellipsometry to determine <span class="math notranslate nohighlight">\(T_g\)</span>.<br />
 In short, ellipsometry uses the change in polarisation of light as it passes through a thin (<span class="math notranslate nohighlight">\(\approx10-1000\text{ nm}\)</span>) sample. The more material it passes through, the larger the change in polarisation between the p- and s- components, so we can reverse this experimentally to measure the change in polarisation to determine the amount (i.e. thickness) of the sample. This is quite neat but it gets even cooler when you then change the temperature of the sample. If you take thickness measurements across a range of temperatures you will get a set of data that looks like that in <a class="reference internal" href="#fig-c1-thermalexpansion"><span class="std std-numref">Fig. 13</span></a>. We can then assume that <span class="math notranslate nohighlight">\(T_g\)</span> is at the point where the two lines (glass and liquid expansions with <span class="math notranslate nohighlight">\(\alpha_\text{glass}\)</span> and <span class="math notranslate nohighlight">\(\alpha_\text{liquid}\)</span> respectively) intersect.</p>
-<p>This is a simplified model and we know that the transition process occurs over a finite temperature range roughly centred about <span class="math notranslate nohighlight">\(T_g\)</span> measured in this way, but this approach still gives some interesting insights. For example Keddie, Jones and Cory <span id="id1">Keddie <em>et al.</em> [<a class="reference internal" href="#id4" title="J. L. Keddie, R. A. L. Jones, and R. A. Cory. Size-Dependent Depression of the Glass Transition Temperature in Polymer Films. EPL (Europhysics Letters), 27(1):59, jul 1994. URL: https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011 https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011/meta, doi:10.1209/0295-5075/27/1/011.">1994</a>]</span> found that the glass transition temperature of polystyrene depends on the thickness of a sample below about <span class="math notranslate nohighlight">\(100\text{ nm}\)</span>. Their key result is shown in <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>, and all each point on that graph is the glass transition temperature determined using the ellipsometry method we’ve just covered.</p>
+<p>This is a simplified model and we know that the transition process occurs over a finite temperature range roughly centred about <span class="math notranslate nohighlight">\(T_g\)</span> measured in this way, but this approach still gives some interesting insights. For example Keddie, Jones and Cory <span id="id1">Keddie <em>et al.</em> [<a class="reference internal" href="markdown.html#id3" title="J. L. Keddie, R. A. L. Jones, and R. A. Cory. Size-Dependent Depression of the Glass Transition Temperature in Polymer Films. EPL (Europhysics Letters), 27(1):59, jul 1994. URL: https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011 https://iopscience.iop.org/article/10.1209/0295-5075/27/1/011/meta, doi:10.1209/0295-5075/27/1/011.">1994</a>]</span> found that the glass transition temperature of polystyrene depends on the thickness of a sample below about <span class="math notranslate nohighlight">\(100\text{ nm}\)</span>. Their key result is shown in <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>, and all each point on that graph is the glass transition temperature determined using the ellipsometry method we’ve just covered.</p>
 <div class="figure align-center" id="fig-c1-keddie">
 <a class="reference internal image-reference" href="_images/C1_Keddie.png"><img alt="First experimental evidence of the supression of $T_g$ for ultrathin polymer films where the glass transition temperature is constant down to a characteristic thickness, then decreases as the film gets thinner." src="_images/C1_Keddie.png" style="width: 50%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">First experimental evidence of the supression of <span class="math notranslate nohighlight">\(T_g\)</span> for ultrathin polymer films. \Taken from Keddie et al \cite{Keddie1994}</span><a class="headerlink" href="#fig-c1-keddie" title="Permalink to this image">#</a></p>
@@ -433,7 +444,7 @@ In short, ellipsometry uses the change in polarisation of light as it passes thr
 <p>In one method known as heat-flux DSC the sample and reference are placed in a temperature controlled chamber. The sample and reference are connected by a low–resistance heat–flow path. The assembly is enclosed in a single furnace. Enthalpy or heat capacity changesin the sample cause a difference in its temperature relative to the reference; the resulting heat
 flow is small compared with that in differential thermal analysis (DTA) because the sample and reference are in good thermal contact. The temperature difference is recorded and related to enthalpy change in the sample using calibration experiments.<br />
 There are other types of DSC and refinements of the above, so if you are interested in the experimental and measurement side then I’d encourage you to look for some journal articles that used DSC.</p>
-<p>When using DSC to determine <span class="math notranslate nohighlight">\(T_g\)</span> one would be interested in seeing how the specific heat capacity of the sample deviates away from a linear dependence with temperature. For example Schawe (<span id="id2">Schawe [<a class="reference internal" href="#id8" title="J. E.K. Schawe. Principles for the interpretation of modulated temperature DSC measurements. Part 1. Glass transition. Thermochimica Acta, 261(C):183–194, sep 1995. doi:10.1016/0040-6031(95)02315-S.">1995</a>]</span> and <a class="reference internal" href="#fig-c1-schawe"><span class="std std-numref">Fig. 15</span></a>) used DSC to find the glass transition temperature for polystyrene, which you’ll also see agrees with those found in  <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>.</p>
+<p>When using DSC to determine <span class="math notranslate nohighlight">\(T_g\)</span> one would be interested in seeing how the specific heat capacity of the sample deviates away from a linear dependence with temperature. For example Schawe (<span id="id2">Schawe [<a class="reference internal" href="markdown.html#id7" title="J. E.K. Schawe. Principles for the interpretation of modulated temperature DSC measurements. Part 1. Glass transition. Thermochimica Acta, 261(C):183–194, sep 1995. doi:10.1016/0040-6031(95)02315-S.">1995</a>]</span> and <a class="reference internal" href="#fig-c1-schawe"><span class="std std-numref">Fig. 15</span></a>) used DSC to find the glass transition temperature for polystyrene, which you’ll also see agrees with those found in  <a class="reference internal" href="#fig-c1-keddie"><span class="std std-numref">Fig. 14</span></a>.</p>
 <div class="figure align-center" id="fig-c1-schawe">
 <a class="reference internal image-reference" href="_images/C1_Schawe.png"><img alt="The heat capacity of a material varies linearly below and above the transition temperature, but around $T_g$ there is a noticible change that can either be a change in gradient (curves 2a and 2b) or even a peak in the curve (1a, 1b, 3a, 3b)." src="_images/C1_Schawe.png" style="width: 60%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">The heat capacity of a material varies linearly below and above the transition temperature, but around <span class="math notranslate nohighlight">\(T_g\)</span> there is a noticible change that can either be a change in gradient (curves 2a and 2b) or even a peak in the curve (1a, 1b, 3a, 3b).</span><a class="headerlink" href="#fig-c1-schawe" title="Permalink to this image">#</a></p>
@@ -496,11 +507,11 @@ There are other types of DSC and refinements of the above, so if you are interes
       </div>
     </a>
     <a class="right-next"
-       href="Topic2sec1.html"
+       href="Topic2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2.1 Polymers: Types</p>
+        <p class="prev-next-title">Topic 2 - Polymers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
