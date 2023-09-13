@@ -3,6 +3,11 @@
 
 Welcome to the course notes for the Soft Matter half of this module. As this is a shared module these notes will only refer to the Soft Matter part of the course, and for any information about the assessment, deadlines, etc please refer to Blackboard.
 
+## Contacting me
+Office: D29, Hicks Building  
+Office Hours: Mondays, 13:00-14:30. You can book a 30 min appointment via <https://tinyurl.com/mattmears> 
+Email: <m.mears@sheffield.ac.uk>
+
 ## Structure of course
 
 ```{tableofcontents}
